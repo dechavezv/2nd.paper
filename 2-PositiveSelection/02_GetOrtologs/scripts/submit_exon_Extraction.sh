@@ -8,19 +8,16 @@
 #$ -M dechavezv
 
 
-SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
+SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/scripts
 
 QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
-
-# Important change the pathway to your current path
-cd /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
 
 # chan the name of the spescies with the name your genome (eg. red.fox will be Extract_Exons_3.sh ${i} red.fox).
 # See the readme.txt for more details
 
-export Spescies=red.fox
+export Spescies=red.fox.fa
 
-for i in {1..7}; do (
-	$QSUB $SCRIPTDIR/Extract_Exons_3.sh ${i} ${red.fox}
+for i in {1..7}; do
+	$QSUB $SCRIPTDIR/Extract_Exons_3.sh ${i} ${Spescies}
 #	sleep 30m
 done
