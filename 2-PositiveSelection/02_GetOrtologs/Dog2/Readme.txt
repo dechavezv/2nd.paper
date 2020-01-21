@@ -17,6 +17,10 @@ qsub submit_exon_Extraction.sh
 #Change the paths 
 #The script is configurated to be runed in our server in hoffman. 
 #You must change the path within the script `Extract_Exons_3.sh` and `MergeExonsSameGene.sh` if working from a diferent directory. 
+#Tou have to replace the following line with your own path
+# export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
+# export Direc=<your.path.goes.here>
+
 
 # Define your Genome
 Make sure to specified your genome by changin this line within the Extract_Exons_3.sh script:
