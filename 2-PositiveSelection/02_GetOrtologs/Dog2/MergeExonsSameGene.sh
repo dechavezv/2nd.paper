@@ -16,6 +16,8 @@ mkdir Intermidiate1
 #In the previous step you must be extreme carefull with the order. Be sure that the amount of lines of the bed file is the same as the number of '>' in the fast file.
 #Also do tail to verify that the last line corespond to the last line in the bed file 
 
+export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
+
 echo '############'
 echo Linearizing fasta strings
 echo '############'
@@ -45,7 +47,7 @@ for file in Out*; do python ../ReverseComplemet_noChr_Pos.py $file ReverseStrand
 #echo '############'
 #echo Erase intermidiate files
 #echo '############'
-mv ReverseStrand* /u/home/d/dechavez/project-rwayne/Dog${2}/Merge_File
+mv ReverseStrand*  ${Direc}/Dog${2}/Merge_File
 
 rm *
 
