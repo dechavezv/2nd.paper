@@ -21,3 +21,9 @@ qsub submit_exon_Extraction.sh
 # Define your Genome
 Make sure to specified your genome by changin this line within the Extract_Exons_3.sh script:
 #export Fasta=<your-path>/Dog${2}/<Your-genome>.fa
+
+# finally concatenate all genes into a single file and put it in the corret folder in data/
+# cat Merge_File/* > /u/home/d/dechavez/project-rwayne/2nd.paper/data/Genomes.canids.Jan.2020.Ortologs.fasta/<All.my.Ortologs>.fa
+
+#Then remove individual files
+#rm -rf Merge_File
