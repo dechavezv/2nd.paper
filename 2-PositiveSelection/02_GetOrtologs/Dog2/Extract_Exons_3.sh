@@ -24,6 +24,8 @@ module load gatk/3.1.1
 module load java/1.7.0_45
 module load bedtools
 
+export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
+
 #create directory for analysis
 mkdir -p DirCanis_familiaris_$1.bed
 
@@ -35,7 +37,7 @@ mkdir Merge_File
 cd DirCanis_familiaris_$1.bed
 
 # copy bed file to current dierctory
-cp ../backup.beds/Canis_familiaris_$1.bed ./
+cp ../bedFiles/Canis_familiaris_$1.bed ./
 
 
 #Separate files by trnascript
@@ -49,7 +51,7 @@ rm Canis_familiaris_$1.bed
 mkdir Merged_Bam/ 
 
 #Define the path where files will be directed
-export OUTMerge=/u/home/d/dechavez/project-rwayne/Dog${2}/DirCanis_familiaris_$1.bed/Merged_Bam
+export OUTMerge=${Direc}/Dog${2}/DirCanis_familiaris_$1.bed/Merged_Bam
 
 #copy all files and scripts in "Merged_Bam" directory
 cp ../replaceNames_Fasta.py Merged_Bam/
@@ -100,7 +102,7 @@ echo '#########'
 #replace header names of previous outputs with header of bed files 
 
 rm *.bed
-for dir in /u/home/d/dechavez/project-rwayne/Dog${2}/DirCanis_familiaris_$1.bed/Merged_Bam/*.bed/; do (cd "$dir" && python replaceNames_Fasta.py *.fa *.bed Name_ && \
+for dir in ${Direc}/Dog${2}/DirCanis_familiaris_$1.bed/Merged_Bam/*.bed/; do (cd "$dir" && python replaceNames_Fasta.py *.fa *.bed Name_ && \
 rm Merged_*);done
 
 
@@ -108,5 +110,5 @@ echo '#########'
 echo 'Preparing sequence to VESPA Pipieline'
 echo '#########'
 
-for dir in /u/home/d/dechavez/project-rwayne/Dog${2}/DirCanis_familiaris_$1.bed/Merged_Bam/*.bed/; do (cd "$dir" && \
+for dir in ${Direc}/Dog${2}/DirCanis_familiaris_$1.bed/Merged_Bam/*.bed/; do (cd "$dir" && \
 bash MergeExonsSameGene.sh $1 $2);done

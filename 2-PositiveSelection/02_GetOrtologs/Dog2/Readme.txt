@@ -1,5 +1,6 @@
-#Before you run this script make sure you have the following:
-## - One folder called backup.beds with bedfiles split into sevetn difernt files (e.g Canis_familiaris_1.bed)
+# Before you run this script make sure you have the following:
+
+## - One folder called bedFiles with bedfiles split into sevetn difernt files (e.g Canis_familiaris_1.bed)
 ## - Your genome in fasta format. This genomes was generated in the previous step '01_fromBamTofasta' 
 ## - the necesary scripts: Extract_Exons_3.sh, merge_CDS_Exons.py, MergeExonsSameGene.sh, replaceNames_Fasta.py, ReverseComplemet_noChr_Pos.py and submit_exon_Extraction.sh 
 
