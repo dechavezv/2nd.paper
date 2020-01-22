@@ -19,5 +19,12 @@ export Spescies=red.fox.fa
 
 for i in {1..7}; do
 	$QSUB $SCRIPTDIR/Extract_Exons_3.sh ${i} ${Spescies}
-#	sleep 30m
+#	sleep 5h
 done
+
+sleep 5h
+cd red.fox.fa_Output
+for file in *.fa; do (echo $file && cat $file >> ../../../data/Genomes.canids.Jan.2020.Ortologs.fasta/${Spescies});done
+cd ../
+rm -rf red.fox.fa_DirCanis
+rm -rf red.fox.fa_Output 
