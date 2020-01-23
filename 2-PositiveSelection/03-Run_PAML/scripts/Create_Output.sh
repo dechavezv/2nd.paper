@@ -2,11 +2,11 @@
 
 #$ -l highp,h_rt=20:00:00,h_data=5G
 #$ -pe shared 1
-#$ -N four_HD_Indel_PAML_II
+#$ -N Out.files
 #$ -cwd
 #$ -m bea
-#$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/four_HD_Indels_PAML_II.out
-#$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/four_HD_Indels_PAML_II.err
+#$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/Out.files.out
+#$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/Out.files.err
 #$ -M dechavezv
 
 . /u/local/Modules/default/init/modules.sh
