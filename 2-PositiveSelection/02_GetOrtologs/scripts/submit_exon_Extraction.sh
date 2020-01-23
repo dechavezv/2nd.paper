@@ -1,6 +1,6 @@
 #! /bin/bash
 #$ -wd /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
-#$ -l highp,h_rt=02:00:00,h_data=1G
+#$ -l highp,h_rt=05:00:00,h_data=1G
 #$ -N ortolog
 #$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/log
 #$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/log
@@ -22,9 +22,11 @@ for i in {1..7}; do
 #	sleep 5h
 done
 
-sleep 5h
+sleep 2h
+
 cd red.fox.fa_Output
+touch ../../../data/Genomes.canids.Jan.2020.Ortologs.fasta/${Spescies}
 for file in *.fa; do (echo $file && cat $file >> ../../../data/Genomes.canids.Jan.2020.Ortologs.fasta/${Spescies});done
 cd ../
-rm -rf red.fox.fa_DirCanis
-rm -rf red.fox.fa_Output 
+rm -rf red.fox.fa_DirCanis*
+rm -rf red.fox.fa_Output*

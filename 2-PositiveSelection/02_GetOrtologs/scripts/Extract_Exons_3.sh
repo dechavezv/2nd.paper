@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#$ -l highp,h_rt=10:00:00,h_data=1G
+#$ -l highp,h_rt=18:00:00,h_data=1G
 #$ -pe shared 1
 #$ -N OrtoFasta_BD
 #$ -cwd
@@ -25,7 +25,7 @@ module load java/1.7.0_45
 module load bedtools
 
 
-export data=/u/home/d/dechavez/project-rwayne/2nd.paper/data/Genomes.canids.Jan.2020.Ortologs.fasta
+export data=/u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020
 export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs
 
 cd ${Direc}

@@ -1,3 +1,4 @@
 # Don't track content of these folders
-data/
 
+data/
+2-PositiveSelection/02_GetOrtologs/bedFiles

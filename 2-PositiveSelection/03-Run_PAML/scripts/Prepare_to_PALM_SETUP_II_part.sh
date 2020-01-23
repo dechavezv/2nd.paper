@@ -13,6 +13,7 @@
 module load python/2.7.3
 module load perl/5.10.1
 export PERL5LIB=$HOME/VESPA-1.0:$PERL5LIB
+
 export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
 export data=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML
 
@@ -66,22 +67,20 @@ echo Move_output_folder
 echo '############'
 for dir in Dir_*;do (cd $dir && cd Map_Gaps_metAl_compare_Prank/ && /
 mv tree Tree_$dir && /
-cp -r Tree_$dir /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/PAML_out);done
-
+cp -r Tree_$dir ${data}/PAML_out_before_SWAMP);done
 
 echo '############'
 echo Move_sequences
 echo '############'
 for dir in Dir_*;do (cd $dir && cd Map_Gaps_metAl_compare_Prank/tree/modelA/Omega1 && /
 cp align.phy aling.phy_$dir && /
-mv aling.phy_$dir ${data}/sequences);done
-
+mv aling.phy_$dir ${data}/sequences_before_SWAMP);done
 
 echo '############'
 echo Get Likelihoods
 echo '############'
 
-cd {data}/PAML_out
+cd ${data}/PAML_out_before_SWAMP
 
 for dir in Tree_*; do (cd $dir && /
 cd modelA/Omega1 && /
@@ -103,7 +102,7 @@ sed -i -r 's/Tree_Dir_(\w+).fasta/\1/g' name_dircetory && /
 paste out_modelA out_modelAnull name_dircetory| column -s $'\t' -t > LTR_PAML.out && /
 sed -i -r 's/^(\w+)\s+(\w+)\s+(\S+)\s+(\w+)\s+(\w+)\s+(\S+)\s+(\w+)/\7\t\3\t\6\t\1\t\2\t\4\t\5/g' LTR_PAML.out && /
 mv LTR_PAML.out ${PWD##*/}_LTR_PAML.out && /
-cp *_LTR_PAML.out ${data}/PAML_LRT && /
+cp *_LTR_PAML.out ${Direc}/PAML_LRT && /
 rm *);done
 
 cat ${Direc}/PAML_LRT/*_LTR_PAML.out > ${data}/PAML_LRT/Canids.Likelihood.$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt
@@ -133,7 +132,7 @@ rm Pvalue_${input}
 mv Edited_Pvalue_${input} Pvalue_${input}
 #grep -wF -f List_genesFiltered_CovariatesFixed_dictionary.txt Edited_Pvalue_${input} > Filtered_${input} #this will keep elements from file 1 within file2
 #awk '!($1="")' Filtered_${input} > P_values_${input}
-c
+
  
 rm Edited_${input}  #delete intermidiate files
 #rm Pvalue_${input} #delete intermidiate files
@@ -144,17 +143,16 @@ rm Filtered_${input} #delete intermidiate files
 echo '############'
 echo Get BEB sires
 echo '############'
-# this script will work with the following path
+# these commands will work with the following path
 ## <something>/PAML_out/Tree_Dir_ENSCAFG00000000001.fasta/modelA/Omega1/
 ## If you dont have the path above change the regualr expresion " after sed "1i$(echo ${PWD##*line/}
 
-cd ${data}/PAML_out
-mkdir ${data}/BEB_Sites
 
+mkdir ${Direc}/BEB_Sites
 
 export BEB_Sites=u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/BEB_Sites
 export PAML_dir=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/PAML_out
-export script=/u/home/d/dechavez/project-rwayne/scripts
+export script=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/scripts
 export Pvalue=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/PAML_LRT
 
 cd ${PAML_dir}
@@ -175,4 +173,4 @@ echo " ************************** Extracting BEB Sites *************************
 cd ${BEB_Sites}
 
 python ${script}/Append_BEB_site_to_table.py ${Pvalue}/P_values_${input} BEB_$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt BEB_
-
+mv BEB_P_values* ${data}/PAML
