@@ -29,4 +29,6 @@ sleep 2h
 
 cd ${DIREC}/Processing
 
-$QSUB Prepare_to_PALM_SETUP_II_part.sh
+for dir in dir*; do (cd $dir && echo $dir && $QSUB Prepare_to_PALM_SETUP_II_part.sh);done > PAML.Prank.log
+
+
