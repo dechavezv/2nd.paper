@@ -72,19 +72,7 @@ echo '############'
 echo Move_Files_modelAnull
 echo '############'
 for dir in Tree*; do (cd $dir/modelA/Omega1 && cp align_masked.phy ../../modelAnull/Omega1);done
+
+
+# Create Subdirectories
  
-echo '############'
-echo PAML_annalysis
-echo '############'
-
-for dir in Tree*;do (cd $dir/modelA/Omega1 && ./codeml codeml_modelA_masked.ctl && /
-cd .. && cd .. && /
-cd modelAnull/Omega1 && ./codeml codeml_modelAnull_masked.ctl);done
-
-echo '#######################'
-echo Move_Files
-echo '######################'
-
-for dir in Tree*; do (echo $dir && cd $dir/modelA/Omega1 && pwd && /
-cp align_masked.phy $dir.phy && /
-mv $dir.phy /u/flashscratch/d/dechavez/PAML/PAML/PAML_out/SWAMP_sequneces_10in5_AND_3in5);done
