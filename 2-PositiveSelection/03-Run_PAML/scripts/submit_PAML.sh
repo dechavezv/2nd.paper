@@ -14,23 +14,24 @@ QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 $QSUB ${SCRIPTDIR}/Prepare_to_PALM_SETUP_I_Part_PRANK.sh
 
-sleep 1h
+#sleep 1h
+
+sleep 2m
 
 cd ${DIREC}/Processing
 
 for dir in dir*; do (cd $dir && echo $dir && $QSUB Prepare_to_PALM_SETUP_I_Part_PRANK.sh);done > PAML.Prank.log
 
-sleep 4h
+sleep 7m
 
-cd ${DIREC}
-$QSUB Create_codon_aminoacid_table.sh
+$QSUB ${SCRIPTDIR}/Create_codon_aminoacid_table.sh
 
-sleep 2h
+sleep 5m 
+#sleep 2h
 
-cd ${DIREC}/Processing
+for dir in dir*; do (cd $dir && echo $dir && $QSUB PAML_aling_PRANK.sh);done > PAML.Prank.log
 
-for dir in dir*; do (cd $dir && echo $dir && $QSUB Prepare_to_PALM_SETUP_II_part.sh);done > PAML.Prank.log
-
-sleep 4h
+sleep 5m
+#sleep 4h
 
 $QSUB ${SCRIPTDIR}/Create_Output.sh

@@ -2,7 +2,7 @@
 
 #$ -l highp,h_rt=20:00:00,h_data=5G
 #$ -pe shared 1
-#$ -N four_HD_Indel_PAML_II
+#$ -N IIpartPAML
 #$ -cwd
 #$ -m bea
 #$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/four_HD_Indels_PAML_II.out
@@ -107,12 +107,11 @@ rm *);done
 
 cat ${Direc}/PAML_LRT/*_LTR_PAML.out > ${data}/PAML_LRT/Canids.Likelihood.$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt
 
-
 echo '############'
 echo Get p-values
 echo '############'
 
-cd ${Direc}/PAM_LRT
+cd ${data}/PAM_LRT
 
 export input=Canids.Likelihood.$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt
 export scripts=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/scripts
@@ -150,10 +149,10 @@ echo '############'
 
 mkdir ${Direc}/BEB_Sites
 
-export BEB_Sites=u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/BEB_Sites
-export PAML_dir=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/PAML_out
+export BEB_Sites=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/BEB_Sites
+export PAML_dir=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/PAML_out_before_SWAMP
 export script=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/scripts
-export Pvalue=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/PAML_LRT
+export Pvalue=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/PAML_LRT
 
 cd ${PAML_dir}
 
@@ -173,4 +172,4 @@ echo " ************************** Extracting BEB Sites *************************
 cd ${BEB_Sites}
 
 python ${script}/Append_BEB_site_to_table.py ${Pvalue}/P_values_${input} BEB_$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt BEB_
-mv BEB_P_values* ${data}/PAML
+mv BEB_P_values* ${data}

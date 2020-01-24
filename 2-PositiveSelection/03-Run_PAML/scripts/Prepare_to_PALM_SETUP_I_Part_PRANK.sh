@@ -1,7 +1,7 @@
 #! /bin/bash
 #$ -l highp,h_rt=10:00:00,h_data=5G
 #$ -pe shared 1
-#$ -N PAML_I
+#$ -N IpartPAML
 #$ -cwd
 #$ -m bea
 #$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/four_HD_Indels_PAML_I.out
@@ -44,21 +44,21 @@ export Genome=/u/home/d/dechavez/project-rwayne/2nd.paper/data/Genomes.canids.Ja
 
 cd ${Direc}
 
-mkdir Genomes
+#mkdir Genomes
 mkdir PAML_LRT
 
-echo '############'
-echo Fix_format_Biomart_seq_into_PipelineFormat
-echo '############'
+#echo '############'
+#echo Fix_format_Biomart_seq_into_PipelineFormat
+#echo '############'
 
-cp ${Genome}/* ./Genomes
+#cp ${Genome}/* ./Genomes
 
-cd Genomes
-for file in *.fa; do
-sed -i 's/\t/\|/'g $file;done
-rm *.fai
+#cd Genomes
+#for file in *.fa; do
+#sed -i 's/\t/\|/'g $file;done
+#rm *.fai
 
-cd ..
+#cd ..
 
 echo '############'
 echo Clean sequence
