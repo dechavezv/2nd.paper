@@ -4,8 +4,8 @@
 #$ -N IpartPAML
 #$ -cwd
 #$ -m bea
-#$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/four_HD_Indels_PAML_I.out
-#$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/four_HD_Indels_PAML_I.err
+#$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/PAML_I.out
+#$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/log/PAML_I.err
 #$ -M dechavezv
 
 echo Author:Daniel Chavez Year:2016 
@@ -41,6 +41,7 @@ export PERL5LIB=$HOME/VESPA-1.0:$PERL5LIB
 
 export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
 export Genome=/u/home/d/dechavez/project-rwayne/2nd.paper/data/Genomes.canids.Jan.2020.Ortologs.fasta
+export Vespa=/u/home/d/dechavez/VESPA-1.0/vespa.py
 
 cd ${Direc}
 
@@ -63,17 +64,17 @@ mkdir PAML_LRT
 echo '############'
 echo Clean sequence
 echo '############'
-python /u/home/d/dechavez/VESPA-1.0/vespa.py ensembl_clean -input=Genomes/ -label_filename=True
+python ${Vespa} ensembl_clean -input=Genomes/ -label_filename=True
 
 echo '############'
 echo Translate sequence  
 echo '############'
-python /u/home/d/dechavez/VESPA-1.0/vespa.py translate -input=Cleaned_Genomes/
+python ${Vespa} translate -input=Cleaned_Genomes/
 
 echo '############'
 echo Create database
 echo '############'
-python /u/home/d/dechavez/VESPA-1.0/vespa.py create_database -input=Translated_Cleaned_Genomes/
+python ${Vespa} create_database -input=Translated_Cleaned_Genomes/
 
 echo '############'
 echo Move Files
@@ -82,6 +83,7 @@ mkdir Procesing
 cp -r scripts/tree/ Procesing/
 cp scripts/Prepare_to_PALM_SETUP_II_part.sh Procesing/
 cp -r scripts/CodemlWrapper/ Procesing/
+cp scripts/codeml Procesing/
 cp scripts/fasta2phylip.pl Procesing/
 cp scripts/tree.txt Procesing/
 cp scripts/prank Procesing/
@@ -93,10 +95,11 @@ cp scripts/PAML_aling_PRANK.sh Procesing/
 cp -r Cleaned_Genomes/ Procesing/
 cp scripts/move_file.sh Procesing/
 
+cd Procesing/
+
 echo '############'
 echo Split by gene ID
 echo '############'
-cd Procesing/
 awk -F '|' '/^>/ {F=sprintf("%s.fasta",$2); print > F;next;} {print >> F;}' database.fas
 i=0; for f in *.fasta; do d=dir_$(printf %03d $((i/500+1))); mkdir -p $d; mv "$f" $d; let i++; done
 
@@ -109,6 +112,7 @@ cp Prepare_to_PALM_SETUP_II_part.sh $dir
 cp -r CodemlWrapper/ $dir
 cp fasta2phylip.pl $dir 
 cp tree.txt $dir 
+cp codeml $dir
 cp PAML_aling_PRANK.sh $dir
 cp muscle3.8.31_i86linux64 $dir 
 cp fasta2phylip.pl $dir
@@ -125,6 +129,7 @@ cp -r tree/ Dir_$file && /
 cp -r CodemlWrapper/ Dir_$file && /
 cp fasta2phylip.pl Dir_$file && /
 cp tree.txt Dir_$file && /
+cp codeml Dir_$file && /
 mv $file Dir_$file && /
 cp muscle3.8.31_i86linux64 Dir_$file && /
 cp fasta2phylip.pl Dir_$file && /

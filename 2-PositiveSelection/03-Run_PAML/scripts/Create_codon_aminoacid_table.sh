@@ -1,17 +1,20 @@
 #! /bin/bash
 #$ -l highp,h_rt=2:00:00,h_data=1G
 #$ -pe shared 1
-#$ -N Indel_PAML_I
+#$ -N AminoToNucle
 #$ -cwd
 #$ -m bea
 #$ -o ./Indels_PAML_I.out
 #$ -e ./Indels_PAML_I.err
 #$ -M dechavezv
 
+DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
+
 echo '############'
 echo Move_Transcript
 echo '############'
-cd Procesing/
+
+cd ${DIREC}/Procesing
 cp move_file.sh Cleaned_Genomes/
 cd Cleaned_Genomes
 mkdir Transcripts
