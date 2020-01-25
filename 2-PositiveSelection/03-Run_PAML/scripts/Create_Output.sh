@@ -79,10 +79,10 @@ rm Pvalue_${input}
 mv Edited_Pvalue_${input} Pvalue_${input}
 
 
-#rm Edited_${input}  #delete intermidiate files
-#rm Edited_Pvalue_${input} #delete intermidiate files
-#rm LRT_Edited_${input} #delete intermidiate files
-#rm Filtered_${input} #delete intermidiate files
+rm Edited_${input}  #delete intermidiate files
+rm Edited_Pvalue_${input} #delete intermidiate files
+rm LRT_Edited_${input} #delete intermidiate files
+rm Filtered_${input} #delete intermidiate files
 
 echo '############'
 echo Get BEB sites
