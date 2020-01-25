@@ -1,4 +1,5 @@
 #! /bin/bash
+
 #$ -wd /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
 #$ -l highp,h_rt=36:00:00,h_data=5G
 #$ -N subPAML
@@ -53,6 +54,3 @@ echo  Create final multispecies sequences and ouput files
 echo '######################################'
 
 $QSUB ${SCRIPTDIR}/Create_Output.sh
-
-## cd ${DIREC}
-## rm -rf Procesing
