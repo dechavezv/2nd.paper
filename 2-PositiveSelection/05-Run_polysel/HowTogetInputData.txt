@@ -1,0 +1,51 @@
+A. Choosing your NCBI pathways:
+https://www.ncbi.nlm.nih.gov/biosystems/
+Choose advanced search
+Choose “BiosystemType” and type “pathway”
+[Optional: if you want dog-specific, you can have a second field that is Organism “canis lupus familiaris”]
+So your search will look like:
+"pathway"[BioSystemType]
+or
+("pathway"[BioSystemType]) AND "canis lupus familiaris"[Organism]
+
+If you don’t specify that it has to be dog, after you hit ‘search’ you’ll get a list of pathways, and you can restrict it just to ‘conserved Biosystems’
+
+Then download as a .csv file (you need the CSV to create the input files for Polysel)
+
+B. Generating the input files
+You need 3 tab delimited files
+
+1. ObjInfo.txt: this is the info on your genes: objID [the NCBI uid] objStat [the fourth root of your delta lnL] objName [the gene symbol] and then any other info columns you want
+To get UIDs for my genes, I downloaded the gene2ensembl file from the NCBI ftp site and used it to go between (you’ll see in my script that some genes don’t have a 1:1 UID due to isoforms, etc. so I first used a combination of gene ID / protein ID from Ensembl, then got a few more based on just the gene ID that didn’t have isoforms): ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/
+
+this will depend a lot on how your genes are formatted, so you’ll probably have to script it from scratch, mostly
+
+2. SetInfo: this is the info on the pathways from biosystems. You get this from the .csv file I described in part A. You have to subset it to just have the biosystems ID number (bsid), the name, and the source (optional)
+
+3. SetObj.txt This is the correspondence between each pathway and a gene. \
+So it just has 2 columns with the bsid of the pathway and then the uid of a gene in the pathway. \
+So pathways and genes will show up in multiple rows  This was the hardest for me to track down! \
+I got it by downloading the biosystems_gene_all.gz file from the NCBI Biosystems FTP site: ftp://ftp.ncbi.nih.gov/pub/biosystems/biosystems.20170421/
+This has info on every pathway, so then I subset to only include the biosystems I chose in part A. :)\
+(Note: some pathways don’t have any genes associated with them so won’t appear in the file)
+
+I’m attaching my preparation R script in case it helps you :)
+
+This isn’t a complete guide, but I hope it helps you save time and get started! :)
+~ Annabel
+
+============================================ 
+biosystems_gene.gz 
+============================================ 
+
+This file lists associations between biosystems and Entrez Gene records
+that represent biosystem components. In this file, the GO records have
+been filtered out. The associations were made via the method 
+described in: 
+http://www.ncbi.nlm.nih.gov/Structur...rectLinksGenes. 
+
+The file is formatted as: 
+
+Column 1: bsid of biosystem 
+Column 2: GeneID of the gene 
+Column 3: score
