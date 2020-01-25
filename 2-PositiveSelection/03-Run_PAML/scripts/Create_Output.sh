@@ -12,10 +12,18 @@
 . /u/local/Modules/default/init/modules.sh
 module load python/2.7.3
 module load perl/5.10.1
+module load R
 export PERL5LIB=$HOME/VESPA-1.0:$PERL5LIB
 
 export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
 export data=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML
+
+echo '############'
+echo Create directories to sotre intermediate files
+echo '############'
+cd ${Direc}
+mkdir PAML_LRT
+
 
 echo '############'
 echo Get Likelihoods
@@ -67,7 +75,7 @@ export anaconda=/u/home/d/dechavez/anaconda3/bin
 
 grep -E -v '^[0-9]|^\w+$' ${input} > Edited_${input} #delete empty line from file
 ${anaconda}/python ${scripts}/calculate_LTR.py Edited_${input} LRT_Edited_${input} #calculate LRT, for mor einformation on how to calculate LRT and p_valus go to https://evosite3d.blogspot.com/2011/09/identi$
-${R}/Rscript ${scripts}/R/calculate_pvalues.R LRT_Edited_${input} Pvalue_${input} #calculate p_calues with one degree of freedom
+Rscript ${scripts}/calculate_pvalues.R LRT_Edited_${input} Pvalue_${input} #calculate p_calues with one degree of freedom
 awk '{ print $2,$3,$4,$5}' Pvalue_${input} \
 | perl -pe 's/"//g' | perl -pe 's/V2/Ensmebl_ID\tStatistic/;s/P-value/Pvalue/;s/Static_Signif/Significance/g' \
 > Edited_Pvalue_${input}
@@ -91,9 +99,6 @@ echo '############'
 ## <something>/PAML_out/Tree_Dir_ENSCAFG00000000001.fasta/modelA/Omega1/
 ## If you dont have the path above change the regualr expresion " after sed "1i$(echo ${PWD##*line/}
 
-
-mkdir ${Direc}/BEB_Sites
-
 export BEB_Sites=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/BEB_Sites
 export PAML_dir=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/PAML_out_before_SWAMP
 export script=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/scripts
@@ -115,6 +120,20 @@ echo " ************************** Extracting BEB Sites *************************
 # Here the table with Pvalues  is `Pvalue_LRT_I_Masked_BD_MW_Feb17_2019.txt`
 
 cd ${BEB_Sites}
+mv ${Pvalue}/Pvalue_${input} ./
+python ${script}/Append_BEB_site_to_table.py Pvalue_${input} BEB_$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt BEB_
+mv BEB_Pvalue* ${data}
 
-python ${script}/Append_BEB_site_to_table.py ${Pvalue}/P_values_${input} BEB_$(date | perl -pe 's/\w+\s+(\w+)\s+(\d+)\s+\d+\:\d+\:\d+\s+PST\s+(\d+)/\1.\2.\3/g').txt BEB_
-mv BEB_P_values* ${data}
+echo '#####################'
+echo Delete all intermidiate files
+echo '#####################'
+
+cd ${Direc} 
+
+rm -rf Translated_Cleaned_Genomes
+rm -rf PAML_LRT
+rm -rf Cleaned_Genomes
+rm database.fas
+rm *.log
+rm -rf Procesing
+
