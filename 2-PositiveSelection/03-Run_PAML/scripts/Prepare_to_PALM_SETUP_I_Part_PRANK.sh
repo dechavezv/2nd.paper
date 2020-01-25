@@ -46,7 +46,6 @@ export Vespa=/u/home/d/dechavez/VESPA-1.0/vespa.py
 cd ${Direc}
 
 #mkdir Genomes
-mkdir PAML_LRT
 
 #echo '############'
 #echo Fix_format_Biomart_seq_into_PipelineFormat
