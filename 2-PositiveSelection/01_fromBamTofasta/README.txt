@@ -32,7 +32,7 @@ export BAM=2nd_call_cat_samt_ug_hc_BBJ_raw.vcf.table.bam_${i}.bam
    sed -i 's/red.fox/<your_spescies_here>/g' submit_fromAlignedBamToFasta.sh
 
 4. Specify the 95th percentile of coverage yping the following
-   sed -i 's/(depth.95th\=)\d+/\1<your_percentile>/g' submit_fromAlignedBamToFasta.sh
+   sed -i 's/(depth_95th\=)\d+/\1<your_percentile>/g' submit_fromAlignedBamToFasta.sh
 
 #AFTER CHEKING ALL THE INFO ABOVE !!! Run the pipeline just by typing the following:
 
