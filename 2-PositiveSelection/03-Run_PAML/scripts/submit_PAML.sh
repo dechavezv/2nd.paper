@@ -8,10 +8,10 @@
 #$ -m abe
 #$ -M dechavezv
 
-SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/scripts
-DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
+export SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML/scripts
+export DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
 
-QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
+export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 
 echo '######################################'
@@ -21,6 +21,7 @@ echo '######################################'
 $QSUB ${SCRIPTDIR}/Prepare_to_PALM_SETUP_I_Part_PRANK.sh
 
 
+#add more time if any step has not been completed
 sleep 1m
 
 cd ${DIREC}/Procesing
