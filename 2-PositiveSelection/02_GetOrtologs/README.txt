@@ -3,17 +3,9 @@ Author: Daniel Chavez, 2020 ©
 
 
 PLEASE READ THIS IMPORTANT INFORMATION BEFORE RUNING THE PIPELINE.
-1. Change the absolute paths with your own. These are within the following scripts:
+1. Change the absolute paths with your own. These are within all .sh scripts.
 
-        Create_codon_aminoacid_table.sh
-        Create_Output.sh
-        move_file.sh
-        PAML_aling_PRANK.sh
-        Prepare_to_PALM_SETUP_II_part.sh
-        Prepare_to_PALM_SETUP_I_Part_PRANK.sh
-        submit_PAML.sh
-
-    #The paths can be easily identify as they are always at the head of the bash scripts and are followed by the word `export`.
+    #The paths can be easily identify as they are always at the head of the bash scripts and are followed by the word `export` .
     #Notice that everything before 2nd.paper/ has to be replace with your own path.
     #For instance, if you want to change the current directory in Prepare_to_PALM_SETUP_I_Part_PRANK.sh you have to change:
         #From \
