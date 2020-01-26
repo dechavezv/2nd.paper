@@ -22,13 +22,11 @@ PLEASE READ THIS IMPORTANT INFORMATION BEFORE RUNING THE PIPELINE.
 
 3. Make sure to split your bed files in at least 7 diferent files (same size or # lines). This will allow to parallelize the job.
    #if you end up having less than 7 bed files. Type the following:
-    sed -i 's/..7/..<the_number_of_your_files_here> submit_exon_Extraction.sh
+    sed -i 's/..7/..<the_number_of_your_files_here> scripts/submit_exon_Extraction.sh
 
 #AFTER CHEKING ALL THE INFO ABOVE !!! Run the pipeline just by typing the following:
 
-
-qsub submit_exon_Extraction.sh
-
+qsub scripts/submit_exon_Extraction.sh
 
 #Here are some notes about the sctips
 
