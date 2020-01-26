@@ -3,6 +3,9 @@ Author: Daniel Chavez, 2020 ©
 
 
 PLEASE READ THIS IMPORTANT INFORMATION BEFORE RUNING THE PIPELINE.
+1. Make suere that you have a genome in fasta format in the following path as this will be the input to extract ortologs:
+	2nd.paper/data/Whole.genome.fasta.Jan.2020/<your_genome_in_fasta>
+
 1. Change the absolute paths with your own. These are within all .sh scripts.
 
     #The paths can be easily identify as they are always at the head of the bash scripts and are followed by the word `export` .
