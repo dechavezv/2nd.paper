@@ -8,9 +8,9 @@
 #$ -M dechavezv
 
 
-SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/scripts
+export SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/scripts
 
-QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
+export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 # chan the name of the spescies with the name your genome (eg. red.fox will be Extract_Exons_3.sh ${i} red.fox).
 # See the readme.txt for more details
@@ -30,3 +30,11 @@ for file in *.fa; do (echo $file && cat $file >> ../../../data/Genomes.canids.Ja
 cd ../
 rm -rf red.fox.fa_DirCanis*
 rm -rf red.fox.fa_Output*
+
+# finally concatenate all genes into a single file and put it in the corret folder in data/
+cat Merge_File/* > /u/home/d/dechavez/project-rwayne/2nd.paper/data/Genomes.canids.Jan.2020.Ortologs.fasta/red.fox.fa
+
+#Then remove files
+rm -rf Merge_File
+
+
