@@ -17,6 +17,7 @@ with this:
 <path_of_current_directory>/SWAMP_sequneces_10in15_and_3in5	
 
 Now to run the pipiline do the following:
+1. Provide your on newick file on the directory scripts/tree
 1. Copy all phylip alingments to this directoy
 2. Type: bash Make_directories.sh # this will create independnt files with the necesary subfolders to run downstream stpes 
 3. To save memory remove the alignments that are NOT in subfolder, type the following:
