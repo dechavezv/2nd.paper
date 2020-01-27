@@ -7,8 +7,8 @@
 #$ -m abe
 #$ -M dechavezv
 
-SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP/scripts
-DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP
+export SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP/scripts
+export DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP
 export seq=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/sequences_before_SWAMP
 
 QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
@@ -23,13 +23,25 @@ echo '############'
 
 cp ${seq}/* ./
 
+echo '############'
+echo  Make directories and move files
+echo '############'
+
 for file in *.fasta; do (mkdir Dir_$file && mv $file Dir_$file && /
-cp -r scripts/tree Dir_$file && /
+cp -r ${SCRIPTDIR}/tree Dir_$file && /
 cd Dir_$file && cp $file tree/modelA/Omega1 && /
+cp ${SCRIPTDIR}/codeml tree/modelA/Omega1 && /
+cp ${SCRIPTDIR}/codeml tree/modelAnull/Omega1 && /
+cp ${SCRIPTDIR}/codeml_modelA_rate_zero.ctl tree/modelA/Omega1 && /
+cp ${SCRIPTDIR}/codeml_modelA_masked.ctl $dir/modelA/Omega1 && /
+cp ${SCRIPTDIR}/codeml_modelAnull_masked.ctl $dir/modelAnull/Omega1 && /
 cd tree/modelA/Omega1 && mv *.fasta align.phy);done
+);done
+
+cd ${DIREC}/processing
 
 echo '############'
-echo  Make_subfolders_to_parallilize
+echo  Make subfolders to parallelize
 echo '############'
 i=0; for f in *.fasta; do d=dir_$(printf %03d $((i/200+1))); mkdir -p $d; mv "$f" $d; let i++; done
 
@@ -37,6 +49,3 @@ sleep 1m
 
 for file in dir*; do (echo $dir && cd $dir && $QSUB ${SCRIPTDIR}/Run.PAML.zero.rate.sh);done
 
-sleep 5m
-
-cd ${DIREC}
