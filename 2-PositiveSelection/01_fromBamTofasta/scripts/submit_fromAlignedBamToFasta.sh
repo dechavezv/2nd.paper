@@ -18,7 +18,7 @@ echo '######################################'
 echo  OPTION 1: WHOLE GENOME
 echo '######################################'
 
-$QSUB ${SCRIPTDIR}/from_AlignedBam_To_Fasta_byChr.sh ${depth_95th} ${spescies} 
+$QSUB ${SCRIPTDIR}/from_AlignedBam_To_Fasta.sh ${depth_95th} ${spescies} 
 
 
 # Run the next command ONLY if you have split your bam

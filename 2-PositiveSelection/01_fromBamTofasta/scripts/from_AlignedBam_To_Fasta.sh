@@ -13,6 +13,7 @@
 . /u/local/Modules/default/init/modules.sh
 module load bcftools
 module load samtools
+module load bedtools
 
 export BAM=/u/home/d/dechavez/project-rwayne/red.fox/vulp.SRR5328113.red.fox.MarkDup_Filtered.bam
 export REF=/u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa
@@ -22,11 +23,16 @@ export data=/u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.
 
 ## echo -e "\n Getting genome in FASTA format\n"
 
-cd ${Direcc}
+cd ${Direc}
 
 samtools mpileup -Q 20 -q 20 -u -v \
--f ${REF} ${BAM} | \
-bcftools call -c | \
-vcfutils.pl vcf2fq -d 3 -D $2 -Q 20 > ${BAM}.fq
+-f ${REF} ${BAM} |
+bcftools call -c |
+vcfutils.pl vcf2fq -d 3 -D $1 -Q 20 > ${BAM}.fq
 /u/home/d/dechavez/seqtk/seqtk seq -aQ33 -q20 -n N ${BAM}.fq > ${data}/$2.fa
+
+sleep 5h
+
+rm *.fq
+
 

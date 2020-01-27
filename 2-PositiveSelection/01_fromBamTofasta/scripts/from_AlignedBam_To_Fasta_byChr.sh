@@ -31,8 +31,10 @@ samtools mpileup -Q 20 -q 20 -u -v \
 -f ${REF} ${BAM} | \
 bcftools call -c | \
 vcfutils.pl vcf2fq -d 3 -D $2 -Q 20 > ${BAM}.fq
-/u/home/d/dechavez/seqtk/seqtk seq -aQ33 -q20 -n N ${BAM}.fq > Bychr/${BAM}_d3_phred33.fa
-
+/u/home/d/dechavez/seqtk/seqtk seq -aQ33 -q20 -n N ${BAM}.fq > Bychr/$3_chr$1.fa
 cat Bychr/* > ${data}/$3.fa
 
+sleep 5h
+
+rm *.fq
 rm -rf Bychr
