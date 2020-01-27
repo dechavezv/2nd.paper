@@ -21,7 +21,6 @@ export OUT=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/sequences_befor
 export Swamp_files=/u/home/d/dechavez/project-rwayne/2nd.paper/data/PAML/sequences_before_SWAMP/scripts
 
 cd ${OUT}
-cd $1
 
 echo '############'
 echo  Move_Control_files_rate_0
