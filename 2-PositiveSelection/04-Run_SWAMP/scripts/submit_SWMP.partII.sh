@@ -16,3 +16,7 @@ QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 cd ${DIREC}/processing
 
 for dir in dir*; do (echo $dir && cd $dir && $QSUB ${SCRIPTDIR}/SWAMP.sh);done
+
+sleep 15m
+
+cd ${DIREC}
