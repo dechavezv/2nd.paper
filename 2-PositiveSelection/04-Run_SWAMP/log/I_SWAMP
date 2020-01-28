@@ -1,0 +1,86 @@
+############
+Make_dir_for_PAML
+############
+############
+Make directories and move files
+############
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 30: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 31: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 32: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 33: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 34: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 35: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 36: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 37: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 30: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 31: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 32: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 33: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 34: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 35: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 36: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 37: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 30: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 31: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 32: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 33: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 34: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 35: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 36: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 37: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 30: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 31: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 32: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 33: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 34: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 35: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 36: /: is a directory
+/work/UGE/8.6.4/n7272/job_scripts/1919626: line 37: /: is a directory
+############
+Make subfolders to parallelize
+############
+dir_001
+Your job 1919628 ("rate_zero_PAML") has been submitted
+############
+Make_dir_for_PAML
+############
+############
+Make directories and move files
+############
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 30: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 31: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 32: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 33: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 34: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 35: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 36: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 37: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 30: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 31: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 32: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 33: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 34: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 35: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 36: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 37: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 30: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 31: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 32: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 33: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 34: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 35: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 36: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 37: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 30: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 31: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 32: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 33: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 34: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 35: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 36: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1920239: line 37: /: is a directory
+############
+Make subfolders to parallelize
+############
+dir_001
+Your job 1920380 ("rate_zero_PAML") has been submitted

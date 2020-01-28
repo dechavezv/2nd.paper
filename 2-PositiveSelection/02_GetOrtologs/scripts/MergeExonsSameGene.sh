@@ -49,5 +49,3 @@ for file in Out*; do python ../ReverseComplemet_noChr_Pos.py $file ReverseStrand
 #echo '############'
 mv ReverseStrand*  ${Direc}/${2}_Output
 
-
-##rm -rf ${2}_DirCanis_familiaris_${1}.bed 

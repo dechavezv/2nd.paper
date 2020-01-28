@@ -1,0 +1,4 @@
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[warning] samtools mpileup option `u` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[warning] samtools mpileup option `v` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[mpileup] 1 samples in 1 input files

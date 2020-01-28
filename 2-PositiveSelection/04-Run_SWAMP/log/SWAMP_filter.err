@@ -1,0 +1,112 @@
+Traceback (most recent call last):
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 783, in <module>
+    main()
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 133, in main
+    args.minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 233, in sliding_window_scan
+    interscan, branchcodes, minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 306, in sliding_window_scan_file
+    print_masked_phyfile(infile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 674, in print_masked_phyfile
+    print_phyfile(phyoutfile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 707, in print_phyfile
+    out = create_outfile(phyoutfile)  # Create output masked phylip file
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 751, in create_outfile
+    out = open(outfile, 'w')
+IOError: [Errno 2] No such file or directory: 'Dir_aling_masked.phy_Dir_ENSCAFG00000009622.fasta/tree/modelA/Omega1/align_masked.phy'
+Traceback (most recent call last):
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 783, in <module>
+    main()
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 133, in main
+    args.minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 233, in sliding_window_scan
+    interscan, branchcodes, minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 306, in sliding_window_scan_file
+    print_masked_phyfile(infile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 674, in print_masked_phyfile
+    print_phyfile(phyoutfile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 707, in print_phyfile
+    out = create_outfile(phyoutfile)  # Create output masked phylip file
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 751, in create_outfile
+    out = open(outfile, 'w')
+IOError: [Errno 2] No such file or directory: 'Dir_aling_masked.phy_Dir_ENSCAFG00000009623.fasta/tree/modelA/Omega1/align_masked.phy'
+Traceback (most recent call last):
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 783, in <module>
+    main()
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 133, in main
+    args.minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 233, in sliding_window_scan
+    interscan, branchcodes, minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 306, in sliding_window_scan_file
+    print_masked_phyfile(infile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 674, in print_masked_phyfile
+    print_phyfile(phyoutfile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 707, in print_phyfile
+    out = create_outfile(phyoutfile)  # Create output masked phylip file
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 751, in create_outfile
+    out = open(outfile, 'w')
+IOError: [Errno 2] No such file or directory: 'Dir_aling_masked.phy_Dir_ENSCAFG00000009624.fasta/tree/modelA/Omega1/align_masked.phy'
+Traceback (most recent call last):
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 783, in <module>
+    main()
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 133, in main
+    args.minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 233, in sliding_window_scan
+    interscan, branchcodes, minseqlength)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 306, in sliding_window_scan_file
+    print_masked_phyfile(infile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 674, in print_masked_phyfile
+    print_phyfile(phyoutfile, masked_dict)
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 707, in print_phyfile
+    out = create_outfile(phyoutfile)  # Create output masked phylip file
+  File "/u/home/d/dechavez/project-rwayne/SWAMP/SWAMP.py", line 751, in create_outfile
+    out = open(outfile, 'w')
+IOError: [Errno 2] No such file or directory: 'Dir_aling_masked.phy_Dir_ENSCAFG00000009628.fasta/tree/modelA/Omega1/align_masked.phy'
+cp: cannot stat `align_masked.phy': No such file or directory
+cp: cannot stat `align_masked.phy': No such file or directory
+cp: cannot stat `align_masked.phy': No such file or directory
+cp: cannot stat `align_masked.phy': No such file or directory
+/work/UGE/8.6.4/n6281/job_scripts/1918405: line 69: /: is a directory
+cp: cannot stat `align_masked.phy': No such file or directory
+mv: cannot stat `Dir_aling.phy_Dir_ENSCAFG00000009622.fasta.phy': No such file or directory
+/work/UGE/8.6.4/n6281/job_scripts/1918405: line 69: /: is a directory
+cp: cannot stat `align_masked.phy': No such file or directory
+mv: cannot stat `Dir_aling.phy_Dir_ENSCAFG00000009623.fasta.phy': No such file or directory
+/work/UGE/8.6.4/n6281/job_scripts/1918405: line 69: /: is a directory
+cp: cannot stat `align_masked.phy': No such file or directory
+mv: cannot stat `Dir_aling.phy_Dir_ENSCAFG00000009624.fasta.phy': No such file or directory
+/work/UGE/8.6.4/n6281/job_scripts/1918405: line 69: /: is a directory
+cp: cannot stat `align_masked.phy': No such file or directory
+mv: cannot stat `Dir_aling.phy_Dir_ENSCAFG00000009628.fasta.phy': No such file or directory
+/work/UGE/8.6.4/n6271/job_scripts/1918428: line 44: syntax error near unexpected token `newline'
+/work/UGE/8.6.4/n6271/job_scripts/1918428: line 44: `for '
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 70: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 70: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 70: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1918464: line 70: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 62: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 62: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 62: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 62: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 68: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 68: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 68: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 69: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 68: /: is a directory
+/work/UGE/8.6.4/n6271/job_scripts/1919281: line 69: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 62: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 62: /: is a directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 63: cd: ../../modelAnull/Omega1: No such file or directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 62: cd: Dir_aling.phy_Dir_ENSCAFG00000009624.fasta/tree/modelA/Omega1: No such file or directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 63: cd: ../../modelAnull/Omega1: No such file or directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 62: cd: Dir_aling.phy_Dir_ENSCAFG00000009628.fasta/tree/modelA/Omega1: No such file or directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 63: cd: ../../modelAnull/Omega1: No such file or directory
+/work/UGE/8.6.4/n7157/job_scripts/1919646: line 68: /: is a directory
+cp: cannot stat `align_masked.phy': No such file or directory
+mv: cannot stat `Dir_aling.phy_Dir_ENSCAFG00000009623.fasta.phy': No such file or directory

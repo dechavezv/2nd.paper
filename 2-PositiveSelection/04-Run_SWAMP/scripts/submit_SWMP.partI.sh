@@ -44,7 +44,5 @@ echo  Make subfolders to parallelize
 echo '############'
 i=0; for f in Dir_*; do d=dir_$(printf %03d $((i/200+1))); mkdir -p $d; mv "$f" $d; let i++; done
 
-sleep 1m
 
 for dir in dir*; do (echo $dir && cd $dir && $QSUB ${SCRIPTDIR}/Run.PAML.zero.rate.sh);done
-
