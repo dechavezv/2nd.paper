@@ -33,19 +33,18 @@ cd Dir_$file && cp $file tree/modelA/Omega1 && /
 cp ${SCRIPTDIR}/codeml tree/modelA/Omega1 && /
 cp ${SCRIPTDIR}/codeml tree/modelAnull/Omega1 && /
 cp ${SCRIPTDIR}/codeml_modelA_rate_zero.ctl tree/modelA/Omega1 && /
-cp ${SCRIPTDIR}/codeml_modelA_masked.ctl $dir/modelA/Omega1 && /
-cp ${SCRIPTDIR}/codeml_modelAnull_masked.ctl $dir/modelAnull/Omega1 && /
+cp ${SCRIPTDIR}/codeml_modelA_masked.ctl tree/modelA/Omega1 && /
+cp ${SCRIPTDIR}/codeml_modelAnull_masked.ctl tree/modelAnull/Omega1 && /
 cd tree/modelA/Omega1 && mv *.fasta align.phy);done
-);done
 
 cd ${DIREC}/processing
 
 echo '############'
 echo  Make subfolders to parallelize
 echo '############'
-i=0; for f in *.fasta; do d=dir_$(printf %03d $((i/200+1))); mkdir -p $d; mv "$f" $d; let i++; done
+i=0; for f in Dir_*; do d=dir_$(printf %03d $((i/200+1))); mkdir -p $d; mv "$f" $d; let i++; done
 
 sleep 1m
 
-for file in dir*; do (echo $dir && cd $dir && $QSUB ${SCRIPTDIR}/Run.PAML.zero.rate.sh);done
+for dir in dir*; do (echo $dir && cd $dir && $QSUB ${SCRIPTDIR}/Run.PAML.zero.rate.sh);done
 
