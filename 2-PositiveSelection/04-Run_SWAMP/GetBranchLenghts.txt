@@ -1,0 +1,27 @@
+
+# After you have run scripts/submit_SWMP.partI.s. Extract information about branch and labels from \
+# a random file \
+# You can get this information by typing the following from THIS DIRECTORY
+
+grep -A2 -B2 'tree with node'  processing/dir_001/Dir_aling.phy_Dir_ENSCAFG00000009628.fasta/tree/modelA/Omega1/rst > branch_canids.txt
+
+############ Create file with branch lengths ############################
+#You will work on your file name branch_canids.txt
+
+# You have to match to sets of information:
+
+  a. nodes and terminarl branches provide in numbers.
+  16..3    16..17   17..18   18..5    18..8    17..6    16..19   19..20   20..21 ..etc
+
+  b. name of spescies.
+  (3_Caur, ((5_Cfam, 8_Clupu) 18 , 6_Clat) 17 ...etc
+
+# The resulting files should look something like this:
+  16..3	        Caur
+  16..17	Cfam,Clupu,Clat
+  17..18	Cfam,Clupu
+  ..etc
+
+# save your file here: '2nd.paper/2-PositiveSelection/04-Run_SWAMP/scripts'
+
+# For more information about this file take a look at the sample file scripts/sample_branch_canids.txt
