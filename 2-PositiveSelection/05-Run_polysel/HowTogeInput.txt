@@ -35,7 +35,7 @@ For further information go to the authors github repoitory https://github.com/CM
 	  python scripts/Compare_List_v2.py biosystems_gene_all SetID_pathways_dog.txt Genes_within_dog_Pwthways.txt
 	- The previous step will generated a file called "Genes_within_dog_Pwthways.txt". Rename this file, type the following:
 	   `mv Genes_within_dog_Pwthways.txt SetObj.txt`
-
+	- The heder of 1st comun of SetObj.txt shoud be "setID" and the 2nd "objID".
 3. ObjInfo.txt: this is the info on your genes: objID [the NCBI uid] objStat [the fourth root of your delta lnL] objName [the gene symbol] and then any other info columns you want\
    
 	- get UIDs: To get UIDs, downloaded the gene2ensembl file from the NCBI ftp site (ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/) and used it to get uid of your genes.
