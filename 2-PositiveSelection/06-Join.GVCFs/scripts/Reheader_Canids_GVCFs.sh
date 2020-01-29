@@ -9,6 +9,10 @@
 #$ -e ./Reheader_Canids_GVCFs.err
 #$ -M dechavezv
 
+# this pipe is better than sed beacuse it doesnt iterate trough every line
+# However the tool can be aplied to independet VCF files as well
+# for more information got to "https://samtools.github.io/bcftools/bcftools.html"
+
 # then load your modules:
 . /u/local/Modules/default/init/modules.sh
 module load bcftools
