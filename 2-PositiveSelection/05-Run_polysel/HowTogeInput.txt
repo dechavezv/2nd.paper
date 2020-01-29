@@ -3,8 +3,8 @@ Autthor DAniel Chavez, 2020 (Thanks to Annabel Beichman for her help to get some
 This Pipeline has information step by step in how to performed polysel analysis.
 For further information go to the authors github repoitory https://github.com/CMPG/polysel or refert to the paper https://academic.oup.com/mbe/article-lookup/doi/10.1093/molbev/msx083#supplementary-data
 
-1. Download a cvs file with pathways of your spescies from NCBI. This is how: 
-
+1. SetInfo: this is the info on the pathways from biosystems. Download a cvs file with pathways \
+   of your spescies from NCBI. This is how: 
 	- go to https://www.ncbi.nlm.nih.gov/biosystems/
 	- Choose advanced search
 	- Choose “BiosystemType” and type “pathway”
@@ -14,45 +14,47 @@ For further information go to the authors github repoitory https://github.com/CM
 		or
 		("pathway"[BioSystemType]) AND "canis lupus familiaris"[Organism]
 
-	If you don’t specify that it has to be dog, after you hit ‘search’ you’ll get a list of pathways, and you can restrict it just to ‘conserved Biosystems’
-	Then download as a .csv file (you need the CSV to create the input files for Polysel)
+	If you don’t specify that it has to be dog, after you hit ‘search’ you’ll get a list of pathways, \
+	and you can restrict it just to ‘conserved Biosystems’
+ 
+     Download as a .csv file (you need the CSV to create the input for polysle). Then, subset the file you downloaded \
+     to just have the biosystems ID number (bsid), the name, and the source (optional) by typing the following:
 
-2. SetInfo: this is the info on the pathways from biosystems. You get this from the .csv file described in stp 1. \
-   Then, subset it to just have the biosystems ID number (bsid), the name, and the source (optional) by typing the following:
-
-   cut -f1,3,4 > SetInfo.txt
+     `cut -f1,3,4 > SetInfo.txt`
 
    The heder of 1st comun of SetInfo.txt shoud be SetID, 2nd setName and 3rd setSource colum (optional)
 
-
-3. SetObj.txt: This is the correspondence between each pathway and a gene. \
+2. SetObj.txt: This is the correspondence between each pathway and a gene. \
    So it just has 2 columns with the bsid of the pathway and then the uid of a gene in the pathway. \
    So pathways and genes will show up in multiple rows. To generate this file do the following:
 	- downloading the biosystems_gene_all.gz file from the NCBI Biosystems FTP site: ftp://ftp.ncbi.nih.gov/pub/biosystems/biosystems.20170421/ \
 	   (Note: some pathways don’t have any genes associated with them so won’t appear in the file)
 	- Then Subset the cvs from step 1 to only SetID. You can do this by typing the following:
-          cut -f1 <file_with_pathways_dog_from_step1.csv> > SetID_pathways_dog.txt
+          `cut -f1 <file_with_pathways_dog_from_step1.csv> > SetID_pathways_dog.txt`
 	- Then, in order to get only those genes within the pathway of the dog, type the following:
 	  python scripts/Compare_List_v2.py biosystems_gene_all SetID_pathways_dog.txt Genes_within_dog_Pwthways.txt
 	- The previous step will generated a file called "Genes_within_dog_Pwthways.txt". Rename this file, type the following:
-	   mv Genes_within_dog_Pwthways.txt SetObj.txt
+	   `mv Genes_within_dog_Pwthways.txt SetObj.txt`
 
-4. ObjInfo.txt: this is the info on your genes: objID [the NCBI uid] objStat [the fourth root of your delta lnL] objName [the gene symbol] and then any other info columns you want\
+3. ObjInfo.txt: this is the info on your genes: objID [the NCBI uid] objStat [the fourth root of your delta lnL] objName [the gene symbol] and then any other info columns you want\
    
 	- get UIDs: To get UIDs, downloaded the gene2ensembl file from the NCBI ftp site (ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/) and used it to get uid of your genes.
   	  Note: some genes don’t have a 1:1 UID due to isoforms, etc. Use a combination of gene ID / protein ID from Ensembl, then got a few more based on just the gene ID that didn’t have isoforms
 	- You need to append UIDS (as objID header column) into your PAML table. To do this you will need the "gene2ensembl" file obtained in the previous step and yout PAML table. \
           Then type the following:
-	  python scirpts/Append_NCBIuid_to_PAMLtable.py <PAML_table> gene2ensembl UIDS_
+	  `python scirpts/Append_NCBIuid_to_PAMLtable.py <PAML_table> gene2ensembl UIDS_`
 	- Optional: Append the values in SUMSTAT (summary of files) to the file generated in the previous step (UIDS_<file>), type the following:
-	  python Append_NCBIuid_to_PAMLtable.py UIDS_<file> SUMSTAT_UIDS_<file>
-	- Then renmae the file by typing:
- 	  mv mv SUMSTAT_UIDS_<file> ObjInfo.txt 
+	  `python Append_NCBIuid_to_PAMLtable.py UIDS_<file> SUMSTAT_UIDS_<file>`
+	   Note: the SUMSTAT (summary of files) was generated in STEP 04-SWAMP
+	- Then rename the file by typing:
+ 	  mv SUMSTAT_UIDS_<file> ObjInfo.txt 
 
-5. Finally move the input files to data:
+4. Finally move the input files to data:
    mv ObjInfo.txt data
    mv SetObj.txt data
    mv SetInfo.txt data
+
+5. TO RUN THE POLYSEL FOLLOWED INSTRUCTION ON THE README.md FILE
 
 ===============================================================
 Note on biosystems_gene.gz 
