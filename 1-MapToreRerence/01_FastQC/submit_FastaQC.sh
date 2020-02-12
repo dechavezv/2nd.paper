@@ -18,4 +18,8 @@ export DIR=/u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav
 
 cd ${DIR}
 
-${QSUB} ${SCRIPT} ${DIR} Bush-dog_R0902_2_1.fastq.gz Bush-dog_R0902_2_2.fastq.gz BD.bam BD_1a BD Lib1 C7424ACXX Smithsonian
+#save name of samples withouth the _R1_001.fastq.gz  or _R2_001.fastq.gz extension  
+ls *.fastq.gz | perl -pe 's/_R\d+_\d+.fastq.gz//g' | uniq > list.of.samples.txt
+
+# then itarate through the list and run Fastaqc
+for line in $(cat list.of.samples.txt); do ${QSUB} ${SCRIPT} $line;done
