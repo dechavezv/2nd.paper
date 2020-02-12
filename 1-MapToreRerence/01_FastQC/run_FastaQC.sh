@@ -6,15 +6,15 @@
 #$ -N FASTAQC_Lvet
 #$ -cwd
 #$ -m bea
-#$ -o /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/log/FASTAQC.out
-#$ -e /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/log/FASTAQC.err
+#$ -o /u/home/d/dechavez/project-rwayne/Lvet/log/FASTAQC.out
+#$ -e /u/home/d/dechavez/project-rwayne/Lvet/log/FASTAQC.err
 #$ -M dechavezv
 
 # then load your modules:
 . /u/local/Modules/default/init/modules.sh
 module load java
 
-export RAW_read=/u/scratch/d/dechavez/Lvet
+export RAW_read=/u/home/d/dechavez/project-rwayne/Lvet/raw.reads
 export FASTAQC=/u/home/d/dechavez/project-rwayne/FastQC
 
 echo "########"
@@ -24,8 +24,8 @@ echo "#######"
 FastaQC_fn () {
 	echo "***** Beginning FastaqC of $1 *****"
 
- 	${FASTAQC}/fastqc ${RAW_read}/${1}_R1_001.fastq.gz 
-	${FASTAQC}/fastqc ${RAW_read}/${1}_R2_001.fastq.gz
+ 	${FASTAQC}/fastqc ${RAW_read}/${1}_R1.fastq.gz 
+	${FASTAQC}/fastqc ${RAW_read}/${1}_R2.fastq.gz
 
         echo "***** $1 processing complete *****"
 }
