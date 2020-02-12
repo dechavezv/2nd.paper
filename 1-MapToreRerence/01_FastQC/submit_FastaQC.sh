@@ -12,9 +12,8 @@
 
 #usage [dir] [read_1] [read_2] [outfile] [RG] [sample] [library] [flowcell] [seq center]
 
-#QSUB=/u/systems/UGE8.0.1vm/bin/lx-amd64/qsub
 QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
-SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/1-MapToreRerence/02_FastqToSam/run_FastqToSam_BD.sh
+SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/1-MapToreRerence/01_FastQC/run_FastaQC.sh
 
 DIR=/u/scratch/d/dechavez/BD
 
