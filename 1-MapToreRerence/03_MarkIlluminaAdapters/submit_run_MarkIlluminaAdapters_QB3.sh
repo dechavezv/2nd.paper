@@ -14,6 +14,6 @@ QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 cd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav
 
 for i in ./*.bam; do
-	$QSUB $SCRIPTDIR/run_MarkIlluminaAdapters_Lvet.sh ${i}
+	$QSUB $SCRIPTDIR/run_MarkIlluminaAdapters_QB3.sh ${i}
 #	sleep 30m
 done
