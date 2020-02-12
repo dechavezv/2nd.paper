@@ -24,8 +24,8 @@ echo "#######"
 FastaQC_fn () {
 	echo "***** Beginning FastaqC of $1 *****"
 
- 	${FASTAQC}/fastqc ${RAW_read}/${1} 
-	${FASTAQC}/fastqc ${RAW_read}/${1}
+ 	${FASTAQC}/fastqc ${RAW_read}/${1}_R1_001.fastq.gz 
+	${FASTAQC}/fastqc ${RAW_read}/${1}_R2_001.fastq.gz
 
         echo "***** $1 processing complete *****"
 }
