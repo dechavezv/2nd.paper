@@ -18,4 +18,4 @@ java -jar -Xmx16g /u/local/apps/gatk/3.7/GenomeAnalysisTK.jar \
 -allSites \
 -L chr$(printf "%02d" "$SGE_TASK_ID") \
 $(for j in {01..4}; do echo "-V /u/scratch/d/dechavez/MW/GVCFs/bcbr${j}_chr$(printf "%02d" "$SGE_TASK_ID").g.vcf.gz "; done) \
--o /u/home/d/dechavez/project-rwayne/MW/VCF/MW_allSamples_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz
+-o /u/home/d/dechavez/project-rwayne/MW/VCF/bcbr_joint_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz
