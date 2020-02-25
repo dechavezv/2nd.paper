@@ -19,4 +19,4 @@ java -jar -Xmx16g /u/local/apps/gatk/3.7/GenomeAnalysisTK.jar \
 -stand_call_conf 0 \
 -L chrX \
 $(for j in {01..5}; do echo "-V /u/scratch/d/dechavez/MW/GVCFs/bcbr${j}_chrX.g.vcf.gz "; done) \
--o /u/home/d/dechavez/project-rwayne/MW/VCF/MW_allSamples_chrX.vcf.gz
+-o /u/home/d/dechavez/project-rwayne/MW/VCF/bcbr_joint_chrX.vcf.gz
