@@ -1,12 +1,11 @@
 #! /bin/bash
 
-#$ -l highp,h_rt=18:00:00,h_data=1G
-#$ -pe shared 1
-#$ -N OrtoFasta_BD
+#$ -l highp,h_rt=18:00:00,h_data=1G,h_vmem=5G
+#$ -N OrtoFasta
 #$ -cwd
 #$ -m bea
-#$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/log/OrtoFasta_BD.out
-#$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/log/OrtoFasta_BD.err
+#$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/log/
+#$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/02_GetOrtologs/log/
 #$ -M dechavezv
 
 #highmem
