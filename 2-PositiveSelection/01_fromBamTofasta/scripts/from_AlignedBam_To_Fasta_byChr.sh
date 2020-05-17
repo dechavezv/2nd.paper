@@ -17,7 +17,7 @@ module load samtools
 #what chr?
 i=$1
 
-export BAM=/u/home/d/dechavez/project-rwayne/red.fox/vulp.SRR5328113.red.fox.MarkDup_Filtered.bam
+export BAM=/u/home/d/dechavez/project-rwayne/red.fox/vulp.SRR5328113.red.fox.chr$i.MarkDup_Filtered.bam
 export REF=/u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa
 export Direc=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/01_fromBamTofasta
 export data=/u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020
