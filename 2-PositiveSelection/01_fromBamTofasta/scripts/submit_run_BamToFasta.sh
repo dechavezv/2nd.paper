@@ -1,19 +1,31 @@
 #! /bin/bash
 
-#$ -wd /u/home/d/dechavez/project-rwayne/dire.wolf
+#$ -wd /u/scratch/d/dechavez/IndelReal/split.bams
 #$ -l highp,h_rt=4:00:00,h_data=1G
 #$ -N subBamTofasta
-#$ -o /u/home/d/dechavez/project-rwayne/dire.wolf/log/BamToFasta
-#$ -e /u/home/d/dechavez/project-rwayne/dire.wolf/log/BamToFasta
+#$ -o /u/scratch/d/dechavez/IndelReal/split.bams/log/
+#$ -e /u/scratch/d/dechavez/IndelReal/split.bams/log/
 #$ -m abe
 #$ -M dechavezv
 
 export SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/01_fromBamTofasta/scripts
-export DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/01_fromBamTofasta
+export DIREC=/u/scratch/d/dechavez/IndelReal/split.bams
 export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 cd ${DIREC}
 ### $QSUB run_BamToFasta.sh ${BAM} ${depth_95th}
+
+for i in {01..38} X; do
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh CL100060195_L02_S2_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 80
+done
+
+#for i in {01..38} X; do
+###$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BAM-RMDUP_ACAD1735.bam_chr${i}.bam 20
+#done
+
+#for i in {01..38} X; do
+###$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BAM-RMDUP_ACAD18742.bam_chr${i}.bam 20
+#done
 
 ## for i in {01..38} X; do
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh bcbr01_Aligned.MarkDup_Filtered_Indelreal.bam_chr${i}.bam 49
@@ -51,9 +63,9 @@ cd ${DIREC}
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh bsve338_Aligned.MarkDup_Filtered_Indelreal.bam_chr${i}.bam 42
 ## done
 
-## for i in {01..38} X; do 
-## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cb17082018_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 78
-## done
+for i in {01..38} X; do 
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cb17082018_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 178
+done
 
 ## for i in {01..38} X; do 
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh SV16082018_Aligned.MarkDup_Filtered_Indelreal.bam_chr${i}.bam 78
@@ -63,4 +75,5 @@ cd ${DIREC}
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh bCth_Aligned.MarkDup_Filtered_Indelreal.bam_chr${i}.bam 47
 ## done
 
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh bCth_Aligned.MarkDup_Filtered_Indelreal_chrX.bam 47
+
+### $QSUB ${SCRIPTDIR}/run_BamToFasta.sh bCth_Aligned.MarkDup_Filtered_Indelreal_chrX.bam 47

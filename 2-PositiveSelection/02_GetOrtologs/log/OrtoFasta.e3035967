@@ -1,0 +1,926 @@
+mkdir: cannot create directory `bCth.fa_Output': File exists
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22316 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23935 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24406 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24823 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25356 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25814 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26324 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26921 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27600 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 28112 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 28612 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29015 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29444 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29836 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30188 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30631 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 31091 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 31608 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32084 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32567 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:   610 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1073 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1557 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2046 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2423 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2988 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3726 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4239 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4756 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5334 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5958 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  6545 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  7099 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  7778 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  8342 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  8856 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9255 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9769 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10236 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10875 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 11567 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 12256 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 12878 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 13417 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14338 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15214 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15953 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 16693 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 17400 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 18147 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 18923 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19674 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20195 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20783 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 21500 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22088 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22700 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23215 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23987 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24655 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25251 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25790 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26287 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26701 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27353 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27925 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 28535 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29205 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29880 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30401 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30929 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 31576 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32143 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32718 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:   769 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1351 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1697 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2027 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2354 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2690 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3036 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3411 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3756 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4385 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4871 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5346 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5843 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  6399 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  6998 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  7534 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  8151 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  8569 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9118 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9575 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10208 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10689 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 11327 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 11978 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 12482 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 13002 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 13330 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14049 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14564 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14995 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15418 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15987 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 16520 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 17089 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 17600 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 18287 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 18866 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19270 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19821 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20228 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20694 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 21181 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 21729 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22360 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22897 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23355 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23718 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24134 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24754 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25164 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25704 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26208 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26669 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27073 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27435 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27997 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 28472 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29096 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29694 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30368 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30901 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 31437 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 31910 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32520 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:   464 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1086 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1522 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2200 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2897 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3662 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4343 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4996 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5400 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5951 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  6498 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  7136 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  7716 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  8343 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9029 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9666 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10249 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10875 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 11629 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 12277 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 12845 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 13443 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14094 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14664 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15265 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15967 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 16672 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 17300 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 18032 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19156 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19783 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20365 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20952 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 21657 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22236 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22579 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22906 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23291 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23691 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24097 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24578 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25046 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25704 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26422 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27066 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27634 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 28412 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29013 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29800 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30763 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 31570 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32217 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 32763 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:   966 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  1729 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  2327 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3095 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  3913 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  4356 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5079 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  5884 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  6780 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  7688 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  8604 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75:  9448 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 10277 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 11143 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 11893 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 12700 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 13343 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14052 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 14999 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 15733 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 16482 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 17243 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 18064 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19016 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 19885 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 20761 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 21669 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 22573 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 23463 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24233 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 24988 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 25837 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 26668 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 27543 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 28365 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 29157 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30035 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+index file /u/home/d/dechavez/project-rwayne/2nd.paper/data/Whole.genome.fasta.Jan.2020/bCth.fa.fai not found, generating...
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+/work/UGE/8.6.4/n6264/job_scripts/3035967: line 75: 30704 Aborted                 (core dumped) bedtools getfasta -fi ${Fasta} -bed ${neutral} -fo ${OUT}/$file.fa
+mkdir: cannot create directory `Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/': No space left on device
+cp: cannot create regular file `Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/': Is a directory
+cp: cannot create regular file `Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/': Is a directory
+cp: cannot create regular file `Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/': Is a directory
+cp: cannot create regular file `Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/': Is a directory
+cp: cannot create regular file `Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/': Is a directory
+Error: The requested fasta output file (Dir_Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed/Merged_ENSCAFG00000005965ENSCAFT00000009632+.bed.fa) could not be opened. Exiting!
+mkdir: cannot create directory `Dir_Merged_ENSCAFG00000005969ENSCAFT00000009643+.bed/': No space left on device
+rm: write error: No space left on device

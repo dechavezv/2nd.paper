@@ -22,6 +22,7 @@ PLEASE READ THIS IMPORTANT INFORMATION BEFORE RUNING THE PIPELINE.
 
 2. Specify the name of your spescies by typing the following 
    sed -i 's/red.fox.fa/<your_spescies_here>/g' submit_exon_Extraction.sh
+   #Alternatevily provide a list of spescies names and put it in the sctip directory
 
 3. Make sure to split your bed files in at least 7 diferent files (same size or # lines). This will allow to parallelize the job.
    #if you end up having less than 7 bed files. Type the following:
