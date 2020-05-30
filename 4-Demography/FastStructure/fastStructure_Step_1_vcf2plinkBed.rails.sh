@@ -17,6 +17,6 @@ outdir=/u/home/d/dechavez/project-rwayne/rails.project/VCF/DanielData/${calldate
 mkdir -p $outdir
 # you need to use const-fid 0 otherwise it thinks that family name_sample name is structure of ID and tries to split it (and fails)
 # allow extra chromosomes: to get it to get over the fact that chr names are non standard (make sure these wont get ignored?)
-plink --vcf $indir/$infile --make-bed --keep-allele-order --const-fid 0 --allow-extra-chr --chr-set 35 no-x no-y no-xy no-mt -maf 0.05 -out $outdir/${infile%.vcf.gz}
+plink --vcf $indir/$infile --make-bed --keep-allele-order --const-fid 0 --allow-extra-chr --chr-set 36 no-x no-y no-xy no-mt -maf 0.05 -out $outdir/${infile%.vcf.gz}
 ### note for faststructure to work you have to filter on maf 0.05
 ## -chr-set changes the chromosome set. The first parameter specifies the number of diploid autosome pairs. For intance for the rail vcf that has 35chr I used '--chr-set 35 no-x no-y no-xy no-mt' 

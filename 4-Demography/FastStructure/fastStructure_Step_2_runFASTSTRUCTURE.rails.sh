@@ -1,9 +1,9 @@
 #! /bin/bash
 
-#$ -l highp,h_rt=22:00:00,h_data=10G
+#$ -l highmem,highp,h_rt=22:00:00,h_data=20G
 #$ -N FastStructure
-#$ -o /u/home/d/dechavez/project-rwayne/rails.project/FASTSTRUCTURE/log/FastqQC
-#$ -e /u/home/d/dechavez/project-rwayne/rails.project/FASTSTRUCTURE/log/FastqQC
+#$ -o /u/home/d/dechavez/project-rwayne/rails.project/FASTSTRUCTURE/log/
+#$ -e /u/home/d/dechavez/project-rwayne/rails.project/FASTSTRUCTURE/log/
 #$ -m abe
 #$ -M dechavezv
 
@@ -32,7 +32,7 @@ calldate=20200517 # date you called genotypes
 # program dir: (downloaded 20180726)
 fastDir=/u/home/d/dechavez/project-rwayne/fastStructure
 #kvals="1 2 3 4 5 6 7 8 9 10"
-kvals="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" # set this to whatever numbers you want 
+kvals="1 2 3 4 5 6 7 8 9 10" # set this to whatever numbers you want 
 #kvals=10
 indir=/u/home/d/dechavez/project-rwayne/rails.project/VCF/DanielData/${calldate}_filtered/plinkFormat # eventually going to be filtered SNP vcf (no monomorphic sites)
 infilePREFIX=LS_joint_allchr_Annot_Mask_Filter_passingSNPs.vcf
@@ -56,7 +56,7 @@ for k in $kvals
 do
 echo "carrying out faststructure analysis with K = $k "
 python $fastDir/structure.py -K $k --input=$indir/$infilePREFIX --output=$outdir/${infilePREFIX}.faststructure_output
-### --tol=10e-12 #use this if you want to increase convergance
+##### --tol=10e-12 #use this if you want to increase convergance
 
 # "This generates a genotypes_output.3.log file that tracks how the algorithm proceeds, 
 # and files genotypes_output.3.meanQ and genotypes_output.3.meanP 

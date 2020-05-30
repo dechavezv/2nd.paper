@@ -4,8 +4,8 @@
 #$ -l h_rt=30:00:00,h_data=2G,highp,h_vmem=60G
 #$ -N msmc
 #$ -pe shared 11
-#$ -o /u/scratch/d/dechavez/rails.project/VCF/msmc/log/
-#$ -e /u/scratch/d/dechavez/rails.project/VCF/msmc/log/
+#$ -o /u/scratch/d/dechavez/SA.VCF/log/
+#$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
 
@@ -18,13 +18,15 @@ msmc=/u/home/d/dechavez/msmc-master/msmc
 
 rundate=`date +%Y%m%d` # msmc rundate
 
-OUTDIR=/u/home/d/dechavez/project-rwayne/rails.project/VCF/DanielData/msmc/${date}/msmcAnalysis/output_${rundate}
+PREFIX=$1
+OUTDIR=/u/scratch/d/dechavez/SA.VCF/Filtered/${date}/msmcAnalysis/output_${rundate}
 mkdir -p $OUTDIR
 
-date=20200520 #Input creation date
-INPUTDIR=/u/home/d/dechavez/project-rwayne/rails.project/VCF/DanielData/msmc/${date}/msmcAnalysis/inputFiles
 
-$msmc -t 14 -I 0,1 -o $OUTDIR/rails.msmc.LS$1.out $INPUTDIR/chunk_LS$1_*_postMultiHetSep.txt
+date=20200530 #Input creation date
+INPUTDIR=/u/scratch/d/dechavez/SA.VCF/Filtered/${date}/msmcAnalysis/inputFiles
+
+$msmc -t 14 -o $OUTDIR/rails.msmc.${PREFIX}.out $INPUTDIR/chunk_${PREFIX}_*_postMultiHetSep.txt
 
 # use the following if you get an index error message
 ## -I 0,1

@@ -1,0 +1,29 @@
+#! /bin/bash
+
+#$ -l h_rt=24:00:00,h_data=5G,highp,h_vmem=10G,arch=intel*
+#$ -N msmc_rail
+#$ -cwd
+#$ -m bea
+#$ -o /u/scratch/d/dechavez/rails.project/VCF/msmc/log/
+#$ -e /u/scratch/d/dechavez/rails.project/VCF/msmc/log/
+#$ -M dechavezv
+
+source /u/local/Modules/default/init/modules.sh
+module load perl
+
+msmc_tools=/u/home/d/dechavez/msmc-tools
+msmc=/u/home/d/dechavez/msmc-master/msmc
+
+# date you called genotypes:
+date=20200520
+wd=/u/scratch/d/dechavez/rails.project/VCF/msmc/${date} # your working directory 
+
+i=1
+
+vcf=${wd}/LS_joint_chr${i}_TrimAlt_Annot_Mask_Filter_Allalleles_passingSNPs.vcf # this has already gone through masking
+
+# PREP FOR MSMC: 
+mkdir -p ${wd}/msmcAnalysis
+mkdir -p ${wd}/msmcAnalysis/inputFiles
+
+/u/home/d/dechavez/anaconda3/bin/python3 ${msmc_tools}/generate_multihetsep.py ${vcf} > ${wd}/msmcAnalysis/inputFiles/chunk_${i}_postMultiHetSep.txt
