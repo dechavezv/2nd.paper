@@ -1,11 +1,11 @@
 #! /bin/bash
-#$ -wd /u/scratch/d/dechavez/rails.project/Jaime.data.2018
-#$ -l highp,h_rt=12:00:00,h_data=13G,arch=intel*
-#$ -o /u/scratch/d/dechavez/rails.project/log/FastqToSam
-#$ -e /u/scratch/d/dechavez/rails.project/log/FastqToSam
+#$ -wd /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020
+#$ -l highp,h_rt=18:00:00,h_data=12G,arch=intel*,h_vmem=44G
+#$ -o /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/log/fast2bam.out
+#$ -e /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/log/fast2bam.err
 #$ -m abe
 #$ -M dechavezv
-#$ -N fq2sam
+#$ -N fast2bam
 
 #highmem
 
@@ -19,10 +19,10 @@ PICARD=/u/local/apps/picard-tools/current/picard.jar
 DIR=${1}
 cd ${DIR}
 
-mkdir /u/scratch/d/dechavez/rails.project/temp/${2%.*}
-TEMP_DIR=/u/scratch/d/dechavez/rails.project/temp/${2%.*}
+mkdir /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/temp/${2%.*}
+TEMP_DIR=/u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/temp/${2%.*}
 
-java -Xmx8G -jar -Djava.io.tmpdir=${TEMP_DIR} ${PICARD} FastqToSam \
+java -Xmx7G -jar -Djava.io.tmpdir=${TEMP_DIR} ${PICARD} FastqToSam \
 FASTQ=${DIR}/${2} \
 FASTQ2=${DIR}/${3} \
 OUTPUT=${DIR}/${4} \

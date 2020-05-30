@@ -1,14 +1,11 @@
 #!/bin/bash
-
-#$ -l highmem,highp,h_rt=22:00:00,h_data=35G
-#$ -N GVCF.HC.Rails
-#$ -cwd
-#$ -m bea
-#$ -o /u/home/d/dechavez/project-rwayne/rails.project/gvcf/log/gvcf4.1.14.out
-#$ -e /u/home/d/dechavez/project-rwayne/rails.project/gvcf/log/gvcf4.1.14.err
+#$ -wd /u/scratch/d/dechavez/rails.project/bams/Daniel.2020/bam
+#$ -l highmem,h_rt=190:00:00,h_data=30G,highp,h_vmem=50G
+#$ -N HC_rail
+#$ -o /u/scratch/d/dechavez/rails.project/bams/Daniel.2020/bam/log/gvcf/log/reports
+#$ -e /u/scratch/d/dechavez/rails.project/bams/Daniel.2020/bam/log/gvcf/log/reports
+#$ -m abe
 #$ -M dechavezv
-
-## highmem
 
 # then load your modules:
 . /u/local/Modules/default/init/modules.sh
@@ -16,17 +13,12 @@ module load java
 module load samtools
 source activate gatk-intel
                                      
-export DIREC=/u/home/d/dechavez/project-rwayne/rails.project/bams/filtered.bam.files
+export DIREC=/u/scratch/d/dechavez/rails.project/bams/Daniel.2020/bam
 export BAM=${1}
 export Reference=/u/home/d/dechavez/project-rwayne/rails.project/reference.genomes/InaccesibleRail/InaccesibleRail.fa
-export vcf=/u/home/d/dechavez/project-rwayne/rails.project/gvcf
-export temp=/u/scratch/d/dechavez/rails.project/temp
+export temp=/u/scratch/d/dechavez/rails.project/bams/Daniel.2020/bam/temp
 
 cd ${DIREC}
-
-mkdir -p ${vcf}/log
-mkdir -p ${vcf}/Inv.HC_VCF
-mkdir -p ${vcf}/tmp
 
 echo "#######"
 echo "Haplotype Caller for '$1' "
@@ -36,7 +28,7 @@ echo "########"
 HaplotypeCaller \
 -R ${Reference} \
 -I ${BAM} \
--O ${vcf}/${BAM%.bam}.g.vcf.gz \
+-O ${DIREC}/${BAM%.bam}.g.vcf.gz \
 -ERC BP_RESOLUTION \
 -mbq 10 \
 --output-mode EMIT_ALL_ACTIVE_SITES \

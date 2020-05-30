@@ -1,9 +1,9 @@
 #! /bin/bash
 
-#$ -wd /u/scratch/d/dechavez/rails.project/Jaime.data.2018
-#$ -l h_rt=14:00:00,h_data=25G,highp
-#$ -o /u/scratch/d/dechavez/rails.project/log/mrkDup.out
-#$ -e /u/scratch/d/dechavez/rails.project/log/mrkDup.err
+#$ -wd /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020
+#$ -l h_rt=34:00:00,h_data=27G,highp,h_vmem=70G,highmem_forced=TRUE
+#$ -o /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/log/mrkDup.out
+#$ -e /u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/log/mrkDup.err
 #$ -m abe
 #$ -M dechavezv
 
@@ -13,20 +13,18 @@ source /u/local/Modules/default/init/modules.sh
 module load java
 
 PICARD=/u/local/apps/picard-tools/current/picard.jar
-TEMP_DIR=/u/scratch/d/dechavez/rails.project/temp
-BAM_DIR=/u/scratch/d/dechavez/rails.project/Jaime.data.2018
+TEMP_DIR=/u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020/temp
+BAM_DIR=/u/home/d/dechavez/project-rwayne/rails.project/reads/Daniel.data.2020
 
 BAM1=$1
 BAM_OUT=$2
 
-OPT_DIST=$3
-
-java -Xmx20G -Djava.io.tmpdir=$TEMP_DIR -jar $PICARD MarkDuplicates \
+java -Xmx27G -Djava.io.tmpdir=$TEMP_DIR -jar $PICARD MarkDuplicates \
 MAX_RECORDS_IN_RAM=150000 \
 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000 \
 INPUT=$BAM_DIR/$BAM1 \
 OUTPUT=$BAM_DIR/$BAM_OUT \
 METRICS_FILE=$BAM_DIR/${BAM_OUT}_metrics.txt \
-OPTICAL_DUPLICATE_PIXEL_DISTANCE=${OPT_DIST} \
+OPTICAL_DUPLICATE_PIXEL_DISTANCE=2500 \
 CREATE_INDEX=true \
 TMP_DIR=$TEMP_DIR

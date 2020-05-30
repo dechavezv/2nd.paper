@@ -1,8 +1,8 @@
 #! /bin/bash
 
 #$ -wd /u/home/d/dechavez/project-rwayne/MW/VCF
-#$ -l h_rt=20:00:00,h_data=21G,highp
-#$ -t 1-38:1
+#$ -l h_data=21G,h_rt=72000,h_vmem=27G,arch=intel*
+#$ -t 10-38:1
 #$ -N GTgVCF
 #$ -o /u/home/d/dechavez/project-rwayne/MW/VCF/log/reports
 #$ -e /u/home/d/dechavez/project-rwayne/MW/VCF/log/reports
