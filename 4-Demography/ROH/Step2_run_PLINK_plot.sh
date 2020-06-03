@@ -1,6 +1,16 @@
 #! /bin/bash
+#$ -cwd
+#$ -l h_rt=04:00:00,h_data=8G,highp,h_vmem=30G,highmem_forced=TRUE
+#$ -N runROHstep2
+#$ -o /u/scratch/d/dechavez/BD/ROH/log/
+#$ -e /u/scratch/d/dechavez/BD/ROH/log/
+#$ -m abe
+#$ -M dechavezv
 
-PLINK=/u/home/j/jarobins/project-rwayne/utils/programs/plink_1.90/plink
+
+source /u/local/Modules/default/init/modules.sh
+module load vcftools
+module load plink
 
 cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530/plinkInputFiles
 
