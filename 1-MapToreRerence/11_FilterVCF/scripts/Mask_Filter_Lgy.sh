@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#$ -wd /u/home/d/dechavez/project-rwayne/Cth/VCF
+#$ -wd /u/home/d/dechavez/project-rwayne/Lvet/Lgy/VCF
 #$ -l highp,h_rt=24:00:00,h_data=10G,arch=intel*,h_vmem=30G
 #$ -N Filter.VCF.custom.python
 #$ -o /u/home/d/dechavez/project-rwayne/Lvet/Lgy/VCF/log/
