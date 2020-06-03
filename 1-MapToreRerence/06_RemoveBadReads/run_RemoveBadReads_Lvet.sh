@@ -2,8 +2,9 @@
 
 #$ -wd /u/scratch/d/dechavez/IndelReal
 #$ -l h_rt=22:00:00,h_data=8G,highp,h_vmem=40G
-#$ -o /u/scratch/d/dechavez/IndelReal/log/rmBad.out
-#$ -e /u/scratch/d/dechavez/IndelReal/log/rmBad.err
+#$ -N Remv
+#$ -o /u/scratch/d/dechavez/IndelReal/log/
+#$ -e /u/scratch/d/dechavez/IndelReal/log/
 #$ -m abe
 #$ -M dechavezv
 
