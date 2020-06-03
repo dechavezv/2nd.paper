@@ -1,6 +1,6 @@
 #! /bin/bash
 #$ -wd /u/home/d/dechavez/project-rwayne/BD/VCF
-#$ -l highp,h_vmem=34G,h_rt=24:00:00,h_data=10G,arch=intel*
+#$ -l highp,h_vmem=34G,h_rt=24:00:00,h_data=7G,arch=intel*
 #$ -N trim_annot
 #$ -o /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -e /u/home/d/dechavez/project-rwayne/BD/VCF
