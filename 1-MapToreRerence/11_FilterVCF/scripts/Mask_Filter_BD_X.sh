@@ -3,11 +3,10 @@
 #$ -wd /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -l highp,h_rt=24:00:00,h_data=12G,arch=intel*,h_vmem=30G
 #$ -N Filter.VCF.custom.python
-#$ -o /u/home/d/dechavez/project-rwayne/BD/VCF
-#$ -e /u/home/d/dechavez/project-rwayne/BD/VCF
+#$ -o /u/home/d/dechavez/project-rwayne/BD/VCF/log/
+#$ -e /u/home/d/dechavez/project-rwayne/BD/VCF/log/
 #$ -m abe
 #$ -M dechavezv
-
 
 #highmem_forced=TRUE,highp
 
@@ -24,33 +23,34 @@ GATK=/u/local/apps/gatk/3.7/GenomeAnalysisTK.jar
 cd /u/home/d/dechavez/project-rwayne/BD/VCF
 
 IDX=X
-VCF=$(ls *_chr${IDX}_*TrimAlt_Annot.vcf.gz)
+#VCF=$(ls Sve*_chr${IDX}_TrimAlt_Annot.vcf.gz)
+VCF=bsve04_chr${IDX}_TrimAlt_Annot.vcf.gz
 
 ### VariantFiltration
 LOG=${VCF%.vcf.gz}_VariantFiltration_${IDX}.log
 date "+%Y-%m-%d %T" > ${LOG}
 
-## java -jar -Xmx10g ${GATK} \
-## -T VariantFiltration \
-## -R ${REFERENCE} \
-## -mask ${REPEATMASK} -maskName "FAIL_Rep" \
-## -filter "QD < 2.0" -filterName "FAIL_QD" \
-## -filter "FS > 60.0" -filterName "FAIL_FS" \
-## -filter "MQ < 40.0" -filterName "FAIL_MQ" \
-## -filter "MQRankSum < -12.5" -filterName "FAIL_MQRankSum" \
-## -filter "ReadPosRankSum < -8.0" -filterName "FAIL_ReadPosRankSum" \
-## -filter "ReadPosRankSum > 8.0" -filterName "FAIL_ReadPosRankSum" \
-## -filter "SOR > 4.0" -filterName "FAIL_SOR" \
-## -l ERROR \
-## -V ${VCF} \
-## -o ${VCF%.vcf.gz}_Mask.vcf.gz &>> ${LOG}
+java -jar -Xmx10g ${GATK} \
+-T VariantFiltration \
+-R ${REFERENCE} \
+-mask ${REPEATMASK} -maskName "FAIL_Rep" \
+-filter "QD < 2.0" -filterName "FAIL_QD" \
+-filter "FS > 60.0" -filterName "FAIL_FS" \
+-filter "MQ < 40.0" -filterName "FAIL_MQ" \
+-filter "MQRankSum < -12.5" -filterName "FAIL_MQRankSum" \
+-filter "ReadPosRankSum < -8.0" -filterName "FAIL_ReadPosRankSum" \
+-filter "ReadPosRankSum > 8.0" -filterName "FAIL_ReadPosRankSum" \
+-filter "SOR > 4.0" -filterName "FAIL_SOR" \
+-l ERROR \
+-V ${VCF} \
+-o ${VCF%.vcf.gz}_Mask.vcf.gz &>> ${LOG}
 
-#exitVal=${?}
-#if [ ${exitVal} -ne 0 ]; then
-#	echo -e "FAILED SelectVariants" >> ${LOG}
-#	exit
-#fi
-#date "+%Y-%m-%d %T" >> ${LOG}
+exitVal=${?}
+if [ ${exitVal} -ne 0 ]; then
+	echo -e "FAILED SelectVariants" >> ${LOG}
+	exit
+fi
+date "+%Y-%m-%d %T" >> ${LOG}
 
 ### Custom filtering
 
