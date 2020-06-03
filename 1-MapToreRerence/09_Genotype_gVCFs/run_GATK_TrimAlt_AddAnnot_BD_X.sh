@@ -1,8 +1,8 @@
 #! /bin/bash
-#$ -wd /u/home/d/dechavez/project-rwayne/BD/VCF
-#$ -l highp,h_rt=24:00:00,h_data=9G,highp,h_vmem=34G
-#$ -o /u/home/d/dechavez/project-rwayne/BD/VCF
-#$ -e /u/home/d/dechavez/project-rwayne/BD/VCF
+#$ -wd /u/scratch/d/dechavez/SA.VCF
+#$ -l highp,h_rt=24:00:00,h_data=20G,h_vmem=44G
+#$ -o /u/scratch/d/dechavez/SA.VCF/log/
+#$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
 
@@ -17,20 +17,20 @@ REFERENCE=/u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa
 
 cd /u/home/d/dechavez/project-rwayne/BD/VCF
 
-java -jar -Xmx6g ${GATK} \
+java -jar -Xmx20g ${GATK} \
 -T SelectVariants \
 -R ${REFERENCE} \
 -L chrX \
 -trimAlternates \
--V bsve_joint_chrX.vcf.gz \
--o bsve_joint_chrX_TrimAlt.vcf.gz
+-V bsve04_chrX.vcf.gz \
+-o bsve04_chrX_TrimAlt.vcf.gz
 
-java -jar -Xmx6g ${GATK} \
+java -jar -Xmx20g ${GATK} \
 -T VariantAnnotator \
 -R ${REFERENCE} \
 -G StandardAnnotation \
 -A VariantType \
 -A AlleleBalance \
 -L chrX \
--V bsve_joint_chrX_TrimAlt.vcf.gz \
--o bsve_joint_chrX_TrimAlt_Annot.vcf.gz
+-V bsve04_chrX_TrimAlt.vcf.gz \
+-o bsve04_chrX_TrimAlt_Annot.vcf.gz
