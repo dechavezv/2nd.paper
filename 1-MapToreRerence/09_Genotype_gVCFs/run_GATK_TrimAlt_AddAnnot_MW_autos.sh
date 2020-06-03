@@ -23,8 +23,8 @@ java -jar -Xmx17g ${GATK} \
 -R ${REFERENCE} \
 -L chr$(printf "%02d" "$SGE_TASK_ID") \
 -trimAlternates \
--V bcbr_joint_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz \
--o bcbr_joint_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz
+-V bcbr05_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz \
+-o bcbr05_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz
 
 java -jar -Xmx17g ${GATK} \
 -T VariantAnnotator \
@@ -33,5 +33,5 @@ java -jar -Xmx17g ${GATK} \
 -A VariantType \
 -A AlleleBalance \
 -L chr$(printf %02d $SGE_TASK_ID) \
--V bcbr_joint_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz \
--o bcbr_joint_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt_Annot.vcf.gz 
+-V bcbr05_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz \
+-o bcbr05_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt_Annot.vcf.gz 
