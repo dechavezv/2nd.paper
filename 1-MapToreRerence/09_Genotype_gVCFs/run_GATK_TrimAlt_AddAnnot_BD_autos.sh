@@ -1,12 +1,12 @@
 #! /bin/bash
 #$ -wd /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -l highp,h_vmem=34G,h_rt=24:00:00,h_data=10G,arch=intel*
-#$ -N trim_annot.24_38
+#$ -N trim_annot
 #$ -o /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -e /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -m abe
 #$ -M dechavezv
-#$ -t 26-38:1
+#$ -t 1-38:1
 
 #highmem,highp
 
@@ -23,8 +23,8 @@ java -jar -Xmx7g ${GATK} \
 -R ${REFERENCE} \
 -L chr$(printf "%02d" "$SGE_TASK_ID") \
 -trimAlternates \
--V bsve_joint_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz \
--o bsve_joint_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz
+-V bsve04_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz \
+-o bsve04_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz
 
 java -jar -Xmx7g ${GATK} \
 -T VariantAnnotator \
@@ -33,5 +33,5 @@ java -jar -Xmx7g ${GATK} \
 -A VariantType \
 -A AlleleBalance \
 -L chr$(printf %02d $SGE_TASK_ID) \
--V bsve_joint_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz \
--o bsve_joint_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt_Annot.vcf.gz 
+-V bsve04_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt.vcf.gz \
+-o bsve04_chr$(printf "%02d" "$SGE_TASK_ID")_TrimAlt_Annot.vcf.gz 
