@@ -1,6 +1,6 @@
 #! /bin/bash
 #$ -wd /u/scratch/d/dechavez/SA.VCF 
-#$ -l h_rt=24:00:00,h_data=4G,highp,h_vmem=20G
+#$ -l h_rt=24:00:00,h_data=12G,highp,h_vmem=20G
 #$ -N trim_annot
 #$ -o /u/scratch/d/dechavez/SA.VCF/log
 #$ -e /u/scratch/d/dechavez/SA.VCF/log
@@ -19,7 +19,7 @@ PREFIX=$1
 
 cd /u/home/d/dechavez/project-rwayne/MW/VCF
 
-java -jar -Xmx4g ${GATK} \
+java -jar -Xmx12g ${GATK} \
 -T SelectVariants \
 -R ${REFERENCE} \
 -L chrX \
@@ -27,7 +27,7 @@ java -jar -Xmx4g ${GATK} \
 -V ${PREFIX}_chrX.vcf.gz \
 -o ${PREFIX}_chrX_TrimAlt.vcf.gz
 
-java -jar -Xmx3g ${GATK} \
+java -jar -Xmx12g ${GATK} \
 -T VariantAnnotator \
 -R ${REFERENCE} \
 -G StandardAnnotation \
