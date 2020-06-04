@@ -6,7 +6,7 @@
 #$ -e /u/home/d/dechavez/project-rwayne/MW/VCF
 #$ -m abe
 #$ -M dechavezv
-#$ -t 1-38:1
+#$ -t 23-23:1
 
 #highmem
 
