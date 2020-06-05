@@ -26,8 +26,8 @@ VCF = gzip.open(vcf_file, 'r')
 # Min depth (1/3x mean) and max depth (2x mean)
 #Mean depth Lve: 28.3954
 
-minD={'Lve':7}
-maxD={'Lve':60}
+minD={'Lvet':7}
+maxD={'Lvet':60}
 
 # Get list of samples in VCF file
 samples=[]
