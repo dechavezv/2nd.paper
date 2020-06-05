@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #$ -wd /u/home/d/dechavez/project-rwayne/BD/VCF
-#$ -l highp,h_rt=24:00:00,h_data=10G,arch=intel*,h_vmem=30G
+#$ -l highp,h_rt=24:00:00,h_data=18G,arch=intel*,h_vmem=30G
 #$ -N Filter.VCF.custom.python
 #$ -o /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -e /u/home/d/dechavez/project-rwayne/BD/VCF
@@ -31,20 +31,20 @@ VCF=bsve04_chr${IDX}.vcf.gz
 LOG=${VCF%.vcf.gz}_VariantFiltration_${IDX}.log
 date "+%Y-%m-%d %T" > ${LOG}
 
-java -jar -Xmx7g ${GATK} \
--T VariantFiltration \
--R ${REFERENCE} \
--mask ${REPEATMASK} -maskName "FAIL_Rep" \
--filter "QD < 2.0" -filterName "FAIL_QD" \
--filter "FS > 60.0" -filterName "FAIL_FS" \
--filter "MQ < 40.0" -filterName "FAIL_MQ" \
--filter "MQRankSum < -12.5" -filterName "FAIL_MQRankSum" \
--filter "ReadPosRankSum < -8.0" -filterName "FAIL_ReadPosRankSum" \
--filter "ReadPosRankSum > 8.0" -filterName "FAIL_ReadPosRankSum" \
--filter "SOR > 4.0" -filterName "FAIL_SOR" \
--l ERROR \
--V ${VCF} \
--o ${VCF%.vcf.gz}_Mask.vcf.gz &>> ${LOG}
+## java -jar -Xmx18g ${GATK} \
+## -T VariantFiltration \
+## -R ${REFERENCE} \
+## -mask ${REPEATMASK} -maskName "FAIL_Rep" \
+## -filter "QD < 2.0" -filterName "FAIL_QD" \
+## -filter "FS > 60.0" -filterName "FAIL_FS" \
+## -filter "MQ < 40.0" -filterName "FAIL_MQ" \
+## -filter "MQRankSum < -12.5" -filterName "FAIL_MQRankSum" \
+## -filter "ReadPosRankSum < -8.0" -filterName "FAIL_ReadPosRankSum" \
+## -filter "ReadPosRankSum > 8.0" -filterName "FAIL_ReadPosRankSum" \
+## -filter "SOR > 4.0" -filterName "FAIL_SOR" \
+## -l ERROR \
+## -V ${VCF} \
+## -o ${VCF%.vcf.gz}_Mask.vcf.gz &>> ${LOG}
 
 exitVal=${?}
 if [ ${exitVal} -ne 0 ]; then
