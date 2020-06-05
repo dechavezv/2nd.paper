@@ -25,7 +25,7 @@ cd /u/home/d/dechavez/project-rwayne/BD/VCF
 
 IDX=$(printf %02d ${SGE_TASK_ID})
 #VCF=$(ls *_chr${IDX}_*TrimAlt_Annot.vcf.gz)
-VCF=bsve04_chr${IDX}.vcf.gz
+VCF=bsve_chr${IDX}.vcf.gz
 
 ### VariantFiltration
 LOG=${VCF%.vcf.gz}_VariantFiltration_${IDX}.log
