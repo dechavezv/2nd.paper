@@ -7,7 +7,7 @@
 #$ -e /u/home/d/dechavez/project-rwayne/BD/VCF
 #$ -m abe
 #$ -M dechavezv
-#$ -t 1-38:1
+#$ -t 37-38:1
 
 #highmem_forced=TRUE,highp
 
