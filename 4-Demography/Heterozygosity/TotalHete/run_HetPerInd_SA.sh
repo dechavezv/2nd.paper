@@ -1,4 +1,5 @@
 #! /bin/bash
+
 #$ -wd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 #$ -l h_rt=24:00:00,h_data=2G,arch=intel*
 #$ -N SAtotHet
@@ -15,9 +16,13 @@ module load python
 
 SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/Heterozygosity/TotalHete
 
-Direc=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
+##Direc=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 
-cd ${Direc}
+##cd ${Direc}
 
-python ${SCRIPTDIR}/HetPerInd_SA.py $(ls *chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID}
-  
+cd /u/home/d/dechavez/project-rwayne/SA.VCF/Indv
+
+for line in $(cat /u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/list.sp.ROH.Het.txt); do /
+python ${SCRIPTDIR}/HetPerInd_SA.py $(ls ${line}_chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID};done
+
+#python ${SCRIPTDIR}/HetPerInd_SA.py $(ls *chr38*vcf.gz) 38
