@@ -1,13 +1,12 @@
 #! /bin/bash
 
 #$ -wd /u/home/d/dechavez/project-rwayne/Lvet/Lvet/VCF
-#$ -l highp,h_rt=24:00:00,h_data=10G,arch=intel*,h_vmem=30G
+#$ -l highp,h_rt=24:00:00,h_data=12G,arch=intel*,h_vmem=30G
 #$ -N Filter.VCF.custom.python
-#$ -o /u/home/d/dechavez/project-rwayne/Lvet/Lvet/VCF/log/
-#$ -e /u/home/d/dechavez/project-rwayne/Lvet/Lvet/VCF/log
+#$ -o /u/home/d/dechavez/project-rwayne/Lvet/Lvet/log/
+#$ -e /u/home/d/dechavez/project-rwayne/Lvet/Lvet/log/
 #$ -m abe
 #$ -M dechavezv
-
 
 #highmem_forced=TRUE,highp
 
@@ -24,13 +23,14 @@ GATK=/u/local/apps/gatk/3.7/GenomeAnalysisTK.jar
 cd /u/home/d/dechavez/project-rwayne/Lvet/Lvet/VCF
 
 IDX=X
+#VCF=$(ls Sve*_chr${IDX}_TrimAlt_Annot.vcf.gz)
 VCF=Lve01_chr${IDX}_TrimAlt_Annot.vcf.gz
 
 ### VariantFiltration
 LOG=${VCF%.vcf.gz}_VariantFiltration_${IDX}.log
 date "+%Y-%m-%d %T" > ${LOG}
 
-java -jar -Xmx7g ${GATK} \
+java -jar -Xmx10g ${GATK} \
 -T VariantFiltration \
 -R ${REFERENCE} \
 -mask ${REPEATMASK} -maskName "FAIL_Rep" \
@@ -54,7 +54,7 @@ date "+%Y-%m-%d %T" >> ${LOG}
 
 ### Custom filtering
 
-SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/1-MapToreRerence/11_FilterVCF/scripts/filterVCF_Lve.py
+SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/1-MapToreRerence/11_FilterVCF/scripts/filterVCF_BD.py
 
 python2.7 ${SCRIPT} ${VCF%.vcf.gz}_Mask.vcf.gz | /u/home/d/dechavez/tabix-0.2.6/bgzip > ${VCF%.vcf.gz}_Mask_Filter.vcf.gz
 
