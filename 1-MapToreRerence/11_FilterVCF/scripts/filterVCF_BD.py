@@ -24,11 +24,6 @@ VCF = gzip.open(vcf_file, 'r')
 
 
 # Min depth (1/3x mean) and max depth (2x mean)
-#Mean depth SV16082018: 38.5503
-#Mean depth Sve313: 60.6981
-#Mean depth Sve315: 17.5794
-#Mean depth Sve338: 20.9457
-
 minD={'SV16082018':12,'Sve313':20,'Sve315':5,'Sve338':6}
 maxD={'SV16082018':78,'Sve313':122,'Sve315':36,'Sve338':42}
 
@@ -111,6 +106,11 @@ for line0 in VCF:
 ### Reference must not be N
     if line[3]=='N':
         filter.append('FAIL_refN')
+        sys.stdout.write('%s\t%s\t%s\n' % ('\t'.join(line[0:6]), ';'.join(filter), '\t'.join(line[7:])) ) ; continue
+
+### Alternate but not QUAL
+    if line[3]!='N' and line[5]=='.' and line[7]=='.':
+        filter.append('FAIL_noQUAL')
         sys.stdout.write('%s\t%s\t%s\n' % ('\t'.join(line[0:6]), ';'.join(filter), '\t'.join(line[7:])) ) ; continue
 
 ### Alternate allele must not be multiallelic or <NON_REF>

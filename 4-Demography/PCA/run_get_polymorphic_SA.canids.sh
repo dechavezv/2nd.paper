@@ -6,7 +6,7 @@
 #$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
-#$ -t 37-38:1
+### #$ -t 37-38:1
 
 #echo "Task id is $(printf %02d $SGE_TASK_ID)"
 
@@ -18,8 +18,8 @@ Direc=/u/scratch/d/dechavez/SA.VCF
 cd /u/home/d/dechavez/project-rwayne/MW/VCF
 
 PREFIX=$1
-#i=$2
-i=$(printf %02d $SGE_TASK_ID)
+i=$2
+#i=$(printf %02d $SGE_TASK_ID)
 zcat ${PREFIX}_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz | \
 grep -v "^#" | grep -v "FAIL" | grep -v "WARN" | grep -vE '\./\.' \
 > ${Direc}/Filtered/20200530/${PREFIX}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf
