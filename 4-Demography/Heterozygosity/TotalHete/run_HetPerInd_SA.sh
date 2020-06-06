@@ -1,20 +1,23 @@
 #! /bin/bash
-#$ -wd /u/home/j/jarobins/project-rwayne/irnp/vcfs
+#$ -wd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 #$ -l h_rt=24:00:00,h_data=2G,arch=intel*
-#$ -N IRNPTotHet
-#$ -o /u/home/j/jarobins/project-rwayne/irnp/reports
-#$ -e /u/home/j/jarobins/project-rwayne/irnp/reports
+#$ -N SAtotHet
+#$ -o /u/scratch/d/dechavez/SA.VCF/log/
+#$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
-#$ -M jarobins
-#$ -t 1-39:1
+#$ -M dechavezv
+#$ -t 1-38:1
 
-# Usage: qsub run_HetPerInd_IRNP_013117_array.sh directory_with_files
+# Usage: qsub run_HetPerInd_SA.sh
 
 source /u/local/Modules/default/init/modules.sh
 module load python
 
-SCRIPTDIR=/u/home/j/jarobins/project-rwayne/utils/scripts/totalhet
+SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/Heterozygosity/TotalHete
 
-cd ${1}
+Direc=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 
-python ${SCRIPTDIR}/HetPerInd_IRNP_013117.py $(ls *chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID}
+cd ${Direc}
+
+python ${SCRIPTDIR}/HetPerInd_SA.py $(ls *chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID}
+  
