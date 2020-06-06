@@ -21,7 +21,7 @@ PREFIX=$1
 i=$2
 #i=$(printf %02d $SGE_TASK_ID)
 zcat ${PREFIX}_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz | \
-grep -v "^#" | grep -v "FAIL" | grep -v "WARN" | grep -vE '\./\.' \
+grep -v "FAIL" | grep -v "WARN" | grep -vE '\./\.' \
 > ${Direc}/Filtered/20200530/${PREFIX}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf
 
 vcf=${PREFIX}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf
