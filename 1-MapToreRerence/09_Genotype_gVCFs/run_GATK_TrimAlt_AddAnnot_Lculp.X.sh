@@ -17,13 +17,13 @@ REFERENCE=/u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa
 
 cd /u/home/d/dechavez/project-rwayne/Lculp/VCF
 
-java -jar -Xmx7g ${GATK} \
--T SelectVariants \
--R ${REFERENCE} \
--L chrX \
--trimAlternates \
--V Lculp01_chrX.vcf.gz \
--o Lculp01_chrX_TrimAlt.vcf.gz
+## java -jar -Xmx7g ${GATK} \
+## -T SelectVariants \
+## -R ${REFERENCE} \
+## -L chrX \
+## -trimAlternates \
+## -V Lculp01_chrX.vcf.gz \
+## -o Lculp01_chrX_TrimAlt.vcf.gz
 
 java -jar -Xmx7g ${GATK} \
 -T VariantAnnotator \
@@ -31,6 +31,7 @@ java -jar -Xmx7g ${GATK} \
 -G StandardAnnotation \
 -A VariantType \
 -A AlleleBalance \
--L chr$(printf %02d $SGE_TASK_ID) \
+-L chrX \
 -V Lculp01_chrX_TrimAlt.vcf.gz \
 -o Lculp01_chrX_TrimAlt_Annot.vcf.gz 
+
