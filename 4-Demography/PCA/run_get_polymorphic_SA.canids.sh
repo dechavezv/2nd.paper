@@ -15,7 +15,7 @@ module load python
 ### #> ${Direc}/Filtered/20200530/$1_chr$(printf %02d $SGE_TASK_ID)_Annot_Mask_Filter_passingSNPs.vcf
 Direc=/u/scratch/d/dechavez/SA.VCF
 
-cd /u/home/d/dechavez/project-rwayne/MW/VCF
+cd /u/home/d/dechavez/project-rwayne/Cth/VCF
 
 PREFIX=$1
 i=$2

@@ -18,5 +18,24 @@ cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 ## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh $line $i
 #done);done
 
+## for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bcbr05 $i;done
+
+## for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh Lgy01 $i;done
+
+
+## for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh Csmi01 $i;done
+
+## for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bsve04 $i;done
+
+## for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh Lve01 $i;done
+
+## for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh Lculp01 $i;done
+
 for i in {01..38}; do
-${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bcbr05 $i;done
+${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bCth $i;done
