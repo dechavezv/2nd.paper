@@ -1,5 +1,5 @@
 #! /bin/bash
-#$ -wd /u/home/d/dechavez/project-rwayne/Lculp/GVCFs
+#$ -wd /u/home/d/dechavez/project-rwayne/Lculp/VCF
 #$ -l highp,h_vmem=34G,h_rt=24:00:00,h_data=7G,arch=intel*
 #$ -N LculpTrimAnnotX
 #$ -o /u/home/d/dechavez/project-rwayne/Lculp/log/
@@ -15,7 +15,7 @@ module load java
 GATK=/u/local/apps/gatk/3.7/GenomeAnalysisTK.jar
 REFERENCE=/u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa
 
-cd /u/home/d/dechavez/project-rwayne/Lculp/GVCFs
+cd /u/home/d/dechavez/project-rwayne/Lculp/VCF
 
 java -jar -Xmx7g ${GATK} \
 -T SelectVariants \
