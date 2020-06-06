@@ -3,8 +3,8 @@
 #$ -wd /u/scratch/d/dechavez/BD/ROH/
 #$ -l highp,h_rt=4:00:00,h_data=1G
 #$ -N subROH
-#$ -o /u/scratch/d/dechavez/BD/ROH/log/ROH.out
-#$ -e /u/scratch/d/dechavez/BD/ROH/log/ROH.err
+#$ -o /u/scratch/d/dechavez/SA.VCF/log/
+#$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
 #$ -t 1-10:1
