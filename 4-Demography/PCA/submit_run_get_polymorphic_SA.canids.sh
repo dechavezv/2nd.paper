@@ -18,4 +18,5 @@ cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 ## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh $line $i
 #done);done
 
-${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bcbr05
+for i in {01..38}; do
+${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bcbr05 $i;done
