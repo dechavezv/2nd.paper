@@ -18,7 +18,7 @@ Direc=/u/scratch/d/dechavez/SA.VCF
 cd /u/scratch/d/dechavez/BD/VCF
 
 PREFIX=$1
-i=$2
+i=X
 #i=$(printf %02d $SGE_TASK_ID)
 zcat ${PREFIX}_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz | \
 grep -v "^#" | grep -v "FAIL" | grep -v "WARN" | grep -vE '\./\.' \
