@@ -4,7 +4,7 @@
 args=commandArgs(TRUE)
 
 # Genotype count data
-
+             _HetPerInd_v8.txt
 gtfiles=list.files(path="/u/scratch/d/dechavez/SA.VCF/Filtered/20200530/HetPerInd", pattern="PerInd.txt")
 gtfiles=paste("/u/scratch/d/dechavez/SA.VCF/Filtered/20200530/HetPerInd", gtfiles[1:38], sep="")
 gts=data.frame(read.table(gtfiles[1], header=T, sep='\t'))
