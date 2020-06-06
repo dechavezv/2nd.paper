@@ -13,7 +13,9 @@ QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 
-for line in $(cat /u/scratch/d/dechavez/SA.VCF/list.txt); do (echo $line && \
-for i in {01..38}; do
-${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh $line $i
-done);done
+#for line in $(cat /u/scratch/d/dechavez/SA.VCF/list.txt); do (echo $line && \
+#for i in {01..38}; do
+## ${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh $line $i
+#done);done
+
+${QSUB} -N OnlyPassVCF $SCRIPT_DIR/run_get_polymorphic_SA.canids.sh bcbr05
