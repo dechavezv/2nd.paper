@@ -7,19 +7,21 @@
 #$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
-
+#$ -t 1-38
 
 source /u/local/Modules/default/init/modules.sh
 module load vcftools
 module load plink
 
 wd=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
-
 cd ${wd}/plinkInputFiles
- 
 plinkoutdir=$wd/plinkOutputFiles
-
 mkdir -p $plinkoutdir
+
+# need to get chr name from file
+i=$(printf "%02d" "$SGE_TASK_ID")
+#i=39
+Sample=$1
 
 FILE=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
 OUTDIR=${plinkoutdir}/plinkroh_${1}_${2}_${3}_${4}_${5}_${6}_${7}
@@ -44,6 +46,6 @@ cd ${OUTDIR}
 source /u/local/Modules/default/init/modules.sh
 module load R
 
-SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROH_20181207.R
+## SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROH_20181207.R
 
-R CMD BATCH --no-save --no-restore '--args 'plinkroh_${1}_${2}_${3}_${4}_${5}_${6}_${7}' '${SCRIPT}
+## R CMD BATCH --no-save --no-restore '--args 'plinkroh_${1}_${2}_${3}_${4}_${5}_${6}_${7}' '${SCRIPT}
