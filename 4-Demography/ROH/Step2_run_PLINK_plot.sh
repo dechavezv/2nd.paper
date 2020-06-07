@@ -1,13 +1,15 @@
 #! /bin/bash
 
 #$ -cwd
-#$ -l h_rt=04:00:00,h_data=8G,highp,h_vmem=30G,highmem_forced=TRUE
+#$ -l h_rt=04:00:00,h_data=8G,highp,h_vmem=30G
 #$ -N runROHstep2
 #$ -o /u/scratch/d/dechavez/SA.VCF/log/
 #$ -e /u/scratch/d/dechavez/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
 #$ -t 1-38
+
+#highmem_forced=TRUE
 
 source /u/local/Modules/default/init/modules.sh
 module load vcftools
