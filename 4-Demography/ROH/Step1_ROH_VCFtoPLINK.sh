@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #$ -cwd
-#$ -l h_rt=04:00:00,h_data=8G,highp,h_vmem=30G,highmem_forced=TRUE
+#$ -l h_rt=04:00:00,h_data=10G,highp,h_vmem=30G
 #$ -N plinkROH
 #$ -o /u/scratch/d/dechavez/SA.VCF/log/
 #$ -e /u/scratch/d/dechavez/SA.VCF/log/
