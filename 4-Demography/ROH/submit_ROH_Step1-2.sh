@@ -16,11 +16,11 @@ cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530s
 
 #Prive a list with name of samples
 
-for file in *.txt; do
-${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh  $file
+for line in $(cat list.sp.ROH.Het.txt); do
+${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh $line
 done
 
-sleep 35m
+sleep 45m
 
 cd plinkInputFiles
 
