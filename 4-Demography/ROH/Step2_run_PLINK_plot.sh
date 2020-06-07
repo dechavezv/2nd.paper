@@ -32,13 +32,13 @@ plink --keep-allele-order --autosome-num 38 --bfile ${FILE} \
 --homozyg \
 -chr-set ${i} \
 --homozyg-kb 100 \
---homozyg-snp ${1} \
---homozyg-density ${2} \
---homozyg-gap ${3} \
---homozyg-window-snp ${4} \
---homozyg-window-het ${5} \
---homozyg-window-missing ${6} \
---homozyg-window-threshold ${7} \
+--homozyg-snp ${2} \
+--homozyg-density ${3} \
+--homozyg-gap ${4} \
+--homozyg-window-snp ${5} \
+--homozyg-window-het ${6} \
+--homozyg-window-missing ${7} \
+--homozyg-window-threshold ${8} \
 --out ${OUTDIR}/${FILE}.out
 
 cd ${OUTDIR}
