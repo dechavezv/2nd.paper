@@ -15,12 +15,12 @@ module load plink
 
 wd=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 cd ${wd}/plinkInputFiles
+
 plinkoutdir=$wd/plinkOutputFiles
 mkdir -p $plinkoutdir
 
 # need to get chr name from file
 i=$(printf "%02d" "$SGE_TASK_ID")
-#i=39
 Sample=$1
 
 FILE=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
