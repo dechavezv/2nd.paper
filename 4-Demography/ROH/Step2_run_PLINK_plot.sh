@@ -24,11 +24,11 @@ i=$(printf "%02d" "$SGE_TASK_ID")
 Sample=$1
 
 FILE=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
-OUTDIR=${plinkoutdir}/plinkroh_${1}_${2}_${3}_${4}_${5}_${6}_${7}
+OUTDIR=${plinkoutdir}/plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 
 mkdir -p ${OUTDIR}
 
-plink --keep-allele-order --autosome-num 38 --bfile ${FILE} \
+plink --keep-allele-order --bfile ${FILE} \
 --homozyg \
 -chr-set ${i} \
 --homozyg-kb 100 \
@@ -42,10 +42,19 @@ plink --keep-allele-order --autosome-num 38 --bfile ${FILE} \
 --out ${OUTDIR}/${FILE}.out
 
 cd ${OUTDIR}
+rm *summary
 
-source /u/local/Modules/default/init/modules.sh
-module load R
+mkdir -p catted
+
+head -n1 ${Sample%.txt}.01.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom  > catted/SAcanids.catted.hom
+
+for i in {01..38}; do (plinkdHom=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom && \
+grep -v "FID" $plinkHom >> catted/SAcanids.catted.hom);done
+
+
+# source /u/local/Modules/default/init/modules.sh
+# module load R
 
 ## SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROH_20181207.R
 
-## R CMD BATCH --no-save --no-restore '--args 'plinkroh_${1}_${2}_${3}_${4}_${5}_${6}_${7}' '${SCRIPT}
+## R CMD BATCH --no-save --no-restore '--args 'plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}/catted' '${SCRIPT}
