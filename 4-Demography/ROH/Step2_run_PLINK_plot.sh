@@ -53,6 +53,7 @@ head -n1 ${Sample%.txt}.01.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom  
 for i in {01..38}; do (plinkdHom=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom && \
 grep -v "FID" $plinkHom >> catted/SAcanids.catted.hom);done
 
+cd  catted/
 
 # source /u/local/Modules/default/init/modules.sh
 # module load R
