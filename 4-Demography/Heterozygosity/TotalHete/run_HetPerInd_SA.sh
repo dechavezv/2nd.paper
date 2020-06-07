@@ -16,14 +16,10 @@ module load python
 
 SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/Heterozygosity/TotalHete
 
-##Direc=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
+Direc=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 
-##cd ${Direc}
+cd ${Direc}
 
-cd /u/home/d/dechavez/project-rwayne/SA.VCF/Indv
 
-#for line in $(cat /u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/list.sp.ROH.Het.txt); do /
-#python ${SCRIPTDIR}/HetPerInd_SA.py $(ls ${line}_chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID};done
-
-python ${SCRIPTDIR}/HetPerInd_SA.py $(ls Sve338*chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID}
-python ${SCRIPTDIR}/HetPerInd_SA.py $(ls Sve315*chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID}
+for line in $(cat /u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/list.sp.ROH.Het.txt); do /
+python ${SCRIPTDIR}/HetPerInd_SA.py $(ls ${line}_chr$(printf %02d $SGE_TASK_ID)*vcf.gz) ${SGE_TASK_ID};done
