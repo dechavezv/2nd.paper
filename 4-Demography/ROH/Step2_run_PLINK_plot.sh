@@ -28,36 +28,37 @@ Sample=$1
 FILE=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
 OUTDIR=${plinkoutdir}/plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 
-mkdir -p ${OUTDIR}
+### mkdir -p ${OUTDIR}
 
-plink --keep-allele-order --file ${FILE} \
---homozyg \
--chr-set ${i} \
---homozyg-kb 100 \
---homozyg-snp ${2} \
---homozyg-density ${3} \
---homozyg-gap ${4} \
---homozyg-window-snp ${5} \
---homozyg-window-het ${6} \
---homozyg-window-missing ${7} \
---homozyg-window-threshold ${8} \
---out ${OUTDIR}/${FILE}.out
+### plink --keep-allele-order --file ${FILE} \
+### --homozyg \
+### -chr-set ${i} \
+### --homozyg-kb 100 \
+### --homozyg-snp ${2} \
+### --homozyg-density ${3} \
+### --homozyg-gap ${4} \
+### --homozyg-window-snp ${5} \
+### --homozyg-window-het ${6} \
+### --homozyg-window-missing ${7} \
+### --homozyg-window-threshold ${8} \
+### --out ${OUTDIR}/${FILE}.out
 
 cd ${OUTDIR}
-rm *summary
+### rm *summary
 
-mkdir -p catted
+### mkdir -p catted
 
-head -n1 ${Sample%.txt}.01.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom  > catted/SAcanids.catted.hom
+#testing_povide name of sample
+head -n1 Sve338.01.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom  > catted/SAcanids.catted.hom
 
-for i in {01..38}; do (plinkdHom=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom && \
+for file in *.hom do (plinkdHom=$file && \
 grep -v "FID" $plinkHom >> catted/SAcanids.catted.hom);done
 
 cd  catted/
 
-# source /u/local/Modules/default/init/modules.sh
-# module load R
+source /u/local/Modules/default/init/modules.sh
+module load R
 
-## SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROH_20181207.R
+SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROHStep2.R
 
-## R CMD BATCH --no-save --no-restore '--args 'plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}/catted' '${SCRIPT}
+R CMD BATCH --no-save --no-restore '--args 'plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}/catted' '${SCRIPT}

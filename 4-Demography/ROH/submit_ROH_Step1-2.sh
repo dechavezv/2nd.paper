@@ -25,15 +25,19 @@ cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 cd plinkInputFiles
 
 # For making temp.txt
-for a in 50 100 200; \
-do for b in 50 100; \
-do for c in 1000 2000 5000; \
-do for d in 50 100 200; \
-do for e in 1 2 3 4 5 10 20; \
-do for f in 1 2 3 4 5 10 20; \
-do for g in .02 .05 .1; \
-do echo $a $b $c $d $e $f $g >> temp.txt ; done; done; done; done; done; done; done
+## for a in 50 100 200; \
+## do for b in 50 100; \
+## do for c in 1000 2000 5000; \
+## do for d in 50 100 200; \
+## do for e in 1 2 3 4 5 10 20; \
+## do for f in 1 2 3 4 5 10 20; \
+## do for g in .02 .05 .1; \
+## do echo $a $b $c $d $e $f $g >> temp.txt ; done; done; done; done; done; done; done
 
-for line in $(cat ${SCRIPT_DIR}/list.sp.ROH.Het.txt); do
-${QSUB} -N ROHstep2 ${SCRIPT_DIR}/Step2_run_PLINK_plot.sh ${line} $(head -n ${SGE_TASK_ID} temp.txt | tail -n 1)
-done
+## for line in $(cat ${SCRIPT_DIR}/list.sp.ROH.Het.txt); do
+### ${QSUB} -N ROHstep2 ${SCRIPT_DIR}/Step2_run_PLINK_plot.sh ${line} $(head -n ${SGE_TASK_ID} temp.txt | tail -n 1)
+## done
+
+#teting can provide any sample for now
+${QSUB} -N ROHstep2 ${SCRIPT_DIR}/Step2_run_PLINK_plot.sh Sve338 50 50 1000 50 1 1 .02
+
