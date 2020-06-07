@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #$ -wd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
-#$ -l highp,h_rt=24:00:00,h_data=2G,arch=intel*
+#$ -l h_rt=24:00:00,h_data=2G,arch=intel*
 #$ -N SAtotHet
 #$ -o /u/scratch/d/dechavez/SA.VCF/log/
 #$ -e /u/scratch/d/dechavez/SA.VCF/log/
