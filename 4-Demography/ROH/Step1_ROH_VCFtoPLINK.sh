@@ -27,6 +27,6 @@ vcf=${Sample%.txt}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf.gz
 # convert to ped/map format. note that you lose chromosome info - that's a pain.
 plinkindir=$wd/plinkInputFiles
 plinkoutdir=$wd/plinkOutputFiles
-mkdir -p $plinkindir
+#mkdir -p $plinkindir
 
 vcftools --gzvcf $vcf --plink --chr chr$i --out $plinkindir/${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
