@@ -40,7 +40,7 @@ for line in VCF:
 	if line[4] not in ['.','A','C','G','T']: continue
 	INFO=line[7].split(';')
 	f=dict(s.split('=') for s in INFO)
-	if int(f['AN'])<50: continue
+	#if int(f['AN'])<50: continue
 	for i in range(0,len(samples)):
 		GT=line[i+9]
 		if GT[:3]=='./.': nocalls[i]+=1
