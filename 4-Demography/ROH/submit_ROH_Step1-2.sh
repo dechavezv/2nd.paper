@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#$ -wd /u/scratch/d/dechavez/BD/ROH/
+#$ -wd  /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 #$ -l highp,h_rt=4:00:00,h_data=1G
 #$ -N subROH
 #$ -o /u/scratch/d/dechavez/SA.VCF/log/
@@ -16,15 +16,13 @@ cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 
 #Prive a list with name of samples
 
-for line in $(cat ${SCRIPT_DIR}/list.sp.ROH.Het.txt); do
-${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh ${line}
-done
+#for line in $(cat ${SCRIPT_DIR}/list.sp.ROH.Het.txt); do
+## ${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh ${line}
+#done
 
-sleep 25m
+#sleep 25m
 
 cd plinkInputFiles
-
-cat *HQsites*.Plink > SA.canids.Plink
 
 # For making temp.txt
 for a in 50 100 200; \
@@ -39,10 +37,3 @@ do echo $a $b $c $d $e $f $g >> temp.txt ; done; done; done; done; done; done; d
 for line in $(cat ${SCRIPT_DIR}/list.sp.ROH.Het.txt); do
 ${QSUB} -N ROHstep2 ${SCRIPT_DIR}/Step2_run_PLINK_plot.sh ${line} $(head -n ${SGE_TASK_ID} temp.txt | tail -n 1)
 done
-
-
-#sleep 6h
-
-#for file in *.txt; do
-#ROH-b.catTogetherResults.BD.sh $file 
-#done
