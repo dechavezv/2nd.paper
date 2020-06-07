@@ -26,7 +26,7 @@ autohet=hets/calls
 
 # ROH data
 
-rohdata=read.table("SA.canids.Plink.hom", header=T)
+rohdata=read.table("SAcanids.catted.hom", header=T)
 
 shorts=rohdata[rohdata$POS2-rohdata$POS1>=100000 & rohdata$POS2-rohdata$POS1<1000000,]
 meds=rohdata[rohdata$POS2-rohdata$POS1>=1000000 & rohdata$POS2-rohdata$POS1<10000000,]
