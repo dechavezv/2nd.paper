@@ -30,7 +30,7 @@ OUTDIR=${plinkoutdir}/plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 
 mkdir -p ${OUTDIR}
 
-plink --keep-allele-order --bfile ${FILE} \
+plink --keep-allele-order --file ${FILE} \
 --homozyg \
 -chr-set ${i} \
 --homozyg-kb 100 \
