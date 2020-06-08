@@ -20,9 +20,9 @@ cd /u/scratch/d/dechavez/SA.VCF/Filtered/20200530
 ## ${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh ${line}
 #done
 
-${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh Lculp01
+### ${QSUB} -N ROHstep1 $SCRIPT_DIR/Step1_ROH_VCFtoPLINK.sh Lculp01
 
-sleep 25m
+#sleep 25m
 
 cd plinkInputFiles
 
@@ -37,7 +37,7 @@ cd plinkInputFiles
 ## do echo $a $b $c $d $e $f $g >> temp.txt ; done; done; done; done; done; done; done
 
 ${QSUB} -N ROHstep2 ${SCRIPT_DIR}/Step2_run_PLINK_plot.sh Lculp01 $(head -n ${SGE_TASK_ID} temp.txt | tail -n 1)
-
+ 
 ## for line in $(cat ${SCRIPT_DIR}/list.sp.ROH.Het.txt); do
 ### ${QSUB} -N ROHstep2 ${SCRIPT_DIR}/Step2_run_PLINK_plot.sh ${line} $(head -n ${SGE_TASK_ID} temp.txt | tail -n 1)
 ## done
