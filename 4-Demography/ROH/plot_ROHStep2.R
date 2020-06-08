@@ -4,8 +4,8 @@
 args=commandArgs(TRUE)
 
 # Genotype count data
-gtfiles=list.files(path="/u/scratch/d/dechavez/SA.VCF/Filtered/20200530/HetPerInd", pattern="PerInd.txt")
-gtfiles=paste("/u/scratch/d/dechavez/SA.VCF/Filtered/20200530/HetPerInd", gtfiles[1:38], sep="")
+gtfiles=list.files(path="/u/scratch/d/dechavez/SA.VCF/Filtered/20200530/HetPerInd/", pattern="PerInd.txt")
+gtfiles=paste("/u/scratch/d/dechavez/SA.VCF/Filtered/20200530/HetPerInd/", gtfiles[1:38], sep="")
 gts=data.frame(read.table(gtfiles[1], header=T, sep='\t'))
 for (i in 2:length(gtfiles)){
 	gts=gts+data.frame(read.table(gtfiles[i], header=T, sep='\t'))
@@ -69,7 +69,7 @@ mylabels=c("MW Capt.","Crab-eat fox","MW 370", "MW 383",
            "MW 388", "MW 404", "Ethiopian", "Andean fox", "Pampas fox",
            "Hoary fox", "BD Capt", "BD 313", "BD 315", "BD 338")
 
-MWnames=c("Cb17082018","Cbr370",Cbr383","Cbr388","Cbr404")
+MWnames=c("Cb17082018","Cbr370","Cbr383","Cbr388","Cbr404")
 BDnames=c("Sve313","Sve315","Sve338","SV16082018")
 
 myfonts=rep(3, length(samps))

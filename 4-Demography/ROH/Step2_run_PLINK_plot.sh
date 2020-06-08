@@ -59,4 +59,7 @@ module load R
 
 SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROHStep2.R
 
-R CMD BATCH --no-save --no-restore '--args 'plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}/catted' '${SCRIPT}
+
+R CMD BATCH ${SCRIPT} plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
+ 
+#R CMD BATCH --no-save --no-restore '--args 'plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}' '${SCRIPT}
