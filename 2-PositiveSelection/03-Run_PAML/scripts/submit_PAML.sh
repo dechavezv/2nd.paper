@@ -48,7 +48,7 @@ echo '######################################'
 
 for dir in dir*; do (cd $dir && $QSUB Prepare_to_PALM_SETUP_II_part.sh );done
 
-sleep 25m
+sleep 36m
 
 echo '######################################'
 echo  Create final multispecies sequences and ouput files
