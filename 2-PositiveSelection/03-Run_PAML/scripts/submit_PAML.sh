@@ -32,7 +32,7 @@ echo '######################################'
 
 for dir in dir*; do (cd $dir && $QSUB PAML_aling_PRANK.sh);done
 
-sleep 3m
+sleep 4m
 
 echo '######################################'
 echo  Transform amino acid sequence to nucleotide sequence
