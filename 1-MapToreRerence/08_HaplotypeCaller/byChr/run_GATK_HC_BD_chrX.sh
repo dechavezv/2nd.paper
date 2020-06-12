@@ -1,22 +1,22 @@
 #! /bin/bash
-#$ -wd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/Bams.Filtered
-#$ -l h_rt=24:00:00,h_data=14G,arch=intel*,h_vmem=30G
-#$ -t 02-3:1
+#$ -wd /u/scratch/d/dechavez/IndelReal
+#$ -l h_rt=42:00:00,h_data=22G,highp
+#$ -t 01-3:1
 #$ -N HC_BD_X
-#$ -o /u/scratch/d/dechavez/BD/GVCFs/log/reports
-#$ -e /u/scratch/d/dechavez/BD/GVCFs/log/reports
+#$ -o /u/scratch/d/dechavez/IndelReal/log/reports
+#$ -e /u/scratch/d/dechavez/IndelReal/log/reports
 #$ -m abe
 #$ -M dechavezv
 
 source /u/local/Modules/default/init/modules.sh
 module load java
 
-cd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/Bams.Filtered
+cd /u/scratch/d/dechavez/IndelReal
 
 export BAM=$(ls bsve$(printf %02d $SGE_TASK_ID)_Aligned.MarkDup_Filtered.bam)
 export ID=${BAM%_Aligned.MarkDup_Filtered.bam}
 
-java -jar -Xmx12g /u/local/apps/gatk/3.7/GenomeAnalysisTK.jar \
+java -jar -Xmx16g /u/local/apps/gatk/3.7/GenomeAnalysisTK.jar \
 -T HaplotypeCaller \
 -R /u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa \
 -ERC BP_RESOLUTION \

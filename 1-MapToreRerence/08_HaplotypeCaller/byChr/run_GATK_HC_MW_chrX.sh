@@ -1,17 +1,17 @@
 #! /bin/bash
-#$ -wd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/Bams.Filtered
-#$ -l h_rt=24:00:00,h_data=22G,arch=intel*
+#$ -wd /u/scratch/d/dechavez/IndelReal
+#$ -l h_rt=42:00:00,h_data=22G,highp
 #$ -t 01-4:1
-#$ -N HC_MW_38
-#$ -o /u/scratch/d/dechavez/MW/GVCFs/log/reports
-#$ -e /u/scratch/d/dechavez/MW/GVCFs/log/reports
+#$ -N HC_MW_X
+#$ -o /u/scratch/d/dechavez/IndelReal/log/reports
+#$ -e /u/scratch/d/dechavez/IndelReal/log/reports
 #$ -m abe
 #$ -M dechavezv
 
 source /u/local/Modules/default/init/modules.sh
 module load java
 
-cd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/Bams.Filtered
+cd /u/scratch/d/dechavez/IndelReal
 
 export BAM=$(ls bcbr$(printf %02d $SGE_TASK_ID)_Aligned.MarkDup_Filtered.bam)
 export ID=${BAM%_Aligned.MarkDup_Filtered.bam}
