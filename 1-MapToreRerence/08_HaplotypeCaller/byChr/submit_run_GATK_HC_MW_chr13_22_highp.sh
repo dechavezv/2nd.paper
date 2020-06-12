@@ -25,19 +25,19 @@ for i in {13..22};
 
 	do (
 	echo "#! /bin/bash"
-	echo "#$ -wd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/Bams.Filtered"
+	echo "#$ -wd /u/scratch/d/dechavez/IndelReal"
 	echo "#$ -l h_rt=30:00:00,h_data=22G,highp"
-	echo "#$ -t 05-5:1"
+	echo "#$ -t 01-4:1"
 	echo "#$ -N HC_MW_${i}"
-	echo "#$ -o /u/scratch/d/dechavez/MW/GVCFs/log/reports"
-	echo "#$ -e /u/scratch/d/dechavez/MW/GVCFs/log/reports"
+	echo "#$ -o /u/scratch/d/dechavez/IndelReal/log/reports"
+	echo "#$ -e /u/scratch/d/dechavez/IndelReal/log/reports"
 	echo "#$ -m abe"
 	echo "#$ -M dechavezv"
 	echo
 	echo "source /u/local/Modules/default/init/modules.sh"
 	echo "module load java"
 	echo
-	echo "cd /u/home/d/dechavez/project-rwayne/QB3.SA.WolfHeav/Bams.Filtered"
+	echo "cd /u/scratch/d/dechavez/IndelReal"
 	echo
 	echo "export BAM=\$(ls bcbr\$(printf "%02d" "\$SGE_TASK_ID")_Aligned.MarkDup_Filtered.bam)"
 	echo "export ID=\${BAM%_Aligned.MarkDup_Filtered.bam}"
