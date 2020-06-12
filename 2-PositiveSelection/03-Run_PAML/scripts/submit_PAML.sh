@@ -14,7 +14,7 @@ export DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-
 export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 
-echo '######################################'
+echo '#######################################'
 echo  Create subdirectories
 echo '######################################'
 
@@ -31,6 +31,10 @@ echo  Align sequences as amino acids
 echo '######################################'
 
 for dir in dir*; do (cd $dir && $QSUB PAML_aling_PRANK.sh);done
+# Note: PAML_aling_PRANK.sh runs for 28hours. There may be cases when you realize this was not suficient /
+# and there are fasta documents that still need to be aligned. If this happens run the following:
+# for dir in dir*; do (cd $dir && PAML_aling_PRANK.missing.sh);dobe
+# You have to change the path with yours.
 
 sleep 4m
 
