@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #$ -wd /u/scratch/d/dechavez/IndelReal
-#$ -l highp,h_rt=2:00:00,h_data=1G
+#$ -l highp,h_rt=4:00:00,h_data=1G
 #$ -N subSplitBam
 #$ -o /u/scratch/d/dechavez/IndelReal/log/subSplitBam
 #$ -e /u/scratch/d/dechavez/IndelReal/log/subSplitBam
@@ -16,9 +16,4 @@ DIRECT=/u/scratch/d/dechavez/IndelReal
 
 cd ${DIRECT}
 
-#for file in *bam; do ${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.sh $file; done
-
-${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.sh bsve313_Aligned.MarkDup.bam  
-${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.sh bsve315_Aligned.MarkDup.bam 
-${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.sh bsve338_Aligned.MarkDup.bam
-
+for file in *bam; do ${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.sh $file; done
