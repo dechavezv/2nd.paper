@@ -1,5 +1,5 @@
 #! /bin/bash
-#$ -l highp,h_rt=28:00:00,h_data=2G
+#$ -l h_rt=24:00:00,h_data=1G,arch=intel*
 #$ -pe shared 1
 #$ -N Prank
 #$ -cwd
