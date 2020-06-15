@@ -21,7 +21,7 @@
 # I'm not totally sure about the wisdom of using the --dontUseSoftClippedBases option, 
 # but I know I used it last time, so I kept it here for consistency with the previous fox study.
 
-for i in {22..27}; 
+for i in {23..27}; 
 
 	do (
 	echo "#! /bin/bash"
@@ -52,8 +52,8 @@ for i in {22..27};
 	echo "-I \${BAM} \\"
 	echo "-o /u/scratch/d/dechavez/MW/GVCFs/\${ID}_chr${i}.g.vcf.gz"
 	
-	) > "run_GATK_HC_MW_chr22_27.sh"
+	) > "run_GATK_HC_MW_chr23_27.sh"
 
-	qsub run_GATK_HC_MW_chr22_37.sh
+	qsub run_GATK_HC_MW_chr23_37.sh
 
 done
