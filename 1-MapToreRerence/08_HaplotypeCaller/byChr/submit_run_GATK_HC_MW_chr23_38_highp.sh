@@ -21,12 +21,12 @@
 # I'm not totally sure about the wisdom of using the --dontUseSoftClippedBases option, 
 # but I know I used it last time, so I kept it here for consistency with the previous fox study.
 
-for i in {28..38}; 
+for i in {22..27}; 
 
 	do (
 	echo "#! /bin/bash"
 	echo "#$ -wd /u/scratch/d/dechavez/IndelReal"
-	echo "#$ -l h_rt=24:00:00,h_data=22G,arch=intel*"
+	echo "#$ -l h_rt=42:00:00,h_data=22G,highp"
 	echo "#$ -t 01-4:1"
 	echo "#$ -N HC_MW_${i}"
 	echo "#$ -o /u/scratch/d/dechavez/IndelReal/log/reports"
@@ -52,8 +52,8 @@ for i in {28..38};
 	echo "-I \${BAM} \\"
 	echo "-o /u/scratch/d/dechavez/MW/GVCFs/\${ID}_chr${i}.g.vcf.gz"
 	
-	) > "run_GATK_HC_MW_chr23_38.sh"
+	) > "run_GATK_HC_MW_chr22_27.sh"
 
-	qsub run_GATK_HC_MW_chr23_38.sh
+	qsub run_GATK_HC_MW_chr22_37.sh
 
 done
