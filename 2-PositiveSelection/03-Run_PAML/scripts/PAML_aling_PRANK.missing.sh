@@ -1,5 +1,5 @@
 #! /bin/bash
-#$ -l h_rt=24:00:00,h_data=1G,arch=intel*
+#$ -l highp,h_rt=44:00:00,h_data=1G,arch=intel*
 #$ -pe shared 1
 #$ -N Prank
 #$ -cwd
@@ -16,4 +16,4 @@ echo '############'
 
 for Dir in Dir*; do (cd $Dir && /
 if [ -f $(printf ${PWD} | perl -pe 's/.*dir_\d+\/Dir_(.*)/prank_\1.best.fas/g') ]; /
-then :;else ./prank -d=$(printf ${PWD} | perl -pe 's/.*dir_\d+\/Dir_(.*)/\1/g') -o=prank_$(printf ${PWD} | perl -pe 's/.*dir_\d+\/Dir_(.*)/\1/g') -t=tree.txt -F -once;fi)done);done
+then :;else ./prank -d=$(printf ${PWD} | perl -pe 's/.*dir_\d+\/Dir_(.*)/\1/g') -o=prank_$(printf ${PWD} | perl -pe 's/.*dir_\d+\/Dir_(.*)/\1/g') -t=tree.txt -F -once;fi)done
