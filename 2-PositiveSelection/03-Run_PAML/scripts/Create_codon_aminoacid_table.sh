@@ -1,5 +1,5 @@
 #! /bin/bash
-#$ -l highp,h_rt=2:00:00,h_data=1G
+#$ -l highp,h_rt=4:00:00,h_data=1G
 #$ -pe shared 1
 #$ -N AminoToNucle
 #$ -cwd
@@ -8,7 +8,7 @@
 #$ -e ./Indels_PAML_I.err
 #$ -M dechavezv
 
-DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
+export DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/03-Run_PAML
 
 echo '############'
 echo Move_Transcript
