@@ -13,20 +13,20 @@
 source /u/local/Modules/default/init/modules.sh
 module load python
 ### #> ${Direc}/Filtered/20200530/$1_chr$(printf %02d $SGE_TASK_ID)_Annot_Mask_Filter_passingSNPs.vcf
-Direc=/u/scratch/d/dechavez/SA.VCF
+Direc=/u/scratch/d/dechavez/HKA/OnlyPass
 
-cd /u/scratch/d/dechavez/BD/VCF
+cd /u/scratch/d/dechavez/HKA
 
 PREFIX=$1
 i=$2
 #i=$(printf %02d $SGE_TASK_ID)
 zcat ${PREFIX}_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz | \
 grep -v "FAIL" | grep -v "WARN" | grep -vE '\./\.' \
-> ${Direc}/Filtered/20200530/${PREFIX}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf
+> ${Direc}/${PREFIX}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf
 
 vcf=${PREFIX}_chr${i}_Annot_Mask_Filter_passingSNPs.vcf
 
-cd ${Direc}/Filtered/20200530
+cd ${Direc}
 
 /u/home/d/dechavez/tabix-0.2.6/bgzip -c ${vcf} > ${vcf}.gz
 /u/home/d/dechavez/tabix-0.2.6/tabix -p vcf ${vcf}.gz
