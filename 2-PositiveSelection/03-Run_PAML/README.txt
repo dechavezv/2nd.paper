@@ -63,7 +63,7 @@ PLEASE READ THIS IMPORTANT INFORMATION BEFORE RUNING THE PIPELINE.
 	 python scripts/lowercase_to_N.py <your_genome_here> # the ouput will be called Masked_depth_<name_of_input>
 	-the tips of the file tree.txt must mach the names of your species in your genomes.
 	-make sure that you dont have a database.fas file alredy in this directory, it you do deleated before running the pipeline as it may cause problems 
-
+	-Verify that you have a config file on tree/modelAnull/Omega1 and tree/modelA/Omega1
 #AFTER CHEKING ALL THE INFO ABOVE !!! Run the pipeline just by typing the following:
 
 qsub scripts/submit_PAML.sh
