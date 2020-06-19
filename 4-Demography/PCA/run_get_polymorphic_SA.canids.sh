@@ -1,6 +1,6 @@
 #! /bin/bash
 #$ -wd /u/scratch/d/dechavez/SA.VCF
-#$ -l h_rt=24:00:00,h_data=1G,highp
+#$ -l h_rt=24:00:00,h_data=1G,arch=intel*
 #$ -N OnlySNPs
 #$ -o /u/scratch/d/dechavez/SA.VCF/log/
 #$ -e /u/scratch/d/dechavez/SA.VCF/log/
