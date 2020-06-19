@@ -17,5 +17,5 @@ module load python/2.7
 cd /u/scratch/d/dechavez/HKA
 
 for i in {01..38} X; do ( echo chr$i && \
-python SlidWin-HKA-like-Test.py bsve_joint_chr${i}_Annot_Mask_Filter_passingSNPs.vcf.gz \
+python SlidWin-HKA-like-Test.py bsve_joint_chr${i}_Annot_Mask_Filter.vcf.gz \
 100000 100000 ${i}> bsve_joint_chr${i}_Annot_Mask_Filter_passingSNPs.HKA.txt);done
