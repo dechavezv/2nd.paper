@@ -56,15 +56,17 @@ else:
 def checkmono(lst):
     return not lst or lst.count(lst[0]) == len(lst)
 
-def computedPolymor(AF_all,DS_all,sites_passing):
+def computedPolymor(AF_all,DS_all,sites_passing,sites_present):
         SNPS_values=[]
         #print(AF_all)
         #print(len(AF_all))
         for i in range(len(AF_all)):
 		#print(2*AF_all[i]*float(1-AF_all[i]))
                 SNPS_values.append(2*AF_all[i]*float(1-AF_all[i]))
-	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.1428571428571428)
-        #print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Diversity'),Polymor,sites_passing))
+	#print(SNPS_values)
+	#print(numpy.sum(SNPS_values))
+	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.1428571428571428)  
+	#print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Diversity'),Polymor,sites_passing))
 	SNPS_values2=[]
 
         for i in range(len(DS_all)):
@@ -74,8 +76,9 @@ def computedPolymor(AF_all,DS_all,sites_passing):
                         SNPS_values2.append(float(0.5))
         Diver=(numpy.sum(SNPS_values2)/sites_passing)
 	k = float(Polymor/Diver)
+	Qsites=float(sites_passing)/sites_present
         #print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Divergence'),Diver,sites_passing))
-	print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('HKA_ratio'),k,sites_passing))
+	print('%s\t%d\t%d\t%s\t%f\t%d\t%d\t%f' % (chromo,window_start,window_end,str('HKA_ratio'),k,sites_present,sites_passing,Qsites))
 
 def fetch_and_calc(chromo,start_pos,end_pos):
         AF_all=[]
@@ -91,11 +94,22 @@ def fetch_and_calc(chromo,start_pos,end_pos):
                 #print(line[-4:])
                 if line[4]=='.': continue
                 sites_polymorphic+=1
-                AF_value = line[7].split(';')
-                value=AF_value[1].split('=')
-                number=value[1].split(',') # keep just SNPS
-                if len(number) > 1: continue # Keep just SNPS
-                AF_all.append(float(value[1]))
+		AF_value = line[7].split(';')
+                value=AF_value[0].split('=')
+		print(line)
+		#print(value)
+		if value[0] == 'ABHet':
+			Hetvalue=AF_value[3].split('=')
+			if Hetvalue[0] == 'AF':
+				Hetnumber=Hetvalue[1].split(',') # keep just SNPS
+				if len(Hetnumber) > 1: continue # Keep just SNPS
+				AF_all.append(float(Hetvalue[1]))
+			elif value[0] == 'ABHom':
+				Altvalue=AF_value[2].split('=')
+				if Altvalue[0] == 'AF':
+					Altnumber=Altvalue[1].split(',') # keep just SNP
+					if len(Altnumber) > 1: continue # Keep just SNPS
+					AF_all.append(float(Altvalue[1]))
 		DS_value = line[9].split(':')
                 value=DS_value[0]
                 number=value[1].split(',') # keep just SNPS
@@ -105,7 +119,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
         #once you have genotypes, run it through fxn
         #print '%s\t%s\t%s\t%s\t' % (chromo,start_pos,sites_present,sites_passing),
         #if not AF_all: print("No Allele frequencies")
-        computedPolymor(AF_all,DS_all,sites_passing)
+        computedPolymor(AF_all,DS_all,sites_passing,sites_present)
 
 #initialize window start and end coordinates
 window_start = start_pos
