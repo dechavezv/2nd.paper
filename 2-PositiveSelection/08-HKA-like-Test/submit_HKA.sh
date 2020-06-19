@@ -7,6 +7,10 @@
 #$ -e /u/scratch/d/dechavez/HKA/log/
 #$ -m abe
 #$ -M dechavezv
+#$ -t 1-38:1
+
+i=$(printf "%02d" "$SGE_TASK_ID")
+#i=X
 
 SCRIPT_DIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/08-HKA-like-Test
 
@@ -16,6 +20,6 @@ module load python/2.7
 
 cd /u/scratch/d/dechavez/HKA
 
-for i in {01..38} X; do ( echo chr$i && \
+
 python ${SCRIPT_DIR}/SlidWin-HKA-like-Test.py bsve_joint_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz \
-100000 10000 chr${i} > bsve_joint_chr${i}_TrimAlt_Annot_Mask_Filter.HKA.txt);done
+100000 10000 chr${i} > bsve_joint_chr${i}_TrimAlt_Annot_Mask_Filter.HKA.txt
