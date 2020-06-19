@@ -14,8 +14,8 @@ source /u/local/Modules/default/init/modules.sh
 module load java
 module load python/2.7
 
-cd /u/scratch/d/dechavez/HKA/OnlyPass
+cd /u/scratch/d/dechavez/HKA
 
 for i in {01..38} X; do ( echo chr$i && \
-python SlidWin-HKA-like-Test.py 100000 100000 bsve_joint_chr${i}_Annot_Mask_Filter_passingSNPs.vcf.gz \
-> bsve_joint_chr${i}_Annot_Mask_Filter_passingSNPs.HKA.txt);done
+python SlidWin-HKA-like-Test.py bsve_joint_chr${i}_Annot_Mask_Filter_passingSNPs.vcf.gz \
+100000 100000 ${i}> bsve_joint_chr${i}_Annot_Mask_Filter_passingSNPs.HKA.txt);done
