@@ -96,20 +96,29 @@ def fetch_and_calc(chromo,start_pos,end_pos):
                 sites_polymorphic+=1
 		AF_value = line[7].split(';')
                 value=AF_value[0].split('=')
-		print(line)
+		#print(line)
 		#print(value)
 		if value[0] == 'ABHet':
-			Hetvalue=AF_value[3].split('=')
-			if Hetvalue[0] == 'AF':
-				Hetnumber=Hetvalue[1].split(',') # keep just SNPS
-				if len(Hetnumber) > 1: continue # Keep just SNPS
-				AF_all.append(float(Hetvalue[1]))
-			elif value[0] == 'ABHom':
-				Altvalue=AF_value[2].split('=')
-				if Altvalue[0] == 'AF':
-					Altnumber=Altvalue[1].split(',') # keep just SNP
-					if len(Altnumber) > 1: continue # Keep just SNPS
-					AF_all.append(float(Altvalue[1]))
+			if ('AF' in AF_value[3]):
+				Hetvalue=AF_value[3].split('=')
+				if Hetvalue[0] == 'AF':
+					Hetnumber=Hetvalue[1].split(',') # keep just SNPS
+					if len(Hetnumber) > 1: continue # Keep just SNPS
+					AF_all.append(float(Hetvalue[1]))
+			elif ('AF' in AF_value[2]):
+				Hetvalue=AF_value[2].split('=')
+				if Hetvalue[0] == 'AF':
+					Hetnumber=Hetvalue[1].split(',') # keep just SNPS
+					if len(Hetnumber) > 1: continue # Keep just SNPS
+					AF_all.append(float(Hetvalue[1]))
+		elif value[0] == 'ABHom':
+			Altvalue=AF_value[2].split('=')
+			if Altvalue[0] == 'AF':
+				Altnumber=Altvalue[1].split(',') # keep just SNP
+				if len(Altnumber) > 1: continue # Keep just SNPS
+				AF_all.append(float(Altvalue[1]))
+			else:
+				print(line)
 		DS_value = line[9].split(':')
                 value=DS_value[0]
                 number=value[1].split(',') # keep just SNPS
