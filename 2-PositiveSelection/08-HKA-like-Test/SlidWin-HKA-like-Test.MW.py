@@ -65,7 +65,7 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present):
                 SNPS_values.append(2*AF_all[i]*float(1-AF_all[i]))
 	#print(SNPS_values)
 	#print(numpy.sum(SNPS_values))
-	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.1428571428571428)  
+	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.111111)  
 	#print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Diversity'),Polymor,sites_passing))
 	SNPS_values2=[]
 
@@ -89,7 +89,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
         for line in parsevcf.fetch(chromo,start_pos,end_pos):
                 line = line.split('\t')
                 sites_present+=1
-                if ('FAIL' in line[6]) or ('.' in line[-1]) or ('.' in line[-2]) or ('.' in line[-3]) or ('.' in line[-4]): continue
+                if ('FAIL' in line[6]) or ('.' in line[-1]) or ('.' in line[-2]) or ('.' in line[-3]) or ('.' in line[-4]) or ('.' in line[-5]): continue
                 sites_passing+=1
                 #print(line[-4:])
                 if line[4]=='.': continue
