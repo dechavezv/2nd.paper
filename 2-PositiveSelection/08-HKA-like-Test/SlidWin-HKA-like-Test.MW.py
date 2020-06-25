@@ -119,7 +119,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
 				AF_all.append(float(Altvalue[1]))
 			else:
 				print(line)
-		DS_value = line[9].split(':')
+		DS_value = line[11].split(':')
                 value=DS_value[0]
                 number=value[1].split(',') # keep just SNPS
                 if len(number) > 1: continue # Keep just SNPS
