@@ -9,7 +9,7 @@ import sys
 
 file1 = open(sys.argv[1], 'r')
 file2 = sys.argv[2]
-outfile = open('Genes_HKA' + sys.argv[1], 'w')
+outfile = open('Genes_HKA_' + sys.argv[1], 'w')
 
 list2 = [line.strip() for line in open(file2,'r')] #read files as list
 

@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #$ -wd /u/scratch/d/dechavez/HKA
-#$ -l highp,h_rt=14:00:00,h_data=1G
+#$ -l h_rt=14:00:00,h_data=1G
 #$ -N runHKA.MW
 #$ -o /u/scratch/d/dechavez/HKA/log/
 #$ -e /u/scratch/d/dechavez/HKA/log/
@@ -25,5 +25,5 @@ python ${SCRIPT_DIR}/SlidWin-HKA-like-Test.BD.py bsve_joint_chr${i}_TrimAlt_Anno
 echo '********** Done calculating HKA-like test ***********'
 
 echo '********** Extracting genes within windows ***********'
-python ${SCRIPT_DIR}/Genes_within_HKA.BD.py bsve_joint_chr${i}_TrimAlt_Annot_Mask_Filter.HKA.txt ${OrtoBed}
+python ${SCRIPT_DIR}/Genes_within_HKA.py bsve_joint_chr${i}_TrimAlt_Annot_Mask_Filter.HKA.txt ${OrtoBed}
 echo '********** Done Extracting genes within windows ***********'
