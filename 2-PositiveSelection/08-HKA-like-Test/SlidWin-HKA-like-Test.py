@@ -78,7 +78,7 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present):
 	k = float(Polymor/Diver)
 	Qsites=float(sites_passing)/sites_present
         #print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Divergence'),Diver,sites_passing))
-	print('%s\t%d\t%d\t%s\t%f\t%d\t%d\t%f' % (chromo,window_start,window_end,str('HKA_ratio'),k,sites_present,sites_passing,Qsites))
+	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%f' % (chromo,window_start,window_end,Polymor,Diver,k,sites_present,sites_passing,Qsites))
 
 def fetch_and_calc(chromo,start_pos,end_pos):
         AF_all=[]
