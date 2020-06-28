@@ -1,8 +1,8 @@
 #! /bin/bash
 
 #$ -wd /u/home/d/dechavez/project-rwayne/Lculp
-#$ -l highp,h_data=20G,h_rt=33:00:00,h_vmem=30G
-#$ -t 1-38:1
+#$ -l highp,h_data=20G,h_rt=33:00:00,h_vmem=40G
+#$ -t 17-17:1
 #$ -N GTgVCF
 #$ -o /u/home/d/dechavez/project-rwayne/Lculp/log/
 #$ -e /u/home/d/dechavez/project-rwayne/Lculp/log/

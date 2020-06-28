@@ -16,5 +16,5 @@ java -jar -Xmx16g /u/local/apps/gatk/3.7/GenomeAnalysisTK.jar \
 -R /u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa \
 -allSites \
 -L chrX \
-$(for j in {01..5}; do echo "-V /u/scratch/d/dechavez/MW/GVCFs/bcbr${j}_chrX.g.vcf.gz "; done) \
--o /u/home/d/dechavez/project-rwayne/MW/VCF/bcbr_joint_chrX.vcf.gz
+$(for j in {05..5}; do echo "-V /u/scratch/d/dechavez/MW/GVCFs/bcbr${j}_chrX.g.vcf.gz "; done) \
+-o /u/home/d/dechavez/project-rwayne/MW/VCF/bcbr${j}_chrX.vcf.gz
