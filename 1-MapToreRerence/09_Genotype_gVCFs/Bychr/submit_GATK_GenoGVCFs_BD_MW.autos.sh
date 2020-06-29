@@ -18,5 +18,5 @@ java -jar -Xmx20g /u/local/apps/gatk/3.7/GenomeAnalysisTK.jar \
 -allSites \
 -L chr$(printf "%02d" "$SGE_TASK_ID") \
 $(for j in {01..4}; do echo "-V /u/scratch/d/dechavez/GVCF/bsve${j}_chr$(printf "%02d" "$SGE_TASK_ID").g.vcf.gz "; done) \
-$(for j in {04..5}; do echo "-V /u/scratch/d/dechavez/GVCF/bcbr${j}_chr$(printf "%02d" "$SGE_TASK_ID").g.vcf.gz "; done) \
+$(for j in {01..5}; do echo "-V /u/scratch/d/dechavez/GVCF/bcbr${j}_chr$(printf "%02d" "$SGE_TASK_ID").g.vcf.gz "; done) \
 -o /u/scratch/d/dechavez/HKA/bsve_bcbr_chr$(printf "%02d" "$SGE_TASK_ID").vcf.gz
