@@ -1,8 +1,8 @@
 #! /bin/bash
 
 #$ -wd /u/scratch/d/dechavez/GVCF
-#$ -l highp,h_data=20G,h_rt=33:00:00,h_vmem=30G,arch=intel*
-#$ -t 1-38:1
+#$ -l highp,h_data=20G,h_rt=43:00:00,h_vmem=38G,arch=intel*
+#$ -t 1-1:1
 #$ -N GTgVCF.MW_BD
 #$ -o /u/scratch/d/dechavez/GVCF/log/
 #$ -e /u/scratch/d/dechavez/GVCF/log/
