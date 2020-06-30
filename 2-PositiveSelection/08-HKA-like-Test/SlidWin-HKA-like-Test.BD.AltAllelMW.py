@@ -62,7 +62,7 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present,sites_polymorphic)
         #print(len(AF_all))
         for i in range(len(AF_all)):
 		#print(2*AF_all[i]*float(1-AF_all[i]))		
-                SNPS_values.append(2*((AF_all[i]*12)/6)*float(1-((AF_all[i]*12)/6))
+                SNPS_values.append(2*((AF_all[i]*12)/6)*float(1-((AF_all[i]*12)/6)))
 	#print(SNPS_values)
 	#print(numpy.sum(SNPS_values))
 	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.1428571428571428)  
@@ -99,7 +99,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
                 value=AF_value[0].split('=')
 		#print(line)
 		#print(value)
-			if ('1/1' not in line[-6]) or ('0/1' in not line[-6]) or ('1/1' not in line[-5]) or ('0/1' not in line[-5]):
+		if ('1/1' not in line[-6]) or ('0/1' not in line[-6]) or ('1/1' not in line[-5]) or ('0/1' not in line[-5]):
 			if value[0] == 'ABHet':
 				if ('AF' in AF_value[3]):
 					Hetvalue=AF_value[3].split('=')
