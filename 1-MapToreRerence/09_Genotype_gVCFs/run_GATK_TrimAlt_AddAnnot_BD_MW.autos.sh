@@ -6,7 +6,7 @@
 #$ -e /u/scratch/d/dechavez/HKA/log/
 #$ -m abe
 #$ -M dechavezv
-#$ -t 1-1:1
+#$ -t 1-38:1
 
 #highmem,highp
 
