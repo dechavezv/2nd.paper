@@ -7,10 +7,10 @@
 #$ -o /u/scratch/d/dechavez/IndelReal/log/
 #$ -e /u/scratch/d/dechavez/IndelReal/log/
 #$ -M dechavezv
-#### #$ -t 1-38:1
+#$ -t 1-38:1
 
-#i=$(printf %02d $SGE_TASK_ID)
-i=X
+i=$(printf %02d $SGE_TASK_ID)
+#i=X
 #i=MT
 
 export BAM=$1

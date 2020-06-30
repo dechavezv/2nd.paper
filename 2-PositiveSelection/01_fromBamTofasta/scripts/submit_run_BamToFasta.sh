@@ -15,9 +15,16 @@ export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 cd ${DIREC}
 ### $QSUB run_BamToFasta.sh ${BAM} ${depth_95th}
 
-for i in {01..38} X; do
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh CL100060195_L02_S2_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 80
-done
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr01.bam 114
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr05.bam 114
+
+#for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 114
+#done
+
+#for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh CL100060195_L02_S2_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 80
+#done
 
 #for i in {01..38} X; do
 ###$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BAM-RMDUP_ACAD1735.bam_chr${i}.bam 20
@@ -63,9 +70,9 @@ done
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh bsve338_Aligned.MarkDup_Filtered_Indelreal.bam_chr${i}.bam 42
 ## done
 
-for i in {01..38} X; do 
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cb17082018_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 178
-done
+## for i in {01..38} X; do 
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cb17082018_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 178
+##done
 
 ## for i in {01..38} X; do 
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh SV16082018_Aligned.MarkDup_Filtered_Indelreal.bam_chr${i}.bam 78

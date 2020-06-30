@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #$ -wd u/scratch/d/dechavez/IndelReal/split.bams
-#$ -l h_rt=10:00:00,h_data=2G,h_vmem=14G
+#$ -l highmem,highp,h_rt=10:00:00,h_data=27G,h_vmem=44G
 #$ -N AligbamTofasta
 #$ -cwd
 #$ -m bea
