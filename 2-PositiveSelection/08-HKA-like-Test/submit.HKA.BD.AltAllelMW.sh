@@ -26,5 +26,5 @@ cat Genes_HKA_bsve_AltAllelMW_chr${i}_TrimAlt_Annot_Mask_Filter.HKA.txt | sort -
 
 sleep 10m
 
-rm Genes*
-rm *HKA.txt
+#rm Genes*
+#rm *HKA.txt
