@@ -62,7 +62,7 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present,sites_polymorphic)
         #print(len(AF_all))
         for i in range(len(AF_all)):
 		#print(2*AF_all[i]*float(1-AF_all[i]))		
-                SNPS_values.append(2*((AF_all[i]*12)/6)*float(1-((AF_all[i]*12)/6)))
+                SNPS_values.append(2*((AF_all[i]*18)/8)*float(((1-AF_all[i])*18)/8))
 	#print(SNPS_values)
 	#print(numpy.sum(SNPS_values))
 	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.1428571428571428)  
@@ -89,17 +89,16 @@ def fetch_and_calc(chromo,start_pos,end_pos):
         for line in parsevcf.fetch(chromo,start_pos,end_pos):
                 line = line.split('\t')
                 sites_present+=1
-                if ('FAIL' in line[6]) or ('.' in line[-1]) or ('.' in line[-2]) or ('.' in line[-3]) or ('.' in line[-4]) or ('.' in line[-5]) or ('.' in line[-6]): continue
+                if ('FAIL' in line[6]) or ('.' in line[-1]) or ('.' in line[-2]) or ('.' in line[-3]) or ('.' in line[-4]) or ('.' in line[-5]) or ('.' in line[-6]) or ('.' in line[-7]) or ('.' in line[-8]) or ('.' in line[-9]): continue
                 sites_passing+=1
                 #print(line[-4:])
                 if line[4]=='.': continue
-		#if ('1/1' in line[-6]) or ('0/1' in line[-6]) or ('1/1' in line[-5]) or ('0/1' in line[-5]): continue
                 sites_polymorphic+=1
 		AF_value = line[7].split(';')
                 value=AF_value[0].split('=')
 		#print(line)
 		#print(value)
-		if ('1/1' not in line[-6]) or ('0/1' not in line[-6]) or ('1/1' not in line[-5]) or ('0/1' not in line[-5]):
+		if ('1/1' not in line[-5]) or ('0/1' not in line[-5]) or ('1/1' not in line[-6]) or ('0/1' not in line[-6] or ('1/1' not in line[-7]) or ('0/1' not in line[-7] or ('1/1' not in line[-8]) or ('0/1' not in line[-8] or ('1/1' not in line[-9]) or ('0/1' not in line[-9]):
 			if value[0] == 'ABHet':
 				if ('AF' in AF_value[3]):
 					Hetvalue=AF_value[3].split('=')
@@ -120,7 +119,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
 					Altnumber=Altvalue[1].split(',') # keep just SNP
 					if len(Altnumber) > 1: continue # Keep just SNPS
 					AF_all.append(float(Altvalue[1]))
-			DS_value = line[12].split(':')
+			DS_value = line[15].split(':')
                 	value=DS_value[0]
                 	number=value[1].split(',') # keep just SNPS
                 	if len(number) > 1: continue # Keep just SNPS

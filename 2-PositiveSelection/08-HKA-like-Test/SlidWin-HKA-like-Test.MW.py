@@ -56,7 +56,7 @@ else:
 def checkmono(lst):
     return not lst or lst.count(lst[0]) == len(lst)
 
-def computedPolymor(AF_all,DS_all,sites_passing,sites_present):
+def computedPolymor(AF_all,DS_all,sites_passing,sites_present,sites_polymorphic):
         SNPS_values=[]
         #print(AF_all)
         #print(len(AF_all))
@@ -65,7 +65,7 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present):
                 SNPS_values.append(2*AF_all[i]*float(1-AF_all[i]))
 	#print(SNPS_values)
 	#print(numpy.sum(SNPS_values))
-	Polymor=((numpy.sum(SNPS_values)/sites_passing)*1.111111)  
+	Polymor=((numpy.sum(SNPS_values)/sites_polymorphic)*1.111111)  
 	#print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Diversity'),Polymor,sites_passing))
 	SNPS_values2=[]
 
@@ -74,11 +74,11 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present):
                         SNPS_values2.append(float(1))
                 elif DS_all[i] == '0/1':
                         SNPS_values2.append(float(0.5))
-        Diver=(numpy.sum(SNPS_values2)/sites_passing)
+        Diver=(numpy.sum(SNPS_values2)/sites_polymorphic)
 	k = float(Polymor/Diver)
 	Qsites=float(sites_passing)/sites_present
         #print('%s\t%d\t%d\t%s\t%f\t%d' % (chromo,window_start,window_end,str('Divergence'),Diver,sites_passing))
-	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%f' % (chromo,window_start,window_end,Polymor,Diver,k,sites_present,sites_passing,Qsites))	
+	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%f' % (chromo,window_start,window_end,Polymor,Diver,k,sites_present,sites_passing,sites_polymorphic,Qsites))	
 
 def fetch_and_calc(chromo,start_pos,end_pos):
         AF_all=[]
@@ -117,8 +117,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
 				Altnumber=Altvalue[1].split(',') # keep just SNP
 				if len(Altnumber) > 1: continue # Keep just SNPS
 				AF_all.append(float(Altvalue[1]))
-			else:
-				print(line)
+
 		DS_value = line[11].split(':')
                 value=DS_value[0]
                 number=value[1].split(',') # keep just SNPS
@@ -128,7 +127,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
         #once you have genotypes, run it through fxn
         #print '%s\t%s\t%s\t%s\t' % (chromo,start_pos,sites_present,sites_passing),
         #if not AF_all: print("No Allele frequencies")
-        computedPolymor(AF_all,DS_all,sites_passing,sites_present)
+        computedPolymor(AF_all,DS_all,sites_passing,sites_present,sites_polymorphic)
 
 #initialize window start and end coordinates
 window_start = start_pos

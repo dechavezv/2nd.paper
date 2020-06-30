@@ -23,7 +23,7 @@ for line in file1:
 		line2 = list2[i].split('\t')
 		if chr == line2[0] and float(line2[1]) < float(end) and float(line2[2]) > float(start):
 			#print('%s\t%s' % (line,line2[3]))					
-			outfile.write(line[0] + '\t' + line[1] + '\t' + line[2] + '\t' + line[3] + '\t' + line[4] + '\t' + line[5] + '\t' + line[6] + '\t' + line[7] + '\t' + line[8] + '\t' + line2[3] + '\t' + line2[7] + '\n')
+			outfile.write(line[0] + '\t' + line[1] + '\t' + line[2] + '\t' + line[3] + '\t' + line[4] + '\t' + line[5] + '\t' + line[6] + '\t' + line[7] + '\t' + line[8] + '\t' + line[9] + '\t' + line2[3] + '\t' + line2[7] + '\n')
 		#else:
 		#	#print('%s\t%s' % (line,'NA'))
 		#	outfile.write(line[0] + '\t' + line[1] + '\t' + line[2] + '\t' + line[3] + '\t' + line[4] + '\t' + line[5] + '\t' + line[6] + '\t' + line[7] + '\t' + 'NA' + '\n')
