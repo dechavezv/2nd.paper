@@ -20,7 +20,7 @@ module load python/2.7
 cd /u/scratch/d/dechavez/HKA/BD
 
 echo '********** Conducting HKA per window ***********' 
-python ${SCRIPT_DIR}/SlidWin-HKA-like-Test.BD.AltAllelMW.py bsve_bcbr_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz \
+python ${SCRIPT_DIR}/SlidWin-HKA-like-Test.BD.AltAllelMW.py ../bsve_bcbr_chr${i}_TrimAlt_Annot_Mask_Filter.vcf.gz \
 100000 10000 chr${i} > bsve_AltAllelMW_chr${i}_TrimAlt_Annot_Mask_Filter.HKA.txt
 echo '********** Done calculating HKA-like test ***********'
 
