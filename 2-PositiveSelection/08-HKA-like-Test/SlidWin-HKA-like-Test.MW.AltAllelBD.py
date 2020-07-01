@@ -98,32 +98,32 @@ def fetch_and_calc(chromo,start_pos,end_pos):
                 value=AF_value[0].split('=')
 		#print(line)
 		#print(value)
-		if ('1/1' not in line[-1]) or ('0/1' not in line[-1]) or ('1/1' not in line[-2]) or ('0/1' not in line[-2] or ('1/1' not in line[-3]) or ('0/1' not in line[-3] or ('1/1' not in line[-4]) or ('0/1' not in line[-4]):
-			if value[0] == 'ABHet':
-				if ('AF' in AF_value[3]):
-					Hetvalue=AF_value[3].split('=')
-					if Hetvalue[0] == 'AF':
-						Hetnumber=Hetvalue[1].split(',') # keep just SNPS
-						if len(Hetnumber) > 1: continue # Keep just SNPS
-						AF_all.append(float(Hetvalue[1]))
-				elif ('AF' in AF_value[2]):
-					Hetvalue=AF_value[2].split('=')
-					if Hetvalue[0] == 'AF':
-						Hetnumber=Hetvalue[1].split(',') # keep just SNPS
-						if len(Hetnumber) > 1: continue # Keep just SNPS
-						AF_all.append(float(Hetvalue[1]))
+		if ('1/1' in line[-1]) or ('0/1' in line[-1]) or ('1/1' in line[-2]) or ('0/1' in line[-2]) or ('1/1' in line[-3]) or ('0/1' in line[-3]) or ('1/1' in line[-4]) or ('0/1' in line[-4]): continue
+		if value[0] == 'ABHet':
+			if ('AF' in AF_value[3]):
+				Hetvalue=AF_value[3].split('=')
+				if Hetvalue[0] == 'AF':
+					Hetnumber=Hetvalue[1].split(',') # keep just SNPS
+					if len(Hetnumber) > 1: continue # Keep just SNPS
+					AF_all.append(float(Hetvalue[1]))
+			elif ('AF' in AF_value[2]):
+				Hetvalue=AF_value[2].split('=')
+				if Hetvalue[0] == 'AF':
+					Hetnumber=Hetvalue[1].split(',') # keep just SNPS
+					if len(Hetnumber) > 1: continue # Keep just SNPS
+					AF_all.append(float(Hetvalue[1]))
 
-			elif value[0] == 'ABHom':
-				Altvalue=AF_value[2].split('=')
-				if Altvalue[0] == 'AF':
-					Altnumber=Altvalue[1].split(',') # keep just SNP
-					if len(Altnumber) > 1: continue # Keep just SNPS
-					AF_all.append(float(Altvalue[1]))
-			DS_value = line[11].split(':')
-                	value=DS_value[0]
-                	number=value[1].split(',') # keep just SNPS
-                	if len(number) > 1: continue # Keep just SNPS
-                	DS_all.append(value)
+		elif value[0] == 'ABHom':
+			Altvalue=AF_value[2].split('=')
+			if Altvalue[0] == 'AF':
+				Altnumber=Altvalue[1].split(',') # keep just SNP
+				if len(Altnumber) > 1: continue # Keep just SNPS
+				AF_all.append(float(Altvalue[1]))
+		DS_value = line[11].split(':')
+                value=DS_value[0]
+                number=value[1].split(',') # keep just SNPS
+                if len(number) > 1: continue # Keep just SNPS
+                DS_all.append(value)
 
         #once you have genotypes, run it through fxn
         #print '%s\t%s\t%s\t%s\t' % (chromo,start_pos,sites_present,sites_passing),
