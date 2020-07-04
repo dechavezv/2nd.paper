@@ -15,8 +15,21 @@ export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 cd ${DIREC}
 ### $QSUB run_BamToFasta.sh ${BAM} ${depth_95th}
 
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr01.bam 114
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr05.bam 114
+for i in {01..38} X; do
+$QSUB ${SCRIPTDIR}/01_IRNP_RKW2455_Aligned_MarkDup_Filtered.bam_chr${i}.bam 50
+done
+
+for i in {01..38} X; do
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh 22_IRNP_MEX_GR6_Aligned_MarkDup_Filtered.bam_chr${i}.bam  48
+done
+
+for i in {01..38} X; do
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cla15379Quebec.FastqToSam.bam_Aligned.MarkDup_Filtered.bam_chr${i}.bam 15
+done
+
+for i in {01..38} X; do
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cla1850Florida.FastqToSam.bam_Aligned.MarkDup_Filtered.bam_chr${i}.bam  16
+done
 
 #for i in {01..38} X; do
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 114
