@@ -9,7 +9,7 @@
 #$ -M dechavezv
 #$ -t 1-38:1
 
-#i=$(printf %02d $SGE_TASK_ID)
+i=$(printf %02d $SGE_TASK_ID)
 #i=X
 #i=MT
 
