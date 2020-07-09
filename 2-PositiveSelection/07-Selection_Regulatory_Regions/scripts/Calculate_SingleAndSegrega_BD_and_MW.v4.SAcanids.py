@@ -56,10 +56,14 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 	
 	#Account for missingness
 	missing=0
-        for i in range(0,len(samples)):
-                if GTfilter(samples[i], line[i+9])=='.': missing+=1
-        Missing.append(float(missing/23))
-	
+	for i in range(9,32):
+		if i == 19: continue #if you want to exclude Gray fox
+		else:
+			field=line[i].split(':')
+			if ('.' in field[0]): missing+=1
+        Missing.append(float(missing/22))	
+
+
 	#Caluclate Segregation Sites
 	for i in range(9,32):
 		if i == 19: continue #if you want to exclude Gray fox
@@ -68,14 +72,13 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 		else:
 			field=line[i].split(':')  			
 			if ('1/1' in field[0]):
-				SegregationSites.append(float(1))
+				SegregationSites.append(float(1))	
 			elif ('0/1' in field[0]):
 				SegregationSites.append(float(0.5))
-	
+	 
 	#Calculate Singletones
 	#All sites homozygous reference but BD 
 	if  ('1/1' in line[27] or '0/1' in line[27]) and ('1/1' in line[28] or '0/1' in line[28]) and ('1/1' in line[29] or '0/1' in line[29]) and ('1/1' in line[30] or '0/1' in line[30]) and ('1/1' not in line[12]) and ('0/1' not in line[12]) and ('1/1' not in line[13]) and ('0/1' not in line[13]) and ('1/1' not in line[14]) and ('0/1' not in line[14]) and ('1/1' not in line[15]) and ('0/1' not in line[15]) and ('1/1' not in line[16]) and ('0/1' not in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
-		print(line)
 		for i in range(27,31):
 			field=line[i].split(':')
 			if ('1/1' in field[0]):
@@ -93,21 +96,21 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 				 MW_single.append(float(0.5))
 
 
-if (numpy.sum(MW_single) > 0) or (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) > 0):
+if (numpy.sum(MW_single) > 0 or numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) > 0):
 	TotalBD=float(((numpy.sum(BD_single)/4)/sites_passing))
 	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
 	Diver=float(TotalBD-TotalMW)
 	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
 	SinglBySeg = Diver/Segre
-	Missingness=Missing/sites_passing
-	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,TotalBD,TotalMW,Diver,Segre,SinglBySeg,sites_present,sites_passing,Missingness,EnsemblID))
+	Missingness=float((numpy.sum(Missing)/sites_passing))
+	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%d\t%f\t%s' % (chromo,start_pos,end_pos,TotalBD,TotalMW,Diver,Segre,SinglBySeg,sites_present,sites_passing,Missingness,EnsemblID))
 
 
 elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) == 0) and (numpy.sum(SegregationSites) > 0):
 	Diver=0
 	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
-	Missingness=Missing/sites_passing
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_Segre",sites_present,sites_passing,Missingness,EnsemblID))
+	Missingness=float((numpy.sum(Missing)/sites_passing))
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%f\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_Segre",sites_present,sites_passing,Missingness,EnsemblID))
 
 
 
@@ -117,8 +120,8 @@ elif (numpy.sum(BD_single) == 0) and (numpy.sum(MW_single) > 0) and (numpy.sum(S
 	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
 	Diver=0-TotalMW
 	Segre=0
-	Missingness=Missing/sites_passing
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleMW",sites_present,sites_passing,Missingness,EnsemblID))
+	Missingness=float((numpy.sum(Missing)/sites_passing))
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%f\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleMW",sites_present,sites_passing,Missingness,EnsemblID))
 
 elif (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) == 0):
 	Diver=0
@@ -126,22 +129,22 @@ elif (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(Se
 	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
 	Diver=float(TotalBD-TotalMW)
 	Segre=0
-	Missingness=Missing/sites_passing
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD_MW",sites_present,sites_passing,Missingness,EnsemblID))
+	Missingness=float((numpy.sum(Missing)/sites_passing))
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%f\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD_MW",sites_present,sites_passing,Missingness,EnsemblID))
 
 elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) == 0):
 	Diver=0
 	TotalBD=float(((numpy.sum(BD_single)/4)/sites_passing))
 	Segre=0
 	Diver=TotalBD-0
-	Missingness=Missing/sites_passing
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD",sites_present,sites_passing,Missingness,EnsemblID))
+	Missingness=float((numpy.sum(Missing)/sites_passing))
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%f\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD",sites_present,sites_passing,Missingness,EnsemblID))
 
 elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) == 0) and (numpy.sum(SegregationSites) == 0):
 	Diver=0
 	Segre=0
-	Missingness=Missing/sites_passing
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"No_variant",sites_present,sites_passing,Missingness,EnsemblID))
+	Missingness=float((numpy.sum(Missing)/sites_passing))
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%f\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"No_variant",sites_present,sites_passing,Missingness,EnsemblID))
 
 VCF.close()
 exit()
