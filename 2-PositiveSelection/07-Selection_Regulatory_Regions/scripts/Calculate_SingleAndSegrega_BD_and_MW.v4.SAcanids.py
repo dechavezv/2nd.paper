@@ -44,6 +44,7 @@ def checkmono(lst):
 BD_single = []
 MW_single = []
 SegregationSites = []
+Missing=[]
 
 sites_present,sites_passing=0,0
 for line in parsevcf.fetch(chromo,start_pos,end_pos):
@@ -52,20 +53,27 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 	# Get Singletones bush dog
 	if ('FAIL' in line[6]): continue
 	sites_passing+=1
-	for i in range(1,22):
-		if i == 13: continue
+	
+	#Account for missingness
+	missing=0
+        for i in range(0,len(samples)):
+                if GTfilter(samples[i], line[i+9])=='.': missing+=1
+        Missing.append(float(missing/23))
+	
+	#Caluclate Segregation Sites
+	for i in range(9,32):
+		if i == 19: continue #if you want to exclude Gray fox
 		if i == 27 or i==28 or i==28 or i==30: continue #if you want to exclude BD
 		if i==12 or i==13 or i==14 or i==15 or i==16 : continue #if you want to exclude MW
 		else:
-			field=line[-i].split(':')  			
+			field=line[i].split(':')  			
 			if ('1/1' in field[0]):
 				SegregationSites.append(float(1))
 			elif ('0/1' in field[0]):
 				SegregationSites.append(float(0.5))
-
+	
 	#Calculate Singletones
-	#All sites homozygous reference
-        #If two alleles add 1
+	#All sites homozygous reference but BD 
 	if  ('1/1' in line[27] or '0/1' in line[27]) and ('1/1' in line[28] or '0/1' in line[28]) and ('1/1' in line[29] or '0/1' in line[29]) and ('1/1' in line[30] or '0/1' in line[30]) and ('1/1' not in line[12]) and ('0/1' not in line[12]) and ('1/1' not in line[13]) and ('0/1' not in line[13]) and ('1/1' not in line[14]) and ('0/1' not in line[14]) and ('1/1' not in line[15]) and ('0/1' not in line[15]) and ('1/1' not in line[16]) and ('0/1' not in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
 		print(line)
 		for i in range(27,31):
@@ -74,8 +82,9 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 				BD_single.append(float(1))
 			elif ('0/1' in field[0]):
 				BD_single.append(float(0.5))
-	if  ('1/1' not in line[27]) and ('0/1' not in line[27]) and ('1/1' not in line[28]) and ('0/1' not in line[28]) and ('1/1' not in line[29]) and ('0/1' not in line[29]) and ('1/1' not in line[30]) and ('0/1' not in line[30]) and ('1/1' in line[12] or '0/1' in line[12]) and ('1/1' in line[13] or '0/1' in line[13]) and ('1/1' in line[14] or '0/1' in line[14]) and ('1/1' in line[15] or '0/1' in line[15]) and ('1/1' in line[16] or '0/1' in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
 
+	#All sites homozygous reference	but MW
+	if  ('1/1' not in line[27]) and ('0/1' not in line[27]) and ('1/1' not in line[28]) and ('0/1' not in line[28]) and ('1/1' not in line[29]) and ('0/1' not in line[29]) and ('1/1' not in line[30]) and ('0/1' not in line[30]) and ('1/1' in line[12] or '0/1' in line[12]) and ('1/1' in line[13] or '0/1' in line[13]) and ('1/1' in line[14] or '0/1' in line[14]) and ('1/1' in line[15] or '0/1' in line[15]) and ('1/1' in line[16] or '0/1' in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
 		for i in range(12,17):
 			field=line[i].split(':')
 			if ('1/1' in field[0]):
@@ -89,7 +98,8 @@ if (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(Segr
 	Diver=float(TotalBD-TotalMW)
 	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
 	SinglBySeg = Diver/Segre
-	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,TotalBD,TotalMW,Diver,Segre,SinglBySeg,sites_present,sites_passing,EnsemblID))
+	Missingness=Missing/sites_passing
+	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,TotalBD,TotalMW,Diver,Segre,SinglBySeg,sites_present,sites_passing,Missingness,EnsemblID))
 
 
 elif (numpy.sum(BD_single) == 0) and (numpy.sum(MW_single) > 0) and (numpy.sum(SegregationSites) > 0):
