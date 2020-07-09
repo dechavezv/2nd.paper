@@ -53,10 +53,9 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 	if ('FAIL' in line[6]): continue
 	sites_passing+=1
 	for i in range(1,22):
-		#if i == 2 or i == 8: continue #if you want to exclude BushDog=2 and GrayFox=8
 		if i == 13: continue
-		if i == 2 or i==3 or i==4 or i==5: continue #if you want to exclude BD
-		if i==16 or i==17 or i==18 or i==19 or i==20 : continue #if you want to exclude MW
+		if i == 27 or i==28 or i==28 or i==30: continue #if you want to exclude BD
+		if i==12 or i==13 or i==14 or i==15 or i==16 : continue #if you want to exclude MW
 		else:
 			field=line[-i].split(':')  			
 			if ('1/1' in field[0]):
@@ -67,18 +66,18 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 	#Calculate Singletones
 	#All sites homozygous reference
         #If two alleles add 1
-	if  ('1/1' in line[27] or '0/1' in line[27]) and ('1/1' in line[28] or '0/1' in line[28]) and ('1/1' in line[29] or '0/1' in line[29]) and ('1/1' in line[30] or '0/1' in line[30]) and ('1/1' in line[12] or '0/1' in line[12]) and ('1/1' in line[13] or '0/1' in line[13]) and ('1/1' in line[14] or '0/1' in line[14]) and ('1/1' in line[15] or '0/1' in line[15]) and ('1/1' in line[16] or '0/1' in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
+	if  ('1/1' in line[27] or '0/1' in line[27]) and ('1/1' in line[28] or '0/1' in line[28]) and ('1/1' in line[29] or '0/1' in line[29]) and ('1/1' in line[30] or '0/1' in line[30]) and ('1/1' not in line[12]) and ('0/1' not in line[12]) and ('1/1' not in line[13]) and ('0/1' not in line[13]) and ('1/1' not in line[14]) and ('0/1' not in line[14]) and ('1/1' not in line[15]) and ('0/1' not in line[15]) and ('1/1' not in line[16]) and ('0/1' not in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
 		print(line)
-		for i in range(2,5):
-			field=line[-i].split(':')
+		for i in range(27,31):
+			field=line[i].split(':')
 			if ('1/1' in field[0]):
 				BD_single.append(float(1))
 			elif ('0/1' in field[0]):
 				BD_single.append(float(0.5))
+	if  ('1/1' not in line[27]) and ('0/1' not in line[27]) and ('1/1' not in line[28]) and ('0/1' not in line[28]) and ('1/1' not in line[29]) and ('0/1' not in line[29]) and ('1/1' not in line[30]) and ('0/1' not in line[30]) and ('1/1' in line[12] or '0/1' in line[12]) and ('1/1' in line[13] or '0/1' in line[13]) and ('1/1' in line[14] or '0/1' in line[14]) and ('1/1' in line[15] or '0/1' in line[15]) and ('1/1' in line[16] or '0/1' in line[16]) and ('1/1' not in line[9]) and ('0/1' not in line[9]) and  ('1/1' not in line[10]) and ('0/1' not in line[10]) and ('1/1' not in line[11]) and ('0/1' not in line[11]) and  ('1/1' not in line[17]) and ('0/1' not in line[17]) and ('1/1' not in line[18]) and ('0/1' not in line[18]) and ('1/1' not in line[19]) and ('0/1' not in line[19]) and ('1/1' not in line[20]) and ('0/1' not in line[20]) and  ('1/1' not in line[21]) and ('0/1' not in line[21]) and ('1/1' not in line[22]) and ('0/1' not in line[22]) and  ('1/1' not in line[23]) and ('0/1' not in line[23]) and ('1/1' not in line[24]) and ('0/1' not in line[24]) and  ('1/1' not in line[25]) and ('0/1' not in line[25]) and ('1/1' not in line[26]) and ('0/1' not in line[26]) and  ('1/1' not in line[26]) and ('0/1' not in line[26]):
 
-
-		for i in range(15,21):
-			field=line[-i].split(':')
+		for i in range(12,17):
+			field=line[i].split(':')
 			if ('1/1' in field[0]):
 				MW_single.append(float(1))
 			elif ('0/1' in field[0]):
