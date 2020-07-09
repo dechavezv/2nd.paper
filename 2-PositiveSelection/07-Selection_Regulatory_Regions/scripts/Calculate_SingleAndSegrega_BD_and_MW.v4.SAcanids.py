@@ -92,7 +92,8 @@ for line in parsevcf.fetch(chromo,start_pos,end_pos):
 			elif ('0/1' in field[0]):
 				 MW_single.append(float(0.5))
 
-if (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) > 0):
+
+if (numpy.sum(MW_single) > 0) or (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) > 0):
 	TotalBD=float(((numpy.sum(BD_single)/4)/sites_passing))
 	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
 	Diver=float(TotalBD-TotalMW)
@@ -102,35 +103,13 @@ if (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(Segr
 	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,TotalBD,TotalMW,Diver,Segre,SinglBySeg,sites_present,sites_passing,Missingness,EnsemblID))
 
 
-elif (numpy.sum(BD_single) == 0) and (numpy.sum(MW_single) > 0) and (numpy.sum(SegregationSites) > 0):
-	Diver=0
-	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
-	Diver=0-TotalMW
-	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
-	SinglBySeg = Diver/Segre
-	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,SinglBySeg,sites_present,sites_passing,EnsemblID))
-    
-elif (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) > 0):
-	Diver=0
-	TotalBD=float((numpy.sum(BD_single)/sites_passing))
-	TotalMW=float((numpy.sum(MW_single)/sites_passing))
-	Diver=float(TotalBD-TotalMW)
-	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
-	SinglBySeg = Diver/Segre
-	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,SinglBySeg,sites_present,sites_passing,EnsemblID))
-        
-elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) > 0):
-	Diver=0
-	TotalBD=float(((numpy.sum(BD_single)/4)/sites_passing))
-	Diver=TotalBD-0
-	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
-	SinglBySeg = Diver/Segre
-	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,SinglBySeg,sites_present,sites_passing,EnsemblID))
-    
 elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) == 0) and (numpy.sum(SegregationSites) > 0):
 	Diver=0
 	Segre=float((numpy.sum(SegregationSites)/13)/sites_passing)
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_Segre",sites_present,sites_passing,EnsemblID))
+	Missingness=Missing/sites_passing
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_Segre",sites_present,sites_passing,Missingness,EnsemblID))
+
+
 
 # Add zero if Segragation is equal to zero
 elif (numpy.sum(BD_single) == 0) and (numpy.sum(MW_single) > 0) and (numpy.sum(SegregationSites) == 0):
@@ -138,7 +117,8 @@ elif (numpy.sum(BD_single) == 0) and (numpy.sum(MW_single) > 0) and (numpy.sum(S
 	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
 	Diver=0-TotalMW
 	Segre=0
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleMW",sites_present,sites_passing,EnsemblID))
+	Missingness=Missing/sites_passing
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleMW",sites_present,sites_passing,Missingness,EnsemblID))
 
 elif (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) == 0):
 	Diver=0
@@ -146,19 +126,22 @@ elif (numpy.sum(MW_single) > 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(Se
 	TotalMW=float(((numpy.sum(MW_single)/5)/sites_passing))
 	Diver=float(TotalBD-TotalMW)
 	Segre=0
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD_MW",sites_present,sites_passing,EnsemblID))
+	Missingness=Missing/sites_passing
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD_MW",sites_present,sites_passing,Missingness,EnsemblID))
 
 elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) > 0) and (numpy.sum(SegregationSites) == 0):
 	Diver=0
 	TotalBD=float(((numpy.sum(BD_single)/4)/sites_passing))
 	Segre=0
 	Diver=TotalBD-0
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD",sites_present,sites_passing,EnsemblID))
+	Missingness=Missing/sites_passing
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"Only_SingleBD",sites_present,sites_passing,Missingness,EnsemblID))
 
 elif (numpy.sum(MW_single) == 0) and (numpy.sum(BD_single) == 0) and (numpy.sum(SegregationSites) == 0):
 	Diver=0
 	Segre=0
-	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"No_variant",sites_present,sites_passing,EnsemblID))
+	Missingness=Missing/sites_passing
+	print('%s\t%d\t%d\t%f\t%f\t%s\t%d\t%d\t%d\t%s' % (chromo,start_pos,end_pos,Diver,Segre,"No_variant",sites_present,sites_passing,Missingness,EnsemblID))
 
 VCF.close()
 exit()
