@@ -75,10 +75,10 @@ def computedPolymor(AF_all,DS_all,sites_passing,sites_present,sites_polymorphic)
 	print('%s\t%d\t%d\t%f\t%f\t%f\t%d\t%d\t%d\t%f' % (chromo,window_start,window_end,Polymor,Diver,k,sites_present,sites_passing,sites_polymorphic,Qsites))
 
 def fetch_and_calc(chromo,start_pos,end_pos):
-        AF_all=[]
+	AF_all=[]
 	DS_all=[]
-        SNPS_values=[]
-        sites_present,sites_passing,sites_polymorphic=0,0,0
+	SNPS_values=[]
+	sites_present,sites_passing,sites_polymorphic=0,0,0
 
         for line in parsevcf.fetch(chromo,start_pos,end_pos):
                 line = line.split('\t')
@@ -93,7 +93,7 @@ def fetch_and_calc(chromo,start_pos,end_pos):
 		#print(line)
 		#print(value)
 		if ('0/0' in line[9]) and ('0/0' in line[10]) and ('0/0' in line[11]) and ('0/0' in line[12]) and ('0/0' in line[13]) and ('1/1' in line[14] or '0/1' in line[14]) and ('1/1' in line[15] or '0/1' in line[15]) and ('1/1' in line[16] or '0/1' in line[16])  and ('1/1' in line[17] or '0/1' in line[17]):
-			for i in range(27,31):
+			for i in range(9,14):
 			field=line[i].split(':')
 			if ('1/1' in field[0]):
 				DS_all.append(float(1))
