@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#$ -l highp,h_rt=12:00:00,h_data=2G
+#$ -l h_rt=15:00:00,h_data=1G
 #$ -pe shared 1
 #$ -N Run_SWAMP
 #$ -cwd
