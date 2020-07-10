@@ -1,11 +1,13 @@
 #! /bin/bash
 #$ -wd /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP
-#$ -l highp,h_rt=16:00:00,h_data=1G
+#$ -l h_rt=24:00:00,h_data=1G
 #$ -N I_SWAMP
 #$ -o /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP/log/I_SWAMP
 #$ -e /u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP/log/I_SWAMP
 #$ -m abe
 #$ -M dechavezv
+
+# highp
 
 export SCRIPTDIR=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP/scripts
 export DIREC=/u/home/d/dechavez/project-rwayne/2nd.paper/2-PositiveSelection/04-Run_SWAMP
