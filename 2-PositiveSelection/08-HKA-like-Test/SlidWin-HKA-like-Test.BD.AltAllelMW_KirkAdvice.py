@@ -93,10 +93,11 @@ def fetch_and_calc(chromo,start_pos,end_pos):
 		#print(line)
 		#print(value)
 		if ('0/0' in line[9]) and ('0/0' in line[10]) and ('0/0' in line[11]) and ('0/0' in line[12]) and ('0/0' in line[13]) and ('1/1' in line[14] or '0/1' in line[14]) and ('1/1' in line[15] or '0/1' in line[15]) and ('1/1' in line[16] or '0/1' in line[16])  and ('1/1' in line[17] or '0/1' in line[17]):
-			for i in range(9,14):
-			field=line[i].split(':')
-			if ('1/1' in field[0]):
-				DS_all.append(float(1))
+			#print(line)
+			for i in range(14,18):
+				field=line[i].split(':')
+				if ('1/1' in field[0]):
+					DS_all.append(float(1))
 
 			if value[0] == 'ABHet':
 				if ('AF' in AF_value[3]):

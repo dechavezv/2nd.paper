@@ -1,10 +1,10 @@
 #! /bin/bash
 
-#$ -wd /u/home/d/dechavez/project-rwayne/Cth/reads
+#$ -wd /u/scratch/d/dechavez/QB3ateloc
 #$ -l highp,h_rt=02:00:00,h_data=1G
 #$ -N subFastqc
-#$ -o /u/home/d/dechavez/project-rwayne/Cth/reads/log/FastqQC
-#$ -e /u/home/d/dechavez/project-rwayne/Cth/reads/log/FastqQC
+#$ -o /u/scratch/d/dechavez/QB3ateloc/log/FastqQC
+#$ -e /u/scratch/d/dechavez/QB3ateloc/log/FastqQC
 #$ -m abe
 #$ -M dechavezv
 
@@ -19,7 +19,7 @@ module load perl
 
 QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 export SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/1-MapToreRerence/01_FastQC/run_FastaQC.sh
-export DIR=/u/home/d/dechavez/project-rwayne/Cth/reads
+export DIR=/u/scratch/d/dechavez/QB3ateloc
 
 cd ${DIR}
 
@@ -30,4 +30,7 @@ cd ${DIR}
 # for line in $(cat list.of.samples.txt); do ${QSUB} ${SCRIPT} $line;done
 
 #If you just want to run one smple uncoment the following
-${QSUB} ${SCRIPT} bCth-213_S79_L001
+${QSUB} ${SCRIPT} AMI-1_S15_L001
+${QSUB} ${SCRIPT} DFU-18_S14_L001
+${QSUB} ${SCRIPT} DGR-1_S12_L001
+${QSUB} ${SCRIPT} DSE-2_S13_L001

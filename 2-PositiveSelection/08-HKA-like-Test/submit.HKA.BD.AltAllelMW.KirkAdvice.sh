@@ -2,7 +2,7 @@
 
 #$ -wd /u/scratch/d/dechavez/HKA/
 #$ -l h_rt=14:00:00,h_data=1G
-#$ -N SubRunHKA.BD.AltAllelMW
+#$ -N SubRunHKA.BD.AltAllelMW.KirkAdvice
 #$ -o /u/scratch/d/dechavez/HKA/log/
 #$ -e /u/scratch/d/dechavez/HKA/log/
 #$ -m abe

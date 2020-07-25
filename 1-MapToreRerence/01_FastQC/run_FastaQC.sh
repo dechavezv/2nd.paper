@@ -1,20 +1,20 @@
-R1.001.fastq.gz#!/bin/bash
+#!/bin/bash
 
 #Use highmem te reserve a whole node
 
 #$ -l highp,h_rt=22:00:00,h_data=5G
-#$ -N FASTAQC_Lvet
+#$ -N FASTAQC_Atel
 #$ -cwd
 #$ -m bea
-#$ -o /u/home/d/dechavez/project-rwayne/Cth/reads/log/FASTAQC.out
-#$ -e /u/home/d/dechavez/project-rwayne/Cth/reads/log/FASTAQC.err
+#$ -o /u/scratch/d/dechavez/QB3ateloc/log/FASTAQC.out
+#$ -e /u/scratch/d/dechavez/QB3ateloc/log/FASTAQC.err
 #$ -M dechavezv
 
 # then load your modules:
 . /u/local/Modules/default/init/modules.sh
 module load java
 
-export RAW_read=/u/home/d/dechavez/project-rwayne/Cth/reads
+export RAW_read=/u/scratch/d/dechavez/QB3ateloc
 export FASTAQC=/u/home/d/dechavez/project-rwayne/FastQC
 
 echo "########"
