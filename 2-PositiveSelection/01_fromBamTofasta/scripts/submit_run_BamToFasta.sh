@@ -13,23 +13,48 @@ export DIREC=/u/scratch/d/dechavez/IndelReal/split.bams
 export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 cd ${DIREC}
+
 ### $QSUB run_BamToFasta.sh ${BAM} ${depth_95th}
 
 for i in {01..38} X; do
-$QSUB ${SCRIPTDIR}/01_IRNP_RKW2455_Aligned_MarkDup_Filtered.bam_chr${i}.bam 50
+$QSUB ${SCRIPTDIR}/Merged_IbeWIB98_L5_Aligned.MarkDup_Filtered.bam_chr${i}.bam
 done
 
 for i in {01..38} X; do
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh 22_IRNP_MEX_GR6_Aligned_MarkDup_Filtered.bam_chr${i}.bam  48
+$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Merged_ChXJ30_L5_Aligned.MarkDup_Filtered.bam_chr${i}.bam
 done
 
-for i in {01..38} X; do
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cla15379Quebec.FastqToSam.bam_Aligned.MarkDup_Filtered.bam_chr${i}.bam 15
-done
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh 01_AMI_Aligned.MarkDup_Filtered.bam_chr${i}.bam 40
+## done
 
-for i in {01..38} X; do
-$QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cla1850Florida.FastqToSam.bam_Aligned.MarkDup_Filtered.bam_chr${i}.bam  16
-done
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh 02_DFU_Aligned.MarkDup_Filtered.bam_chr${i}.bam 40
+## done
+
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh 03_DGR_Aligned.MarkDup_Filtered.bam_chr${i}.bam 40
+## done
+
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh 04_DSE_Aligned.MarkDup_Filtered.bam_chr${i}.bam 40
+## done
+
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh 01_IRNP_RKW2455_Aligned_MarkDup_Filtered.bam_chr${i}.bam 50
+## done
+
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh 22_IRNP_MEX_GR6_Aligned_MarkDup_Filtered.bam_chr${i}.bam  48
+## done
+
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cla15379Quebec.FastqToSam.bam_Aligned.MarkDup_Filtered.bam_chr${i}.bam 15
+## done
+
+## for i in {01..38} X; do
+## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh Cla1850Florida.FastqToSam.bam_Aligned.MarkDup_Filtered.bam_chr${i}.bam  16
+## done
 
 #for i in {01..38} X; do
 ## $QSUB ${SCRIPTDIR}/run_BamToFasta.sh BBJ_BWA_sortRG_rmdup_realign_fixmate_Filtered.bam_chr${i}.bam 114
