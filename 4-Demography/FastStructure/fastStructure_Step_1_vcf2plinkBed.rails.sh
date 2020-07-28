@@ -12,7 +12,7 @@ indir=/u/home/d/dechavez/project-rwayne/rails.project/VCF/DanielData
  # temporary
 # sample size can have an effect, so have downsampled the commanders:
 #infile=snp_7_maxNoCallFrac_0.2_passingBespoke_passingAllFilters_postMerge_raw_variants.vcf.gz
-infile=LS_joint_allchr_Annot_Mask_Filter_passingSNPs.vcf 
+infile=LS_joint_allchr_Annot_Mask_Filter_passingSNPs.NoInvar.vcf
 outdir=/u/home/d/dechavez/project-rwayne/rails.project/VCF/DanielData/${calldate}_filtered/plinkFormat 
 mkdir -p $outdir
 # you need to use const-fid 0 otherwise it thinks that family name_sample name is structure of ID and tries to split it (and fails)
