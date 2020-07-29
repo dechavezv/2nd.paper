@@ -1,13 +1,13 @@
 #! /bin/bash
 
-#$ -wd /u/home/d/dechavez/project-rwayne/SA.VCF/Combined
-#$ -l highp,h_rt=24:00:00,h_data=18G,arch=intel*,h_vmem=30G
+#$ -wd /u/home/d/dechavez/project-rwayne/SA.VCF
+#$ -l highp,h_rt=24:00:00,h_data=10G,arch=intel*,h_vmem=30G
 #$ -N Filter.VCF.custom.python
-#$ -o /u/home/d/dechavez/project-rwayne/SA.VCF/Combined/log/
-#$ -e /u/home/d/dechavez/project-rwayne/SA.VCF/Combined/log/
+#$ -o /u/home/d/dechavez/project-rwayne/SA.VCF/log/
+#$ -e /u/home/d/dechavez/project-rwayne/SA.VCF/log/
 #$ -m abe
 #$ -M dechavezv
-#$ -t 1-36:1
+#$ -t 1-38:1
 
 #highmem_forced=TRUE,highp
 
@@ -21,7 +21,7 @@ REPEATMASK=/u/home/d/dechavez/project-rwayne/Besd_Files/CpG_and_repeat_filter_cf
 
 GATK=/u/local/apps/gatk/3.7/GenomeAnalysisTK.jar
 
-cd /u/home/d/dechavez/project-rwayne/SA.VCF/Combined
+cd /u/home/d/dechavez/project-rwayne/SA.VCF
 
 IDX=$(printf %02d ${SGE_TASK_ID})
 VCF=$(ls *_AmiDgr_chr${IDX}_TrimAlt_Annot.vcf.gz)
@@ -30,7 +30,7 @@ VCF=$(ls *_AmiDgr_chr${IDX}_TrimAlt_Annot.vcf.gz)
 LOG=${VCF%.vcf.gz}_VariantFiltration_${IDX}.log
 date "+%Y-%m-%d %T" > ${LOG}
 
-java -jar -Xmx18g ${GATK} \
+java -jar -Xmx10g ${GATK} \
 -T VariantFiltration \
 -R ${REFERENCE} \
 -mask ${REPEATMASK} -maskName "FAIL_Rep" \
