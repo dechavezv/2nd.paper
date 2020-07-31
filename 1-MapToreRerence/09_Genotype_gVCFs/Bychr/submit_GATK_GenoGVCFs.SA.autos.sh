@@ -2,7 +2,7 @@
 
 #$ -wd /u/home/d/dechavez/project-rwayne/GVCF/
 #$ -l highp,h_data=20G,h_rt=33:00:00,h_vmem=40G
-#$ -t 11-11:1
+#$ -t 01-38:1
 #$ -N GTgVCF
 #$ -o /u/home/d/dechavez/project-rwayne/GVCF/log/
 #$ -e /u/home/d/dechavez/project-rwayne/GVCF/log/
