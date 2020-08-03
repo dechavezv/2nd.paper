@@ -16,19 +16,23 @@ module load vcftools
 module load plink
 
 wd=/u/scratch/d/dechavez/SA.VCF/Filtered/20200530
-cd ${wd}/plinkInputFiles
+
+#keep this to solve memeory issues in SCRATH
+#wd2=/u/home/d/dechavez/project-rwayne/SA.VCF/Filtered/20200530
+
+#cd ${wd}/plinkInputFiles
 
 plinkoutdir=$wd/plinkOutputFiles
 #mkdir -p $plinkoutdir
 
 # need to get chr name from file
-# i=$(printf "%02d" "$SGE_TASK_ID")
-Sample=$1
+#i=$(printf "%02d" "$SGE_TASK_ID")
+#Sample=$1
 
-FILE=${Sample%.txt}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
+FILE=${Sample}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
 OUTDIR=${plinkoutdir}/plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 
-### mkdir -p ${OUTDIR}
+#mkdir -p ${OUTDIR}
 
 ### plink --keep-allele-order --file ${FILE} \
 ### --homozyg \
@@ -44,13 +48,13 @@ OUTDIR=${plinkoutdir}/plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 ### --out ${OUTDIR}/${FILE}.out
 
 cd ${OUTDIR}
-#rm *summary
+rm *summary
 
-#mkdir -p catted
+mkdir -p catted
 
 #testing_povide name of sample
-#head -n1 Sve338.01.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom  > catted/SAcanids.catted.hom
-#cat *.hom |  grep -v "FID"  >>  catted/SAcanids.catted.hom
+head -n1 Sve338.01.HQsites.Only.rmDotGenotypes.rmBadVars.Plink.out.hom  > catted/SAcanids.catted.hom
+cat *.hom |  grep -v "FID"  >>  catted/SAcanids.catted.hom
 
 cd  catted/
 
@@ -60,6 +64,5 @@ module load R
 SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROHStep2.R
 
 
-R CMD BATCH ${SCRIPT} plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
- 
-#R CMD BATCH --no-save --no-restore '--args 'plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}' '${SCRIPT}
+#Rscript ${SCRIPT} plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
+
