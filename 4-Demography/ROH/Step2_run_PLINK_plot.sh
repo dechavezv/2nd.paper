@@ -29,7 +29,7 @@ plinkoutdir=$wd/plinkOutputFiles
 #i=$(printf "%02d" "$SGE_TASK_ID")
 #Sample=$1
 
-FILE=${Sample}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
+#FILE=${Sample}.${i}.HQsites.Only.rmDotGenotypes.rmBadVars.Plink
 OUTDIR=${plinkoutdir}/plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 
 #mkdir -p ${OUTDIR}
@@ -64,5 +64,5 @@ module load R
 SCRIPT=/u/home/d/dechavez/project-rwayne/2nd.paper/4-Demography/ROH/plot_ROHStep2.R
 
 
-#Rscript ${SCRIPT} plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
+Rscript ${SCRIPT} plinkroh_${2}_${3}_${4}_${5}_${6}_${7}_${8}
 
