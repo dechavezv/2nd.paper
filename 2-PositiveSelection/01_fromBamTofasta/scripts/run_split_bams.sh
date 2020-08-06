@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#$ -l h_rt=23:00:00,h_data=2G
+#$ -l h_rt=23:00:00,h_data=4G
 #$ -cwd
 #$ -N SplitBam
 #$ -m bea
 #$ -o /u/scratch/d/dechavez/IndelReal/log/
 #$ -e /u/scratch/d/dechavez/IndelReal/log/
 #$ -M dechavezv
-#$ -t 1-38:1
+#$ -t 1-35:1
 
 i=$(printf %02d $SGE_TASK_ID)
 #i=X
