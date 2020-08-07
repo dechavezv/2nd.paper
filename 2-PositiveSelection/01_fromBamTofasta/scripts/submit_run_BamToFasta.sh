@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #$ -wd /u/scratch/d/dechavez/IndelReal/split.bams
-#$ -l highp,h_rt=4:00:00,h_data=1G
+#$ -l h_rt=24:00:00,h_data=1G
 #$ -N subBamTofasta
 #$ -o /u/scratch/d/dechavez/IndelReal/split.bams/log/
 #$ -e /u/scratch/d/dechavez/IndelReal/split.bams/log/
@@ -13,8 +13,6 @@ export DIREC=/u/scratch/d/dechavez/IndelReal/split.bams
 export QSUB=/u/systems/UGE8.6.4/bin/lx-amd64/qsub
 
 cd ${DIREC}
-
-### $QSUB run_BamToFasta.sh ${BAM} ${depth_95th}
 
 for i in {01..38} X; do
 $QSUB ${SCRIPTDIR}/Merged_IbeWIB98_L5_Aligned.MarkDup_Filtered.bam_chr${i}.bam

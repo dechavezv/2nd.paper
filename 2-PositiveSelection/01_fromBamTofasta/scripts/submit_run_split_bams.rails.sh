@@ -16,4 +16,4 @@ DIRECT=/u/scratch/d/dechavez/IndelReal
 
 cd ${DIRECT}
 
-for file in *bam; do ${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.sh $file; done
+for file in *bam; do ${QSUB} -N Splitbam $SCRIPTDIR/run_split_bams.rail.sh $file; done

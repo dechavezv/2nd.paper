@@ -17,11 +17,11 @@ module load bedtools
 module load python
 
 export BAM=$1
-export REF=/u/home/d/dechavez/project-rwayne/canfam31/canfam31.fa
+export REF=/u/home/d/dechavez/project-rwayne/rails.project/reference.genomes/InaccesibleRail/chr_and_superScafolds/InaccesibleRail.chr.fa
 export Direc=/u/scratch/d/dechavez/IndelReal/split.bams
 export data=/u/scratch/d/dechavez/IndelReal/Fasta.files
 export neutral=/u/home/d/dechavez/project-rwayne/Besd_Files/neutralLoci-geneFlank10k-sep30k-filtered.bed
-export windows=/u/home/d/dechavez/project-rwayne/Besd_Files/25kb_Windows_goodQual.bed
+export windows=/u/home/d/dechavez/project-rwayne/Besd_Files/25kb_GoodQ_rails.bed
 
 
 cd ${Direc}
@@ -40,7 +40,7 @@ mv Masked_depth_${BAM%.bam}.fa ${BAM%.bam}.fa
 echo -e "\n Done with FASTA format for $1\n"
 
 echo -e "\n Getting regions for $1\n"
-bedtools getfasta -fi ${BAM%.bam}.fa -bed ${neutral} -fo ${data}/${BAM}.geneFlank10k.fa
+#bedtools getfasta -fi ${BAM%.bam}.fa -bed ${neutral} -fo ${data}/${BAM}.geneFlank10k.fa
 bedtools getfasta -fi ${BAM%.bam}.fa -bed ${windows} -fo ${data}/${BAM}.25kb.fa
 echo -e "\n Done with regions for $1\n"
 
